@@ -76,8 +76,8 @@ class WooCommerce extends Tutor_Base {
 	    ?>
         <div class="tutor-notice-warning">
             <p>
-                <?php _e(' Seems like you don’t have WooCommerce plugin installed on your site. In order to use this functionality, you need to have the 
-                WooCommerce plugin installed. Get back on this page after installing the plugin and enable the following feature to start selling 
+                <?php _e(' Seems like you don’t have WooCommerce plugin installed on your site. In order to use this functionality, you need to have the
+                WooCommerce plugin installed. Get back on this page after installing the plugin and enable the following feature to start selling
                 courses with Tutor.', 'tutor'); ?>
             </p>
             <p><?php _e('This notice will disappear after activating <strong>WooCommerce</strong>', 'tutor'); ?></p>
@@ -130,8 +130,8 @@ class WooCommerce extends Tutor_Base {
 		$types['tutor_product'] =  array(
 			'id'            => '_tutor_product',
 			'wrapper_class' => 'show_if_simple',
-			'label'         => __( 'For Tutor', 'tutor' ),
-			'description'   => __( 'This checkmark ensure that you will sell a specif course via this product.', 'tutor' ),
+			'label'         => __( 'Para Tutor', 'tutor' ),
+			'description'   => __( 'Esta marca de verificación asegura que venderá un curso específico a través de este producto.', 'tutor' ),
 			'default'       => 'no',
 		);
 
@@ -139,7 +139,7 @@ class WooCommerce extends Tutor_Base {
 	}
 
 	public function register_meta_box(){
-		add_meta_box( 'tutor-attach-product', __( 'Add Product', 'tutor' ), array($this, 'course_add_product_metabox'), $this->course_post_type, 'advanced', 'high' );
+		add_meta_box( 'tutor-attach-product', __( 'Añadir productos', 'tutor' ), array($this, 'course_add_product_metabox'), $this->course_post_type, 'advanced', 'high' );
 	}
 
 	public function course_add_product_metabox(){
@@ -267,7 +267,7 @@ class WooCommerce extends Tutor_Base {
 			'sections'    => array(
 				'general' => array(
 					'label' => __('General', 'tutor'),
-					'desc' => __('WooCommerce Settings', 'tutor'),
+					'desc' => __('Configuraciones de WooCommerce', 'tutor'),
 					'fields' => array(
 						/*'enable_course_sell_by_woocommerce' => array(
 							'type'      => 'checkbox',
@@ -277,9 +277,9 @@ class WooCommerce extends Tutor_Base {
 						),*/
 						'enable_guest_course_cart' => array(
 							'type'      => 'checkbox',
-							'label'     => __('Enable / Disable', 'tutor'),
-							'label_title'   => __('Enable add to cart feature for guest users', 'tutor'),
-							'desc'      => __('Enabling this will let an unregistered user purchase any course from the Course Details page. Head over to Documentation to know how to configure this setting.',	'tutor'),
+							'label'     => __('Activo / Inactivo', 'tutor'),
+							'label_title'   => __('Habilite la función agregar al carrito para usuarios invitados', 'tutor'),
+							'desc'      => __('Al habilitar esto, un usuario no registrado puede comprar cualquier curso desde la página Detalles del curso. Dirígete a Documentación para saber cómo configurar esta configuración.',	'tutor'),
 						),
 					),
 				),

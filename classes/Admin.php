@@ -49,32 +49,32 @@ class Admin{
 			$pro_text = ' '.__('Pro', 'tutor');
 		}
 
-		add_menu_page(__('Tutor LMS', 'tutor').$pro_text, __('Tutor LMS', 'tutor').$pro_text, 'manage_tutor_instructor', 'tutor', null,
+		add_menu_page(__('Tutor IP', 'tutor').$pro_text, __('Tutor IP', 'tutor').$pro_text, 'manage_tutor_instructor', 'tutor', null,
 			'dashicons-welcome-learn-more', 2);
-		add_submenu_page('tutor', __('Categories', 'tutor'), __('Categories', 'tutor'), 'manage_tutor', 'edit-tags.php?taxonomy=course-category&post_type='.$course_post_type, null );
+		add_submenu_page('tutor', __('Categorías', 'tutor'), __('Categories', 'tutor'), 'manage_tutor', 'edit-tags.php?taxonomy=course-category&post_type='.$course_post_type, null );
 
 		add_submenu_page('tutor', __('Tags', 'tutor'), __('Tags', 'tutor'), 'manage_tutor', 'edit-tags.php?taxonomy=course-tag&post_type='.$course_post_type, null );
 
-		add_submenu_page('tutor', __('Students', 'tutor'), __('Students', 'tutor'), 'manage_tutor', 'tutor-students', array($this, 'tutor_students') );
+		add_submenu_page('tutor', __('Estudiantes', 'tutor'), __('Estudiantes', 'tutor'), 'manage_tutor', 'tutor-students', array($this, 'tutor_students') );
 
-		add_submenu_page('tutor', __('Instructors', 'tutor'), __('Instructors', 'tutor'), 'manage_tutor', 'tutor-instructors', array($this, 'tutor_instructors') );
+		add_submenu_page('tutor', __('Instructores', 'tutor'), __('Instructores', 'tutor'), 'manage_tutor', 'tutor-instructors', array($this, 'tutor_instructors') );
 
-		add_submenu_page('tutor', __('Q & A', 'tutor'), __('Q & A '.$unanswered_bubble, 'tutor'), 'manage_tutor_instructor', 'question_answer', array($this, 'question_answer') );
+		add_submenu_page('tutor', __('Preguntas', 'tutor'), __('Preguntas '.$unanswered_bubble, 'tutor'), 'manage_tutor_instructor', 'question_answer', array($this, 'question_answer') );
 
-		add_submenu_page('tutor', __('Quiz Attempts', 'tutor'), __('Quiz Attempts', 'tutor'), 'manage_tutor_instructor', 'tutor_quiz_attempts',array($this, 'quiz_attempts') );
-		add_submenu_page('tutor', __('Withdraw Requests', 'tutor'), __('Withdraw Requests', 'tutor'), 'manage_tutor_instructor', 'tutor_withdraw_requests', array($this, 'withdraw_requests') );
+		add_submenu_page('tutor', __('Intentos de examen', 'tutor'), __('Intentos de examen', 'tutor'), 'manage_tutor_instructor', 'tutor_quiz_attempts',array($this, 'quiz_attempts') );
+		add_submenu_page('tutor', __('Retirar solicitudes', 'tutor'), __('Retirar solicitudes', 'tutor'), 'manage_tutor_instructor', 'tutor_withdraw_requests', array($this, 'withdraw_requests') );
 
 		//add_submenu_page('tutor', __('Add-ons', 'tutor'), __('Add-ons', 'tutor'), 'manage_tutor', 'tutor-addons', array(new Addons(),'addons_page') );
 		add_submenu_page( 'tutor', __( 'Add-ons', 'tutor' ), __( 'Add-ons', 'tutor' ), 'manage_tutor', 'tutor-addons', array( $this, 'enable_disable_addons' ) );
 
 		do_action('tutor_admin_register');
 
-		add_submenu_page('tutor', __('Settings', 'tutor'), __('Settings', 'tutor'), 'manage_tutor', 'tutor_settings', array($this, 'tutor_page') );
+		add_submenu_page('tutor', __('Configuraciones', 'tutor'), __('Configuraciones', 'tutor'), 'manage_tutor', 'tutor_settings', array($this, 'tutor_page') );
 
-		add_submenu_page('tutor', __('Tools', 'tutor'), __('Tools', 'tutor'), 'manage_tutor', 'tutor-tools', array($this, 'tutor_tools') );
+		add_submenu_page('tutor', __('Herramientas', 'tutor'), __('Herramientas', 'tutor'), 'manage_tutor', 'tutor-tools', array($this, 'tutor_tools') );
 
 		if ( ! $hasPro){
-			add_submenu_page( 'tutor', __( 'Get Pro', 'tutor' ), __( '<span class="dashicons dashicons-awards tutor-get-pro-text"></span> Get Pro', 'tutor' ), 'manage_options', 'tutor-get-pro', array($this, 'tutor_get_pro') );
+			add_submenu_page( 'tutor', __( 'Ser Pro', 'tutor' ), __( '<span class="dashicons dashicons-awards tutor-get-pro-text"></span> Ser Pro', 'tutor' ), 'manage_options', 'tutor-get-pro', array($this, 'tutor_get_pro') );
 		}
 	}
 
@@ -123,8 +123,8 @@ class Admin{
 			include apply_filters('tutor_admin_tools_page', tutor()->path."views/pages/{$tutor_admin_tools_page}.php", $tutor_admin_tools_page);
 		}else{
 			$pages = apply_filters('tutor_tool_pages', array(
-				'tutor_pages' => array('title' => __('Tutor Pages', 'tutor') ),
-				'status' => __('Status', 'tutor'),
+				'tutor_pages' => array('title' => __('Páginas de tutor', 'tutor') ),
+				'status' => __('Estado', 'tutor'),
 			));
 
 			$current_page = 'tutor_pages';
@@ -217,7 +217,7 @@ class Admin{
 				$get_assigned_courses_ids = (int) $wpdb->get_var("SELECT user_id from {$wpdb->usermeta} WHERE user_id = {$current_user} AND meta_key = '_tutor_instructor_course_id' AND meta_value = {$get_post_id} ");
 
 				if ( ! $get_assigned_courses_ids){
-					wp_die(__('Permission Denied', 'tutor'));
+					wp_die(__('Permiso denegado', 'tutor'));
 				}
 
 			}
@@ -411,8 +411,8 @@ class Admin{
 		$hasPro = tutor()->has_pro;
 
 		if(!$hasPro){
-			$actions['tutor_pro_link'] = '<a href="https://www.themeum.com/product/tutor-lms/#pricing?utm_source=tutor_plugin_action_link&utm_medium=wordpress_dashboard&utm_campaign=go_premium" target="_blank"><span
- style="color: #ff7742; font-weight: bold;">' . __('Upgrade to Pro', 'wp-megamenu') . '</span></a>';
+			$actions['tutor_pro_link'] = '<a href="https://informatica.pereyra.online" target="_blank"><span
+ style="color: #ff7742; font-weight: bold;">' . __('Acrualizar a Pro', 'wp-megamenu') . '</span></a>';
 		}
 
 		$is_erase_data = tutor_utils()->get_option('delete_on_uninstall');
@@ -421,12 +421,12 @@ class Admin{
 			$plugin_file = tutor()->basename;
 			if ( current_user_can( 'deactivate_plugin', $plugin_file ) ) {
 				if ( isset( $actions['deactivate'] ) ) {
-					$actions['deactivate'] = '<a href="admin.php?page=tutor-tools&tutor_admin_tools_page=uninstall">' . __('Uninstall', 'tutor') . '</a>';
+					$actions['deactivate'] = '<a href="admin.php?page=tutor-tools&tutor_admin_tools_page=uninstall">' . __('Desisntalar', 'tutor') . '</a>';
 				}
 			}
 		}
 
-		$actions['settings'] = '<a href="admin.php?page=tutor_settings">' . __('Settings', 'tutor') . '</a>';
+		$actions['settings'] = '<a href="admin.php?page=tutor_settings">' . __('Configuraciones', 'tutor') . '</a>';
 		return $actions;
 	}
 
@@ -434,12 +434,12 @@ class Admin{
 
 		if ($plugin_file === tutor()->basename) {
 			$plugin_meta[] = sprintf( '<a href="%s">%s</a>',
-				esc_url( 'https://www.themeum.com/docs/tutor-introduction/?utm_source=tutor&utm_medium=plugins_installation_list&utm_campaign=plugin_docs_link' ),
-				__( '<strong style="color: #03bd24">Documentation</strong>', 'tutor' )
+				esc_url( 'https://informatica.pereyra.online' ),
+				__( '<strong style="color: #03bd24">Documentación</strong>', 'tutor' )
 			);
 			$plugin_meta[] = sprintf( '<a href="%s">%s</a>',
-				esc_url( 'https://www.themeum.com/support-forums/?utm_source=tutor&utm_medium=plugins_installation_list&utm_campaign=plugin_support_link' ),
-				__( '<strong style="color: #03bd24">Get Support</strong>', 'tutor' )
+				esc_url( 'https://informatica.pereyra.online' ),
+				__( '<strong style="color: #03bd24">Conseguir soporte</strong>', 'tutor' )
 			);
 		}
 
@@ -461,9 +461,9 @@ class Admin{
 		 */
 		if ( apply_filters( 'tutor_display_admin_footer_text', (tutor_utils()->array_get('parent_base', $current_screen) === 'tutor' ) ) ) {
 			$footer_text = sprintf(
-				__( 'If you like %1$s please leave us a %2$s rating. A huge thanks in advance!', 'tutor' ),
-				sprintf( '<strong>%s</strong>', esc_html__( 'Tutor LMS', 'tutor' ) ),
-				'<a href="https://wordpress.org/support/plugin/tutor/reviews?rate=5#new-post" target="_blank" class="tutor-rating-link">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
+				__( 'Si quieres %1$s por favor dejanos %2$s tu calificación. Un saludo!', 'tutor' ),
+				sprintf( '<strong>%s</strong>', esc_html__( 'Tutor IP', 'tutor' ) ),
+				'<a href="https://informatica.pereyra.online" target="_blank" class="tutor-rating-link">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
 			);
 		}
 

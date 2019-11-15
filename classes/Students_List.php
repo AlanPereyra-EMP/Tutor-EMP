@@ -74,9 +74,9 @@ class Students_List extends \Tutor_List_Table {
 	function get_columns(){
 		$columns = array(
 			'cb'                => '<input type="checkbox" />', //Render a checkbox instead of text
-			'display_name'      => __('Name', 'tutor'),
+			'display_name'      => __('Nombre', 'tutor'),
 			'user_email'        => __('E-Mail', 'tutor'),
-			'completed_course'  => __('Completed Course', 'tutor'),
+			'completed_course'  => __('Cursos completados', 'tutor'),
 		);
 		return $columns;
 	}

@@ -67,10 +67,10 @@ class Question_Answers_List extends \Tutor_List_Table {
 	function get_columns(){
 		$columns = array(
 			'cb'                => '<input type="checkbox" />', //Render a checkbox instead of text
-			'question'          => __('Question', 'tutor'),
-			'display_name'      => __('Student', 'tutor'),
-			'post_title'        => __('Course', 'tutor'),
-			'answer_count'            => __('Answer', 'tutor'),
+			'question'          => __('Pregunta', 'tutor'),
+			'display_name'      => __('Estudiante', 'tutor'),
+			'post_title'        => __('Curso', 'tutor'),
+			'answer_count'            => __('Respuesta', 'tutor'),
 		);
 		return $columns;
 	}

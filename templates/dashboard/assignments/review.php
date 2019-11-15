@@ -14,7 +14,7 @@
 $assignment_submitted_id = (int) sanitize_text_field(tutor_utils()->array_get('view_assignment', $_GET));
 
 if(!$assignment_submitted_id){
-	echo _e("Sorry, but you are looking for something that isn't here." , 'tutor');
+	echo _e("Lo sentimos, pero estás buscando algo que no está aquí." , 'tutor');
 	return;
 }
 
@@ -83,12 +83,12 @@ if ( $submitted_assignment){
                 </div>
                 <div class="tutor-option-field">
                     <input type="number" name="evaluate_assignment[assignment_mark]" value="<?php echo $given_mark ? $given_mark : 0; ?>">
-                    <p class="desc"><?php echo sprintf(__('Mark this assignment out of %s', 'tutor-pro'), "<code>{$max_mark}</code>" ); ?></p>
+                    <p class="desc"><?php echo sprintf(__('Marcar esta tarea de %s', 'tutor-pro'), "<code>{$max_mark}</code>" ); ?></p>
                 </div>
             </div>
             <div class="tutor-assignment-evaluate-row">
                 <div class="tutor-option-field-label">
-                    <label for=""><?php _e('Write a note', 'tutor-pro'); ?></label>
+                    <label for=""><?php _e('Escribe una nota', 'tutor-pro'); ?></label>
                 </div>
                 <div class="tutor-option-field">
                     <textarea name="evaluate_assignment[instructor_note]"><?php echo $instructor_note; ?></textarea>
@@ -105,5 +105,5 @@ if ( $submitted_assignment){
     </div>
 
 <?php }else{
-	_e('Assignments submission not found or not completed', 'tutor');
+		_e('Envío de tareas no encontrado o no completado', 'tutor');
 } ?>

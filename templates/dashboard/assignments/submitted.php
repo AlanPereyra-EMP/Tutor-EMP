@@ -41,9 +41,9 @@ $assignments_submitted = $wpdb->get_results("SELECT * FROM {$wpdb->comments} WHE
             $max_mark = tutor_utils()->get_assignment_option($assignment->comment_post_ID, 'total_mark');
             $pass_mark = tutor_utils()->get_assignment_option($assignment->comment_post_ID, 'pass_mark');
             $given_mark = get_comment_meta($assignment->comment_ID, 'assignment_mark', true);
-            $status = sprintf(__('%s Pending %s', 'tutor'), '<span class="pending">', '</span>');
+            $status = sprintf(__('%s Pendiente %s', 'tutor'), '<span class="pending">', '</span>');
             if(!empty($given_mark)){
-                $status = (int) $given_mark >= (int) $pass_mark ? sprintf(__('%s Pass %s', 'tutor'), '<span class="pass">', '</span>') : sprintf(__('%s Fail %s', 'tutor'), '<span class="fail">', '</span>');
+                $status = (int) $given_mark >= (int) $pass_mark ? sprintf(__('%s aprobado %s', 'tutor'), '<span class="pass">', '</span>') : sprintf(__('%s Reprobado %s', 'tutor'), '<span class="fail">', '</span>');
             }
 
             $review_url = tutor_utils()->get_tutor_dashboard_page_permalink('assignments/review');
@@ -55,7 +55,7 @@ $assignments_submitted = $wpdb->get_results("SELECT * FROM {$wpdb->comments} WHE
                 <td><?php echo $pass_mark; ?></td>
                 <td><?php echo !empty($given_mark) ? $given_mark . '/' . $max_mark : $max_mark; ?></td>
                 <td><?php echo $status; ?></td>
-                <td> <?php echo "<a title='". __('Review this assignment', 'tutor') ."' href='".esc_url($review_url.'?view_assignment='.$assignment->comment_ID)."'><i class='tutor-icon-angle-right'></i> </a>"; ?> </td>
+                <td> <?php echo "<a title='". __('Revisar esta tarea', 'tutor') ."' href='".esc_url($review_url.'?view_assignment='.$assignment->comment_ID)."'><i class='tutor-icon-angle-right'></i> </a>"; ?> </td>
             </tr>
             <?php
         }
@@ -72,7 +72,7 @@ $assignments_submitted = $wpdb->get_results("SELECT * FROM {$wpdb->comments} WHE
 
         ?>
 
-        <p><?php _e('No assignment has been submitted yet', 'tutor'); ?></p>
+        <p><?php _e('Aún no se ha enviado ninguna tarea', 'tutor'); ?></p>
     <?php
 
     }

@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: Tutor LMS
-Plugin URI: https://www.themeum.com/product/tutor-lms/
-Description: Tutor is a complete solution for creating a Learning Management System in WordPress way. It can help you to create small to large scale online education site very conveniently. Power features like report, certificate, course preview, private file sharing make Tutor a robust plugin for any educational institutes.
-Author: Themeum
-Version: 1.4.6
-Author URI: http://themeum.com
+Plugin Name: Tutor IP
+Plugin URI: https://informatica.pereyra.online
+Description: Tutor IP es un fork del plugin Tutor LMS hecho por Themeum y mejorado a una versión PRO por Informatica Pereyra,
+Author: Informatica Pereyra
+Version: 1.4.7
+Author URI: informatica.pereyra.online
 Requires at least: 4.5
-Tested up to: 5.2
+Tested up to: 5.3
 License: GPLv2 or later
 Text Domain: tutor
 */
@@ -17,8 +17,9 @@ if ( ! defined( 'ABSPATH' ) )
 /**
  * Defined the tutor main file
  */
-define('TUTOR_VERSION', '1.4.6');
+define('TUTOR_VERSION', '1.4.7');
 define('TUTOR_FILE', __FILE__);
+define('TUTOR_PRO_VERSION', __FILE__);
 
 /**
  * Load tutor text domain for translation

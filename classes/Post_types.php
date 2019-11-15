@@ -4,14 +4,14 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 
 class Post_types{
-	
+
 	public $course_post_type;
 	public $lesson_post_type;
 
 	public function __construct() {
 		$this->course_post_type = tutor()->course_post_type;
 		$this->lesson_post_type = tutor()->lesson_post_type;
-		
+
 		add_action( 'init', array($this, 'register_course_post_types') );
 		add_action( 'init', array($this, 'register_lesson_post_types') );
 		add_action( 'init', array($this, 'register_quiz_post_types') );
@@ -31,29 +31,29 @@ class Post_types{
 		 */
 		add_action( 'init', array($this, 'register_tutor_enrolled_post_types') );
 	}
-	
+
 	public function register_course_post_types() {
 
 		$labels = array(
-			'name'                      => _x( 'Courses', 'post type general name', 'tutor' ),
-			'singular_name'             => _x( 'Course', 'post type singular name', 'tutor' ),
-			'menu_name'                 => _x( 'Courses', 'admin menu', 'tutor' ),
-			'name_admin_bar'            => _x( 'Course', 'add new on admin bar', 'tutor' ),
-			'add_new'                   => _x( 'Add New', $this->course_post_type, 'tutor' ),
-			'add_new_item'              => __( 'Add New Course', 'tutor' ),
-			'new_item'                  => __( 'New Course', 'tutor' ),
-			'edit_item'                 => __( 'Edit Course', 'tutor' ),
-			'view_item'                 => __( 'View Course', 'tutor' ),
-			'all_items'                 => __( 'Courses', 'tutor' ),
-			'search_items'              => __( 'Search Courses', 'tutor' ),
-			'parent_item_colon'         => __( 'Parent Courses:', 'tutor' ),
-			'not_found'                 => __( 'No courses found.', 'tutor' ),
-			'not_found_in_trash'        => __( 'No courses found in Trash.', 'tutor' )
+			'name'                      => _x( 'Cursos', 'post type general name', 'tutor' ),
+			'singular_name'             => _x( 'Curso', 'post type singular name', 'tutor' ),
+			'menu_name'                 => _x( 'Cursos', 'admin menu', 'tutor' ),
+			'name_admin_bar'            => _x( 'Curso', 'add new on admin bar', 'tutor' ),
+			'add_new'                   => _x( 'Añadir nuevo', $this->course_post_type, 'tutor' ),
+			'add_new_item'              => __( 'Añadir nuevo', 'tutor' ),
+			'new_item'                  => __( 'Nuevo curso', 'tutor' ),
+			'edit_item'                 => __( 'Editar curso', 'tutor' ),
+			'view_item'                 => __( 'Ver curso', 'tutor' ),
+			'all_items'                 => __( 'Cursos', 'tutor' ),
+			'search_items'              => __( 'Buscar cursos', 'tutor' ),
+			'parent_item_colon'         => __( 'Cursos superiores:', 'tutor' ),
+			'not_found'                 => __( 'No hay cursos.', 'tutor' ),
+			'not_found_in_trash'        => __( 'No hay cursos en la papelera.', 'tutor' )
 		);
 
 		$args = array(
 			'labels'                    => $labels,
-			'description'               => __( 'Description.', 'tutor' ),
+			'description'               => __( 'Descripción.', 'tutor' ),
 			'public'                    => true,
 			'publicly_queryable'        => true,
 			'show_ui'                   => true,
@@ -89,22 +89,22 @@ class Post_types{
 		 * Taxonomy
 		 */
 		$labels = array(
-			'name'                       => _x( 'Course Categories', 'taxonomy general name', 'tutor' ),
-			'singular_name'              => _x( 'Category', 'taxonomy singular name', 'tutor' ),
-			'search_items'               => __( 'Search Categories', 'tutor' ),
-			'popular_items'              => __( 'Popular Categories', 'tutor' ),
-			'all_items'                  => __( 'All Categories', 'tutor' ),
+			'name'                       => _x( 'Categorías de cursos', 'taxonomy general name', 'tutor' ),
+			'singular_name'              => _x( 'Categoría', 'taxonomy singular name', 'tutor' ),
+			'search_items'               => __( 'Buscar categorías', 'tutor' ),
+			'popular_items'              => __( 'Categorías popolares', 'tutor' ),
+			'all_items'                  => __( 'Todas las categorías', 'tutor' ),
 			'parent_item'                => null,
 			'parent_item_colon'          => null,
-			'edit_item'                  => __( 'Edit Category', 'tutor' ),
-			'update_item'                => __( 'Update Category', 'tutor' ),
-			'add_new_item'               => __( 'Add New Category', 'tutor' ),
-			'new_item_name'              => __( 'New Category Name', 'tutor' ),
-			'separate_items_with_commas' => __( 'Separate categories with commas', 'tutor' ),
-			'add_or_remove_items'        => __( 'Add or remove categories', 'tutor' ),
-			'choose_from_most_used'      => __( 'Choose from the most used categories', 'tutor' ),
-			'not_found'                  => __( 'No categories found.', 'tutor' ),
-			'menu_name'                  => __( 'Course Categories', 'tutor' ),
+			'edit_item'                  => __( 'Editar categorías', 'tutor' ),
+			'update_item'                => __( 'Actualizar categorías', 'tutor' ),
+			'add_new_item'               => __( 'Añadir Categorias', 'tutor' ),
+			'new_item_name'              => __( 'Nuevo nombre de categoría', 'tutor' ),
+			'separate_items_with_commas' => __( 'Separar categorías con comas', 'tutor' ),
+			'add_or_remove_items'        => __( 'Añadir o remover categorías', 'tutor' ),
+			'choose_from_most_used'      => __( 'Elegir desde las categorías más usadas', 'tutor' ),
+			'not_found'                  => __( 'No hay categorías.', 'tutor' ),
+			'menu_name'                  => __( 'Categorías de cursos', 'tutor' ),
 		);
 
 		$args = array(
@@ -121,22 +121,22 @@ class Post_types{
 		register_taxonomy( 'course-category', $this->course_post_type, $args );
 
 		$labels = array(
-			'name'                       => _x( 'Tags', 'taxonomy general name', 'tutor' ),
-			'singular_name'              => _x( 'Tag', 'taxonomy singular name', 'tutor' ),
-			'search_items'               => __( 'Search Tags', 'tutor' ),
-			'popular_items'              => __( 'Popular Tags', 'tutor' ),
-			'all_items'                  => __( 'All Tags', 'tutor' ),
+			'name'                       => _x( 'Etiquetas', 'taxonomy general name', 'tutor' ),
+			'singular_name'              => _x( 'Etiqueta', 'taxonomy singular name', 'tutor' ),
+			'search_items'               => __( 'Buscar etiquetas', 'tutor' ),
+			'popular_items'              => __( 'Etiquetas populares', 'tutor' ),
+			'all_items'                  => __( 'Todas las etiquetas', 'tutor' ),
 			'parent_item'                => null,
 			'parent_item_colon'          => null,
-			'edit_item'                  => __( 'Edit Tag', 'tutor' ),
-			'update_item'                => __( 'Update Tag', 'tutor' ),
-			'add_new_item'               => __( 'Add New Tag', 'tutor' ),
-			'new_item_name'              => __( 'New Tag Name', 'tutor' ),
-			'separate_items_with_commas' => __( 'Separate Tags with commas', 'tutor' ),
-			'add_or_remove_items'        => __( 'Add or remove Tags', 'tutor' ),
-			'choose_from_most_used'      => __( 'Choose from the most used Tags', 'tutor' ),
-			'not_found'                  => __( 'No Tags found.', 'tutor' ),
-			'menu_name'                  => __( 'Tags', 'tutor' ),
+			'edit_item'                  => __( 'Editar etiquetas', 'tutor' ),
+			'update_item'                => __( 'Actualizar etiquetas', 'tutor' ),
+			'add_new_item'               => __( 'Añadir etiquetas', 'tutor' ),
+			'new_item_name'              => __( 'Añadir nombre de etiqueta', 'tutor' ),
+			'separate_items_with_commas' => __( 'Separar etiquetas con comas', 'tutor' ),
+			'add_or_remove_items'        => __( 'Añadir o remover etiquetas', 'tutor' ),
+			'choose_from_most_used'      => __( 'Elegir desde las etiquetas más usadas', 'tutor' ),
+			'not_found'                  => __( 'No hay etiquetas.', 'tutor' ),
+			'menu_name'                  => __( 'Etiquetas', 'tutor' ),
 		);
 
 		$args = array(
@@ -155,25 +155,25 @@ class Post_types{
 
 	public function register_lesson_post_types() {
 		$labels = array(
-			'name'               => _x( 'Lessons', 'post type general name', 'tutor' ),
-			'singular_name'      => _x( 'Lesson', 'post type singular name', 'tutor' ),
-			'menu_name'          => _x( 'Lessons', 'admin menu', 'tutor' ),
-			'name_admin_bar'     => _x( 'Lesson', 'add new on admin bar', 'tutor' ),
-			'add_new'            => _x( 'Add New', $this->lesson_post_type, 'tutor' ),
-			'add_new_item'       => __( 'Add New Lesson', 'tutor' ),
-			'new_item'           => __( 'New Lesson', 'tutor' ),
-			'edit_item'          => __( 'Edit Lesson', 'tutor' ),
-			'view_item'          => __( 'View Lesson', 'tutor' ),
-			'all_items'          => __( 'Lessons', 'tutor' ),
-			'search_items'       => __( 'Search Lessons', 'tutor' ),
-			'parent_item_colon'  => __( 'Parent Lessons:', 'tutor' ),
-			'not_found'          => __( 'No lessons found.', 'tutor' ),
-			'not_found_in_trash' => __( 'No lessons found in Trash.', 'tutor' )
+			'name'               => _x( 'Lecciones', 'post type general name', 'tutor' ),
+			'singular_name'      => _x( 'Lección', 'post type singular name', 'tutor' ),
+			'menu_name'          => _x( 'Lecciones', 'admin menu', 'tutor' ),
+			'name_admin_bar'     => _x( 'Lección', 'add new on admin bar', 'tutor' ),
+			'add_new'            => _x( 'Añadir nueva', $this->lesson_post_type, 'tutor' ),
+			'add_new_item'       => __( 'Añadir nueva leccion', 'tutor' ),
+			'new_item'           => __( 'Añadir leccioón', 'tutor' ),
+			'edit_item'          => __( 'Editar lección', 'tutor' ),
+			'view_item'          => __( 'Ver lección', 'tutor' ),
+			'all_items'          => __( 'Lecciones', 'tutor' ),
+			'search_items'       => __( 'Buscar lecciones', 'tutor' ),
+			'parent_item_colon'  => __( 'Lecciones superiores:', 'tutor' ),
+			'not_found'          => __( 'No hay lecciones.', 'tutor' ),
+			'not_found_in_trash' => __( 'No hay lecciones en el basurero.', 'tutor' )
 		);
 
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __( 'Description.', 'tutor' ),
+			'description'        => __( 'Descripción.', 'tutor' ),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -201,28 +201,28 @@ class Post_types{
 
 		register_post_type( $this->lesson_post_type, $args );
 	}
-	
+
 	public function register_quiz_post_types() {
 		$labels = array(
-			'name'               => _x( 'Quizzes', 'post type general name', 'tutor' ),
-			'singular_name'      => _x( 'Quiz', 'post type singular name', 'tutor' ),
-			'menu_name'          => _x( 'Quizzes', 'admin menu', 'tutor' ),
-			'name_admin_bar'     => _x( 'Quiz', 'add new on admin bar', 'tutor' ),
-			'add_new'            => _x( 'Add New', $this->lesson_post_type, 'tutor' ),
-			'add_new_item'       => __( 'Add New Quiz', 'tutor' ),
-			'new_item'           => __( 'New Quiz', 'tutor' ),
-			'edit_item'          => __( 'Edit Quiz', 'tutor' ),
-			'view_item'          => __( 'View Quiz', 'tutor' ),
-			'all_items'          => __( 'Quizzes', 'tutor' ),
-			'search_items'       => __( 'Search Quizzes', 'tutor' ),
-			'parent_item_colon'  => __( 'Parent Quizzes:', 'tutor' ),
-			'not_found'          => __( 'No quizzes found.', 'tutor' ),
-			'not_found_in_trash' => __( 'No quizzes found in Trash.', 'tutor' )
+			'name'               => _x( 'Exámenes', 'post type general name', 'tutor' ),
+			'singular_name'      => _x( 'Examen', 'post type singular name', 'tutor' ),
+			'menu_name'          => _x( 'Exámenes', 'admin menu', 'tutor' ),
+			'name_admin_bar'     => _x( 'Examen', 'add new on admin bar', 'tutor' ),
+			'add_new'            => _x( 'Añadir nuevo', $this->lesson_post_type, 'tutor' ),
+			'add_new_item'       => __( 'Añadir examen', 'tutor' ),
+			'new_item'           => __( 'Nuevo examen', 'tutor' ),
+			'edit_item'          => __( 'Editar examen', 'tutor' ),
+			'view_item'          => __( 'Ver examen', 'tutor' ),
+			'all_items'          => __( 'Exámenes', 'tutor' ),
+			'search_items'       => __( 'Buecar exámenes', 'tutor' ),
+			'parent_item_colon'  => __( 'Exámenes superiores:', 'tutor' ),
+			'not_found'          => __( 'No hay exámenes.', 'tutor' ),
+			'not_found_in_trash' => __( 'No hay exámenes en el basurero.', 'tutor' )
 		);
 
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __( 'Description.', 'tutor' ),
+			'description'        => __( 'Descrioción.', 'tutor' ),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => false,
@@ -254,7 +254,7 @@ class Post_types{
 	public function register_topic_post_types(){
 		$args = array(
 			'label'  => 'Topics',
-			'description'        => __( 'Description.', 'tutor' ),
+			'description'        => __( 'Descripción.', 'tutor' ),
 			'public'             => false,
 			'publicly_queryable' => false,
 			'show_ui'            => false,
@@ -268,25 +268,25 @@ class Post_types{
 
 	public function register_assignments_post_types() {
 		$labels = array(
-			'name'               => _x( 'Assignments', 'post type general name', 'tutor' ),
-			'singular_name'      => _x( 'Assignment', 'post type singular name', 'tutor' ),
-			'menu_name'          => _x( 'Assignments', 'admin menu', 'tutor' ),
-			'name_admin_bar'     => _x( 'Assignment', 'add new on admin bar', 'tutor' ),
-			'add_new'            => _x( 'Add New', $this->lesson_post_type, 'tutor' ),
-			'add_new_item'       => __( 'Add New Assignment', 'tutor' ),
-			'new_item'           => __( 'New Assignment', 'tutor' ),
-			'edit_item'          => __( 'Edit Assignment', 'tutor' ),
-			'view_item'          => __( 'View Assignment', 'tutor' ),
-			'all_items'          => __( 'Assignments', 'tutor' ),
-			'search_items'       => __( 'Search Assignments', 'tutor' ),
-			'parent_item_colon'  => __( 'Parent Assignments:', 'tutor' ),
-			'not_found'          => __( 'No Assignments found.', 'tutor' ),
-			'not_found_in_trash' => __( 'No Assignments found in Trash.', 'tutor' )
+			'name'               => _x( 'Asignaciones', 'post type general name', 'tutor' ),
+			'singular_name'      => _x( 'Asignación', 'post type singular name', 'tutor' ),
+			'menu_name'          => _x( 'Asignaciones', 'admin menu', 'tutor' ),
+			'name_admin_bar'     => _x( 'Asignación', 'add new on admin bar', 'tutor' ),
+			'add_new'            => _x( 'Añadir nueva', $this->lesson_post_type, 'tutor' ),
+			'add_new_item'       => __( 'Añadir nueva asignación', 'tutor' ),
+			'new_item'           => __( 'Nueva asignación', 'tutor' ),
+			'edit_item'          => __( 'Editar asignación', 'tutor' ),
+			'view_item'          => __( 'Ver asignación', 'tutor' ),
+			'all_items'          => __( 'Asignaciones', 'tutor' ),
+			'search_items'       => __( 'Buscar asignaciones', 'tutor' ),
+			'parent_item_colon'  => __( 'Asignaciones superiores:', 'tutor' ),
+			'not_found'          => __( 'No hay asignaciones.', 'tutor' ),
+			'not_found_in_trash' => __( 'No hay asignaciones en el basurero.', 'tutor' )
 		);
 
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __( 'Description.', 'tutor' ),
+			'description'        => __( 'Descripción.', 'tutor' ),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => false,
@@ -319,38 +319,38 @@ class Post_types{
 		$post             = get_post();
 		$post_type        = get_post_type( $post );
 		$post_type_object = get_post_type_object( $post_type );
-		
+
 		$course_post_type = tutor()->course_post_type;
 
 		$messages[$course_post_type] = array(
 			0  => '', // Unused. Messages start at index 1.
-			1  => __( 'Course updated.', 'tutor' ),
-			2  => __( 'Custom field updated.', 'tutor' ),
-			3  => __( 'Custom field deleted.', 'tutor' ),
-			4  => __( 'Course updated.', 'tutor' ),
+			1  => __( 'Curso actualizado.', 'tutor' ),
+			2  => __( 'Campo personalizado actualizado.', 'tutor' ),
+			3  => __( 'Campo personalizado eliminado.', 'tutor' ),
+			4  => __( 'Curso eliminado.', 'tutor' ),
 			/* translators: %s: date and time of the revision */
 			5  => isset( $_GET['revision'] ) ? sprintf( __( 'Course restored to revision from %s', 'tutor' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-			6  => __( 'Course published.', 'tutor' ),
-			7  => __( 'Course saved.', 'tutor' ),
-			8  => __( 'Course submitted.', 'tutor' ),
+			6  => __( 'Curso publicado.', 'tutor' ),
+			7  => __( 'Curso guardado.', 'tutor' ),
+			8  => __( 'Curso enviado.', 'tutor' ),
 			9  => sprintf(
-				__( 'Course scheduled for: <strong>%1$s</strong>.', 'tutor' ),
+				__( 'Curso programado para: <strong>%1$s</strong>.', 'tutor' ),
 				// translators: Publish box date format, see http://php.net/date
 				date_i18n( __( 'M j, Y @ G:i', 'tutor' ), strtotime( $post->post_date ) )
 			),
-			10 => __( 'Course draft updated.', 'tutor' )
+			10 => __( 'Curso de borrador cargado.', 'tutor' )
 		);
 
 		if ( $post_type_object->publicly_queryable && $course_post_type === $post_type ) {
 			$permalink = get_permalink( $post->ID );
 
-			$view_link = sprintf( ' <a href="%s">%s</a>', esc_url( $permalink ), __( 'View course', 'tutor' ) );
+			$view_link = sprintf( ' <a href="%s">%s</a>', esc_url( $permalink ), __( 'Ver curso', 'tutor' ) );
 			$messages[ $post_type ][1] .= $view_link;
 			$messages[ $post_type ][6] .= $view_link;
 			$messages[ $post_type ][9] .= $view_link;
 
 			$preview_permalink = add_query_arg( 'preview', 'true', $permalink );
-			$preview_link = sprintf( ' <a target="_blank" href="%s">%s</a>', esc_url( $preview_permalink ), __( 'Preview course', 'tutor' ) );
+			$preview_link = sprintf( ' <a target="_blank" href="%s">%s</a>', esc_url( $preview_permalink ), __( 'Vista previa', 'tutor' ) );
 			$messages[ $post_type ][8]  .= $preview_link;
 			$messages[ $post_type ][10] .= $preview_link;
 		}
@@ -379,7 +379,7 @@ class Post_types{
 	public function register_tutor_enrolled_post_types(){
 		$args = array(
 			'label'  => 'Tutor Enrolled',
-			'description'        => __( 'Description.', 'tutor' ),
+			'description'        => __( 'Descripción.', 'tutor' ),
 			'public'             => false,
 			'publicly_queryable' => false,
 			'show_ui'            => false,

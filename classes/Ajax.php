@@ -134,7 +134,7 @@ class Ajax{
 			}
 		}
 
-		$data = array('msg' => __('Rating placed success', 'tutor'), 'review_id' => $review_ID, 'review' => $review);
+		$data = array('msg' => __('Calificación colocada éxito', 'tutor'), 'review_id' => $review_ID, 'review' => $review);
 		wp_send_json_success($data);
 	}
 
@@ -148,7 +148,7 @@ class Ajax{
 		$question = wp_kses_post($_POST['question']);
 
 		if (empty($question) || empty($question_title)){
-			wp_send_json_error(__('Empty question title or body', 'tutor'));
+			wp_send_json_error(__('Título o cuerpo de pregunta vacía', 'tutor'));
 		}
 
 		$user_id = get_current_user_id();
@@ -180,7 +180,7 @@ class Ajax{
 		}
 		do_action('tutor_after_add_question', $course_id, $comment_id);
 
-		wp_send_json_success(__('Question has been added successfully', 'tutor'));
+		wp_send_json_success(__('La pregunta se ha agregado correctamente', 'tutor'));
 	}
 
 
@@ -190,7 +190,7 @@ class Ajax{
 
 		$answer = wp_kses_post($_POST['answer']);
 		if ( ! $answer){
-			wp_send_json_error(__('Please write answer', 'tutor'));
+			wp_send_json_error(__('Por favor escribe una pregunta', 'tutor'));
 		}
 
 		$question_id = (int) sanitize_text_field($_POST['question_id']);
@@ -218,7 +218,7 @@ class Ajax{
 		$comment_id = (int) $wpdb->insert_id;
 		do_action('tutor_after_answer_to_question', $comment_id);
 
-		wp_send_json_success(__('Answer has been added successfully', 'tutor'));
+		wp_send_json_success(__('La respuesta se ha agregado correctamente', 'tutor'));
 	}
 
 
@@ -234,10 +234,10 @@ class Ajax{
 
 		if ( $if_added_to_list){
 			$wpdb->delete($wpdb->usermeta, array('user_id' => $user_id, 'meta_key' => '_tutor_course_wishlist', 'meta_value' => $course_id ));
-			wp_send_json_success(array('status' => 'removed', 'msg' => __('Course removed from wish list', 'tutor')));
+			wp_send_json_success(array('status' => 'removed', 'msg' => __('Curso removido de la lista', 'tutor')));
 		}else{
 			add_user_meta($user_id, '_tutor_course_wishlist', $course_id);
-			wp_send_json_success(array('status' => 'added', 'msg' => __('Course added to wish list', 'tutor')));
+			wp_send_json_success(array('status' => 'added', 'msg' => __('Curso agregado a la lista de deseos', 'tutor')));
 		}
 	}
 

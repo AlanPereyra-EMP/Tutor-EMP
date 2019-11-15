@@ -35,7 +35,7 @@ if($assignments->count){
             <tr>
                 <td>
                     <h5><?php echo $item->post_title ?></h5>
-                    <h5><a href='<?php echo esc_url($course_url.'?course_id='.$course_id) ?>'><?php echo __('Course: ', 'tutor'). get_the_title($course_id); ?> </a></h5>
+                    <h5><a href='<?php echo esc_url($course_url.'?course_id='.$course_id) ?>'><?php echo __('Curso: ', 'tutor'). get_the_title($course_id); ?> </a></h5>
                 </td>
                 <td><?php echo $max_mark ?></td>
                 <td><?php echo $comment_count ?></td>

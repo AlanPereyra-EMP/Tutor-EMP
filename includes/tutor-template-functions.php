@@ -43,7 +43,7 @@ if ( ! function_exists('tutor_get_template')) {
 			}
 
 			if ( ! file_exists($template_location)){
-				echo '<div class="tutor-notice-warning"> '.__(sprintf('The file you are trying to load is not exists in your theme or tutor plugins location, if you are a developer and extending tutor plugin, please create a php file at location %s ', "<code>{$file_in_theme}</code>"), 'tutor').' </div>';
+				echo '<div class="tutor-notice-warning"> '.__(sprintf('El archivo que está intentando cargar no existe en el tema o en la ubicación de los complementos del tutor, si es un desarrollador y está ampliando el complemento del tutor, cree un archivo php en la ubicación %s ', "<code>{$file_in_theme}</code>"), 'tutor').' </div>';
 			}
 		}
 
@@ -415,7 +415,7 @@ if ( ! function_exists('get_tutor_course_thumbnail')) {
 			if ($url){
 				return $placeHolderUrl;
 			}
-			$html = sprintf('<img alt="%s" src="' . $placeHolderUrl . '" />', __('Placeholder', 'tutor'));
+			$html = sprintf('<img alt="%s" src="' . $placeHolderUrl . '" />', __('Marcador de posición', 'tutor'));
 		}
 
 		echo $html;

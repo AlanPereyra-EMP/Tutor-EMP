@@ -10,9 +10,9 @@ if ($statements->count) {
     <div class="tutor-dashboard-statement-table-wrap">
         <table class="tutor-dashboard-statement-table">
             <tr>
-                <th><?php _e('Course', 'tutor'); ?></th>
-                <th><?php _e('Earning', 'tutor'); ?></th>
-                <th><?php _e('Deduct', 'tutor'); ?></th>
+                <th><?php _e('Curso', 'tutor'); ?></th>
+                <th><?php _e('Ganancias', 'tutor'); ?></th>
+                <th><?php _e('Deduciones', 'tutor'); ?></th>
             </tr>
 
             <?php
@@ -27,7 +27,7 @@ if ($statements->count) {
                         </p>
 
                         <p>
-                            <?php _e('Price', 'tutor'); ?>
+                            <?php _e('Precio', 'tutor'); ?>
                             <?php echo tutor_utils()->tutor_price($statement->course_price_total); ?>
                         </p>
 
@@ -35,7 +35,7 @@ if ($statements->count) {
                             <span class="statement-order-<?php echo $statement->order_status; ?>"><?php echo $statement->order_status; ?></span> <?php
                             _e('Order ID'); ?> #<?php echo $statement->order_id; ?>,
 
-                            <strong><?php _e('Date:', 'tutor') ?></strong>
+                            <strong><?php _e('Fecha:', 'tutor') ?></strong>
                             <i><?php echo date_i18n(get_option('date_format', strtotime($statement->created_at))).' '.date_i18n(get_option('time_format', strtotime($statement->created_at))) ?></i>
                         </p>
 
@@ -46,13 +46,13 @@ if ($statements->count) {
                     </td>
                     <td>
                         <p><?php echo tutor_utils()->tutor_price($statement->instructor_amount); ?></p>
-                        <p class="small-text"> <?php _e('As per');  ?> <?php echo $statement->instructor_rate ?> (<?php echo $statement->commission_type ?>) </p>
+                        <p class="small-text"> <?php _e('Según');  ?> <?php echo $statement->instructor_rate ?> (<?php echo $statement->commission_type ?>) </p>
                     </td>
 
                     <td>
                         <p><?php _e('Commission', 'tutor'); ?> : <?php echo tutor_utils()->tutor_price($statement->admin_amount); ?> </p>
-                        <p class="small-text"><?php _e('Rate', 'tutor'); ?> : <?php echo $statement->admin_rate; ?> </p>
-                        <p class="small-text"><?php _e('Type', 'tutor'); ?> : <?php echo $statement->commission_type; ?> </p>
+                        <p class="small-text"><?php _e('Calificación', 'tutor'); ?> : <?php echo $statement->admin_rate; ?> </p>
+                        <p class="small-text"><?php _e('Tipo', 'tutor'); ?> : <?php echo $statement->commission_type; ?> </p>
 
                         <p><?php _e('Deducted', 'tutor'); ?> : <?php echo $statement->deduct_fees_name; ?>  <?php echo tutor_utils()->tutor_price
                             ($statement->deduct_fees_amount); ?>
@@ -67,7 +67,7 @@ if ($statements->count) {
     </div>
     <?php
 }else{
-    printf("<span>%s</span>", __('Statement data is empty', 'tutor'));
+    printf("<span>%s</span>", __('Los datos del extracto están vacíos.', 'tutor'));
 }
 
 ?>

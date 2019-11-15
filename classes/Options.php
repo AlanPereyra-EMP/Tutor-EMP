@@ -60,7 +60,7 @@ class Options {
 		//re-sync settings
 		//init::tutor_activate();
 
-		wp_send_json_success( array('msg' => __('Option Updated', 'tutor') ) );
+		wp_send_json_success( array('msg' => __('Opciones actualizadas', 'tutor') ) );
 	}
 
 	public function options_attr(){
@@ -70,7 +70,7 @@ class Options {
 		$lesson_url = site_url().'/course/'.'sample-course/<code>lessons</code>/sample-lesson/';
 		$student_url = tutor_utils()->profile_url();
 		$attempts_allowed = array();
-		$attempts_allowed['unlimited'] = __('Unlimited' , 'tutor');
+		$attempts_allowed['unlimited'] = __('Sin limites' , 'tutor');
 		$attempts_allowed = array_merge($attempts_allowed, array_combine(range(1,20), range(1,20)));
 
 		$attr = array(
@@ -79,35 +79,35 @@ class Options {
 				'sections'    => array(
 					'general' => array(
 						'label' => __('General', 'tutor'),
-						'desc' => __('General Settings', 'tutor'),
+						'desc' => __('Configuraciones generales', 'tutor'),
 						'fields' => array(
 							'tutor_dashboard_page_id' => array(
 								'type'          => 'select',
-								'label'         => __('Dashboard Page', 'tutor'),
+								'label'         => __('Página personal', 'tutor'),
 								'default'       => '0',
 								'options'       => $pages,
-								'desc'          => __('This page will be used for student and instructor dashboard', 'tutor'),
+								'desc'          => __('Esta página se utilizará para la página personal del alumno y del instructor.', 'tutor'),
 							),
 							'enable_public_profile' => array(
 								'type'      => 'checkbox',
-								'label'     => __('Public Profile', 'tutor'),
-								'label_title' => __('Enable', 'tutor'),
+								'label'     => __('Perfil público', 'tutor'),
+								'label_title' => __('Activado', 'tutor'),
 								'default' => '0',
-								'desc'      => __('Enable this to make a profile publicly visible',	'tutor')."<br />" .$student_url,
+								'desc'      => __('Habilite esto para que un perfil sea visible públicamente',	'tutor')."<br />" .$student_url,
 							),
 							'load_tutor_css' => array(
 								'type'      => 'checkbox',
-								'label'     => __('Load Tutor CSS', 'tutor'),
-								'label_title' => __('Enable', 'tutor'),
+								'label'     => __('Cargar estilos CSS', 'tutor'),
+								'label_title' => __('Activado', 'tutor'),
 								'default' => '1',
-								'desc'      => __('If your theme has its own styling, then you can turn it off to load CSS from the plugin directory', 'tutor'),
+								'desc'      => __('Si su tema tiene su propio estilo, puede desactivarlo para cargar CSS desde el directorio del plugin', 'tutor'),
 							),
 							'load_tutor_js' => array(
 								'type'      => 'checkbox',
-								'label'     => __('Load Tutor JavaScript', 'tutor'),
-								'label_title' => __('Enable', 'tutor'),
+								'label'     => __('Cargar JavaScript', 'tutor'),
+								'label_title' => __('Activado', 'tutor'),
 								'default' => '1',
-								'desc'      => __('If you have put required script in your theme javascript file, then you can turn it off to load JavaScript from the plugin directory', 'tutor'),
+								'desc'      => __('Si ha colocado la secuencia de comandos requerida en su archivo javascript de tema, puede desactivarla para cargar JavaScript desde el directorio del plugin', 'tutor'),
 							),
 							'student_must_login_to_view_course' => array(
 								'type'      => 'checkbox',

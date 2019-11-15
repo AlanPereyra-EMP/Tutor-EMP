@@ -270,7 +270,7 @@ class Quiz {
 						    $given_answer          = maybe_serialize( $image_inputs );
 						    $is_answer_was_correct = false;
 
-						    $db_answer = $wpdb->get_col( "SELECT answer_title FROM {$wpdb->prefix}tutor_quiz_question_answers WHERE belongs_question_id = {$question_id} AND belongs_question_type = 
+						    $db_answer = $wpdb->get_col( "SELECT answer_title FROM {$wpdb->prefix}tutor_quiz_question_answers WHERE belongs_question_id = {$question_id} AND belongs_question_type =
 'image_answering' ORDER BY answer_order asc ;" );
 
 						    if ( is_array( $db_answer ) && count( $db_answer ) ) {
@@ -372,7 +372,7 @@ class Quiz {
 			wp_send_json_success();
 		}
 
-		wp_send_json_error(__('Quiz has been timeout already', 'tutor'));
+		wp_send_json_error(__('El examen ya ha expirado', 'tutor'));
 	}
 
 	/**
@@ -574,7 +574,7 @@ class Quiz {
 
 			$new_question_data = array(
 				'quiz_id'               => $quiz_id,
-				'question_title'        => __('Question ').$next_question_id,
+				'question_title'        => __('Preguntas ').$next_question_id,
 				'question_description'  => '',
 				'question_type'         => 'true_false',
 				'question_mark'         => 1,
@@ -633,11 +633,11 @@ class Quiz {
                         }
                     }
                     if ($required_validate){
-	                    $validation_msg = "<p class='tutor-error-msg'>".__('Please select the correct answer', 'tutor')."</p>";
+	                    $validation_msg = "<p class='tutor-error-msg'>".__('Por favor seleccione la respuesta correctar', 'tutor')."</p>";
 	                    wp_send_json_error(array('validation_msg' => $validation_msg ));
                     }
                 }else{
-			        $validation_msg = "<p class='tutor-error-msg'>".__('Please make sure you have added more than one option and saved them', 'tutor')."</p>";
+			        $validation_msg = "<p class='tutor-error-msg'>".__('Asegúrese de haber agregado más de una opción y guardarlas', 'tutor')."</p>";
 				    wp_send_json_error(array('validation_msg' => $validation_msg ));
 			    }
             }
@@ -714,14 +714,14 @@ class Quiz {
 						array(
 							'belongs_question_id'   => $question_id,
 							'belongs_question_type' => $question_type,
-							'answer_title'          => __('True', 'tutor'),
+							'answer_title'          => __('Verdadero', 'tutor'),
 							'is_correct'            => $answer['true_false'] == 'true' ? 1 : 0,
 							'answer_two_gap_match'  => 'true',
 						),
 						array(
 							'belongs_question_id'   => $question_id,
 							'belongs_question_type' => $question_type,
-							'answer_title'          => __('False', 'tutor'),
+							'answer_title'          => __('falso', 'tutor'),
 							'is_correct'            => $answer['true_false'] == 'false' ? 1 : 0,
 							'answer_two_gap_match'  => 'false',
 						),
@@ -819,10 +819,10 @@ class Quiz {
 
 		switch ($question_type){
 			case 'true_false':
-				echo '<label>'.__('Answer options &amp; mark correct', 'tutor').'</label>';
+				echo '<label>'.__('Optiones de respuesta &amp; marcar la correcta', 'tutor').'</label>';
 				break;
 			case 'ordering':
-				echo '<label>'.__('Make sure you’re saving the answers in the right order. Students will have to match this order exactly.', 'tutor').'</label>';
+				echo '<label>'.__('Asegúrese de guardar las respuestas en el orden correcto. Los estudiantes deberán coincidir exactamente con este orden.', 'tutor').'</label>';
 				break;
 		}
 
@@ -835,7 +835,7 @@ class Quiz {
                             <?php
                             echo stripslashes($answer->answer_title);
                             if ($answer->belongs_question_type === 'fill_in_the_blank'){
-                                echo ' ('.__('Answer', 'tutor').' : ';
+                                echo ' ('.__('Respuesta', 'tutor').' : ';
                                 echo "<strong>{$answer->answer_two_gap_match} </strong>)";
                             }
                             if ($answer->belongs_question_type === 'matching'){

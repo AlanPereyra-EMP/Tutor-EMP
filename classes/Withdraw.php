@@ -34,31 +34,31 @@ class Withdraw {
 	public function withdraw_methods(){
 		$methods = array(
 			'bank_transfer_withdraw' => array(
-				'method_name'  => __('Bank Transfer', 'tutor'),
-				'desc'  => __('Get your payment directly into your bank account', 'tutor'),
+				'method_name'  => __('Transferencia bancaria', 'tutor'),
+				'desc'  => __('Obtenga su pago directamente en su cuenta bancaria', 'tutor'),
 
 				'admin_form_fields'           => array(
 					'instruction' => array(
 						'type'      => 'textarea',
-						'label'     => __('Instruction', 'tutor'),
-						'desc'     => __('Write instruction for the instructor to fill bank information', 'tutor'),
+						'label'     => __('Instruccíon', 'tutor'),
+						'desc'     => __('Escribir instrucciones para que el instructor complete la información bancaria', 'tutor'),
 					),
 				),
 
 				'form_fields'           => array(
 					'account_name' => array(
 						'type'      => 'text',
-						'label'     => __('Account Name', 'tutor'),
+						'label'     => __('Nombre de cuenta', 'tutor'),
 					),
 
 					'account_number' => array(
 						'type'      => 'text',
-						'label'      => __('Account Number', 'tutor'),
+						'label'      => __('Número de cuenta', 'tutor'),
 					),
 
 					'bank_name' => array(
 						'type'      => 'text',
-						'label'     => __('Bank Name', 'tutor'),
+						'label'     => __('Nombre de banco', 'tutor'),
 					),
 					'iban' => array(
 						'type'      => 'text',
@@ -78,20 +78,20 @@ class Withdraw {
 				'form_fields'           => array(
 					'physical_address' => array(
 						'type'      => 'textarea',
-						'label'     => __('Your Physical Address', 'tutor'),
-						'desc'      => __('We will send you an E-Check to this address directly.', 'tutor'),
+						'label'     => __('Dirección física', 'tutor'),
+						'desc'      => __('Le enviaremos un E-Check a esta dirección directamente.', 'tutor'),
 					),
 				),
 			),
 
 			'paypal_withdraw' => array(
-				'method_name'  => __('PayPal Payment', 'tutor'),
+				'method_name'  => __('PayPal', 'tutor'),
 
 				'form_fields'           => array(
 					'paypal_email' => array(
 						'type'      => 'email',
-						'label'     => __('PayPal E-Mail Address', 'tutor'),
-						'desc'      => __('Write your paypal email address to get payout directly to your paypal account', 'tutor'),
+						'label'     => __('PayPal E-Mail', 'tutor'),
+						'desc'      => __('Escriba su dirección de correo electrónico de PayPal para obtener el pago directamente en su cuenta de PayPal', 'tutor'),
 					),
 
 				),
@@ -182,7 +182,7 @@ class Withdraw {
 			update_user_meta($user_id, '_tutor_withdraw_method_data', $saved_data);
 		}
 
-		$msg = apply_filters('tutor_withdraw_method_set_success_msg', __('Withdraw account has been set successfully', 'tutor'));
+		$msg = apply_filters('tutor_withdraw_method_set_success_msg', __('La cuenta de retiro se ha configurado correctamente', 'tutor'));
 		wp_send_json_success(array('msg' => $msg ));
 	}
 
@@ -209,17 +209,17 @@ class Withdraw {
 
 
 		if ( ! tutor_utils()->count($saved_withdraw_account)){
-			$no_withdraw_method = apply_filters('tutor_no_withdraw_method_msg', __('Please save withdraw method ', 'tutor')  );
+			$no_withdraw_method = apply_filters('tutor_no_withdraw_method_msg', __('Guarde el método de retiro ', 'tutor')  );
 			wp_send_json_error(array('msg' => $no_withdraw_method ));
 		}
 
 		if ($withdraw_amount < $min_withdraw){
-			$required_min_withdraw = apply_filters('tutor_required_min_amount_msg', sprintf(__('Minimum withdraw amount is %s %s %s ', 'tutor') , '<strong>', $formatted_min_withdraw_amount, '</strong>' ) );
+			$required_min_withdraw = apply_filters('tutor_required_min_amount_msg', sprintf(__('El monto mínimo de retiro es %s %s %s ', 'tutor') , '<strong>', $formatted_min_withdraw_amount, '</strong>' ) );
 			wp_send_json_error(array('msg' => $required_min_withdraw ));
 		}
 
 		if ($earning_sum->balance < $withdraw_amount){
-			$insufficient_balence = apply_filters('tutor_withdraw_insufficient_balance_msg', sprintf(__('Insufficient balance to withdraw, your balance is %s %s %s ', 'tutor'),'<strong>', $formatted_balance, '</strong>' ) );
+			$insufficient_balence = apply_filters('tutor_withdraw_insufficient_balance_msg', sprintf(__('Saldo insuficiente para retirar, su saldo es %s %s %s ', 'tutor'),'<strong>', $formatted_balance, '</strong>' ) );
 
 			wp_send_json_error(array('msg' => $insufficient_balence ));
 		}
@@ -252,7 +252,7 @@ class Withdraw {
 
 		do_action('tutor_withdraw_after');
 
-		$withdraw_successfull_msg = apply_filters('tutor_withdraw_successful_msg', __('Withdraw has been successful', 'tutor'));
+		$withdraw_successfull_msg = apply_filters('tutor_withdraw_successful_msg', __('Retirar ha sido exitoso', 'tutor'));
 		wp_send_json_success(array('msg' => $withdraw_successfull_msg, 'available_balance' => $new_available_balance ));
 	}
 

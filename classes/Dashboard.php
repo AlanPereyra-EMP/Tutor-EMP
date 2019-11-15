@@ -43,7 +43,7 @@ class Dashboard {
 				$post_id = $course_ID;
 			}else{
 				$post_type = tutor()->course_post_type;
-				$post_id = wp_insert_post( array( 'post_title' => __( 'Auto Draft', 'tutor' ), 'post_type' => $post_type, 'post_status' => 'auto-draft' ) );
+				$post_id = wp_insert_post( array( 'post_title' => __( 'Borrador automatico', 'tutor' ), 'post_type' => $post_type, 'post_status' => 'auto-draft' ) );
 			}
 
 			$post = get_post( $post_id );

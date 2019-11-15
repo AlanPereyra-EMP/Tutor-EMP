@@ -99,10 +99,10 @@ class Withdraw_Requests_List extends \Tutor_List_Table {
 	function get_columns(){
 		$columns = array(
 			'cb'                => '<input type="checkbox" />', //Render a checkbox instead of text
-			'requested_user'    => __('Requested By', 'tutor'),
-			'amount'            => __('Amount', 'tutor'),
-			'withdraw_method'   => __('Withdraw Method', 'tutor'),
-			'requested_at'      => __('Requested Time', 'tutor'),
+			'requested_user'    => __('Solicitado por', 'tutor'),
+			'amount'            => __('Cantidad', 'tutor'),
+			'withdraw_method'   => __('Método de retirada', 'tutor'),
+			'requested_at'      => __('Tiempo solicitado', 'tutor'),
 		);
 		return $columns;
 	}

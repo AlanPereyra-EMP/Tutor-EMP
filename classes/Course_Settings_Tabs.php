@@ -28,23 +28,23 @@ class Course_Settings_Tabs{
 	}
 
 	public function register_meta_box(){
-		add_meta_box( 'course-settings', __( 'Course Settings', 'tutor-pro' ), array($this, 'display'), $this->course_post_type, 'advanced', 'high' );
+		add_meta_box( 'course-settings', __( 'Configuraciones de cursos', 'tutor-pro' ), array($this, 'display'), $this->course_post_type, 'advanced', 'high' );
 	}
 
 	public function get_default_args(){
 		$args = array(
 			'general' => array(
 				'label' => __('General', 'tutor'),
-				'desc' => __('General Settings', 'tutor'),
+				'desc' => __('Configuraciones generales', 'tutor'),
 				'icon_class'  => ' tutor-icon-settings-1',
 				'callback'  => '',
 				'fields'    => array(
 					'maximum_students' => array(
 						'type'      => 'number',
-						'label'     => __('Maximum Students', 'tutor'),
-						'label_title' => __('Enable', 'tutor'),
+						'label'     => __('Estudiantes máximos', 'tutor'),
+						'label_title' => __('Disponible', 'tutor'),
 						'default' => '0',
-						'desc'      => __('Number of maximum students can enroll in this course, set zero for no limits', 'tutor'),
+						'desc'      => __('Número máximo de estudiantes que pueden inscribirse en este curso, establezca cero sin límites', 'tutor'),
 					),
 				),
 

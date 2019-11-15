@@ -37,12 +37,12 @@ class Instructor {
 		tutor_utils()->checking_nonce();
 
 		$required_fields = apply_filters('tutor_instructor_registration_required_fields', array(
-			'first_name'                => __('First name field is required', 'tutor'),
-			'last_name'                 =>  __('Last name field is required', 'tutor'),
-			'email'                     => __('E-Mail field is required', 'tutor'),
-			'user_login'                => __('User Name field is required', 'tutor'),
-			'password'                  => __('Password field is required', 'tutor'),
-			'password_confirmation'     => __('Password Confirmation field is required', 'tutor'),
+			'first_name'                => __('El campo de nombre es obligatorio', 'tutor'),
+			'last_name'                 =>  __('Se requiere el campo de apellido', 'tutor'),
+			'email'                     => __('Campo de correo electrónico es obligatorio', 'tutor'),
+			'user_login'                => __('El campo de nombre de usuario es obligatorio', 'tutor'),
+			'password'                  => __('El campo de contraseña es obligatorio', 'tutor'),
+			'password_confirmation'     => __('El campo de confirmación de contraseña es obligatorio', 'tutor'),
 		));
 
 		$validation_errors = array();
@@ -53,10 +53,10 @@ class Instructor {
 		}
 
 		if (!filter_var(tutor_utils()->input_old('email'), FILTER_VALIDATE_EMAIL)) {
-			$validation_errors['email'] = __('Valid E-Mail is required', 'tutor');
+			$validation_errors['email'] = __('Ingresar un email válido', 'tutor');
 		}
 		if (tutor_utils()->input_old('password') !== tutor_utils()->input_old('password_confirmation')){
-			$validation_errors['password_confirmation'] = __('Confirm password does not matched with Password field', 'tutor');
+			$validation_errors['password_confirmation'] = __('Confirme que la contraseña no coincide con el campo Contraseña', 'tutor');
 		}
 
 		if (count($validation_errors)){
@@ -120,13 +120,13 @@ class Instructor {
 		$user_id = get_current_user_id();
 		if ($user_id){
 			if (tutor_utils()->is_instructor()){
-				die(__('Already applied for instructor', 'tutor'));
+				die(__('Inscripto con el instructor', 'tutor'));
 			}else{
 				update_user_meta($user_id, '_is_tutor_instructor', tutor_time());
 				update_user_meta($user_id, '_tutor_instructor_status', apply_filters('tutor_initial_instructor_status', 'pending'));
 			}
 		}else{
-			die(__('Permission denied', 'tutor'));
+			die(__('Permiso denegado', 'tutor'));
 		}
 
 		wp_redirect(tutor_utils()->input_old('_wp_http_referer'));
@@ -136,13 +136,13 @@ class Instructor {
 
 	public function add_new_instructor(){
 		$required_fields = apply_filters('tutor_instructor_registration_required_fields', array(
-			'first_name'                => __('First name field is required', 'tutor'),
-			'last_name'                 =>  __('Last name field is required', 'tutor'),
-			'email'                     => __('E-Mail field is required', 'tutor'),
-			'user_login'                => __('User Name field is required', 'tutor'),
-			'phone_number'              => __('Phone Number field is required', 'tutor'),
-			'password'                  => __('Password field is required', 'tutor'),
-			'password_confirmation'     => __('Password Confirmation field is required', 'tutor'),
+			'first_name'                => __('El campo de nombre es obligatorio', 'tutor'),
+			'last_name'                 =>  __('Se requiere el campo de apellido', 'tutor'),
+			'email'                     => __('Campo de correo electrónico es obligatorio', 'tutor'),
+			'user_login'                => __('El campo de nombre de usuario es obligatorio', 'tutor'),
+			'phone_number'              => __('El campo de número de teléfono es obligatorio', 'tutor'),
+			'password'                  => __('El campo de contraseña es obligatorio', 'tutor'),
+			'password_confirmation'     => __('El campo de confirmación de contraseña es obligatorio', 'tutor'),
 		));
 
 		$validation_errors = array();
@@ -153,10 +153,10 @@ class Instructor {
 		}
 
 		if (!filter_var(tutor_utils()->input_old('email'), FILTER_VALIDATE_EMAIL)) {
-			$validation_errors['email'] = __('Valid E-Mail is required', 'tutor');
+			$validation_errors['email'] = __('Se requiere correo electrónico válido', 'tutor');
 		}
 		if (tutor_utils()->input_old('password') !== tutor_utils()->input_old('password_confirmation')){
-			$validation_errors['password_confirmation'] = __('Confirm password does not matched with Password field', 'tutor');
+			$validation_errors['password_confirmation'] = __('Confirme que la contraseña no coincide con el campo Contraseña', 'tutor');
 		}
 
 		if (count($validation_errors)){
@@ -192,7 +192,7 @@ class Instructor {
 
 			do_action('tutor_add_new_instructor_after', $user_id);
 
-			wp_send_json_success(array('msg' => __('Instructor has been added successfully', 'tutor') ));
+			wp_send_json_success(array('msg' => __('El instructor ha sido agregado exitosamente', 'tutor') ));
 		}
 
 		wp_send_json_error(array('errors' => $user_id));

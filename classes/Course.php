@@ -67,13 +67,13 @@ class Course extends Tutor_Base {
 		$coursePostType = tutor()->course_post_type;
 		$course_marketplace = tutor_utils()->get_option('enable_course_marketplace');
         //add_meta_box( 'tutor-course-levels', __( 'Course Level', 'tutor' ), array($this, 'course_level_metabox'), $coursePostType );
-		add_meta_box( 'tutor-course-topics', __( 'Course Builder', 'tutor' ), array($this, 'course_meta_box'), $coursePostType );
-		add_meta_box( 'tutor-course-additional-data', __( 'Additional Data', 'tutor' ), array($this, 'course_additional_data_meta_box'), $coursePostType );
+		add_meta_box( 'tutor-course-topics', __( 'Creador de cursos', 'tutor' ), array($this, 'course_meta_box'), $coursePostType );
+		add_meta_box( 'tutor-course-additional-data', __( 'Información adicional', 'tutor' ), array($this, 'course_additional_data_meta_box'), $coursePostType );
 		add_meta_box( 'tutor-course-videos', __( 'Video', 'tutor' ), array($this, 'video_metabox'), $coursePostType );
 		if ($course_marketplace) {
-			add_meta_box( 'tutor-instructors', __( 'Instructors', 'tutor' ), array( $this, 'instructors_metabox' ), $coursePostType );
+			add_meta_box( 'tutor-instructors', __( 'Instructores', 'tutor' ), array( $this, 'instructors_metabox' ), $coursePostType );
 		}
-		add_meta_box( 'tutor-announcements', __( 'Announcements', 'tutor' ), array($this, 'announcements_metabox'), $coursePostType );
+		add_meta_box( 'tutor-announcements', __( 'Anincios', 'tutor' ), array($this, 'announcements_metabox'), $coursePostType );
 	}
 	public function course_meta_box($echo = true){
 		ob_start();
@@ -361,7 +361,7 @@ class Course extends Tutor_Base {
 		);
 		wp_update_post( $topic_attr );
 
-		wp_send_json_success(array('msg' => __('Topic has been updated', 'tutor') ));
+		wp_send_json_success(array('msg' => __('El tema ha sido actualizado', 'tutor') ));
 	}
 
 
@@ -376,9 +376,9 @@ class Course extends Tutor_Base {
 	public function add_column($columns){
 		$date_col = $columns['date'];
 		unset($columns['date']);
-		$columns['lessons'] = __('Lessons', 'tutor');
-		$columns['students'] = __('Students', 'tutor');
-		$columns['price'] = __('Price', 'tutor');
+		$columns['lessons'] = __('Lecciones', 'tutor');
+		$columns['students'] = __('Estudiantes', 'tutor');
+		$columns['price'] = __('Precio', 'tutor');
 		$columns['date'] = $date_col;
 
 		return $columns;
@@ -460,7 +460,7 @@ class Course extends Tutor_Base {
 
 		$user_id = get_current_user_id();
 		if ( ! $user_id){
-			exit(__('Please Sign In first', 'tutor'));
+			exit(__('Por favor ingresar primero', 'tutor'));
 		}
 
 		$course_id = (int) sanitize_text_field($_POST['tutor_course_id']);
@@ -508,7 +508,7 @@ class Course extends Tutor_Base {
 
 		//TODO: need to show view if not signed_in
 		if ( ! $user_id){
-			die(__('Please Sign-In', 'tutor'));
+			die(__('Por favor ingresar', 'tutor'));
 		}
 
 		$course_id = (int) sanitize_text_field($_POST['course_id']);
@@ -547,7 +547,7 @@ class Course extends Tutor_Base {
 		wp_redirect(get_the_permalink($course_id));
 	}
 
-	
+
 	public function tutor_load_instructors_modal(){
 		global $wpdb;
 
@@ -572,7 +572,7 @@ class Course extends Tutor_Base {
 			$search_sql = "AND (user_login like '%{$search_terms}%' or user_nicename like '%{$search_terms}%' or display_name like '%{$search_terms}%') ";
 		}
 
-		$instructors = $wpdb->get_results("select ID, display_name from {$wpdb->users} 
+		$instructors = $wpdb->get_results("select ID, display_name from {$wpdb->users}
 			INNER JOIN {$wpdb->usermeta} ON ID = user_id AND meta_key = '_tutor_instructor_status' AND meta_value = 'approved'
 			WHERE 1=1 {$not_in_sql} {$search_sql} limit 10 ");
 
@@ -586,12 +586,12 @@ class Course extends Tutor_Base {
 			$output .= apply_filters('tutor_course_instructors_html', $instructor_output, $instructors);
 
 		}else{
-			$output .= __('<p>No instructor available or you have already added maximum instructors</p>', 'tutor');
+			$output .= __('<p>No hay instructores disponibles o has llegado al máximo de instructores</p>', 'tutor');
 		}
 
 
 		if ( ! defined('TUTOR_MT_VERSION')){
-			$output .= '<p class="tutor-notice-warning" style="margin-top: 50px; font-size: 14px;">'. sprintf( __('To add unlimited multiple instructors in your course, get %sTutor LMS Pro%s', 'tutor'), '<a href="https://www.themeum.com/product/tutor-lms" target="_blank">', "</a>" ) .'</p>';
+			$output .= '<p class="tutor-notice-warning" style="margin-top: 50px; font-size: 14px;">'. sprintf( __('Para agregar instructores múltiples ilimitados en su curso, obtenga %sTutor IP Pro%s', 'tutor'), '<a href="https://informatica.pereyra.online" target="_blank">', "</a>" ) .'</p>';
 		}
 
 		wp_send_json_success(array('output' => $output));
@@ -671,12 +671,12 @@ class Course extends Tutor_Base {
 	 * @param $postData
 	 *
 	 * Attach product during save course from the frontend course dashboard.
-	 * 
+	 *
 	 * @return string
 	 *
 	 * @since v.1.3.4
 	 */
-	
+
 	public function attach_product_with_course($post_ID, $postData){
 		$attached_product_id = tutor_utils()->get_course_product_id($post_ID);
 		$course_price = sanitize_text_field(tutor_utils()->array_get('course_price', $_POST));
@@ -730,7 +730,7 @@ class Course extends Tutor_Base {
 		}elseif ($monetize_by === 'edd'){
 
 			$is_update = false;
-			
+
 			if ($attached_product_id){
 				$edd_price = get_post_meta($attached_product_id, 'edd_price', true);
 				if ($edd_price){
@@ -763,7 +763,7 @@ class Course extends Tutor_Base {
 					if ( $coursePostThumbnail ) {
 						set_post_thumbnail( $download_id, $coursePostThumbnail );
 					}
-					
+
 				}
 
 			}

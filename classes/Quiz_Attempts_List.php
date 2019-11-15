@@ -33,14 +33,14 @@ class Quiz_Attempts_List extends \Tutor_List_Table {
 	function column_student($item){
 		$actions = array();
 
-		$actions['answer'] = sprintf('<a href="?page=%s&sub_page=%s&attempt_id=%s">'.__('Review', 'tutor').'</a>',$_REQUEST['page'],'view_attempt',$item->attempt_id);
+		$actions['answer'] = sprintf('<a href="?page=%s&sub_page=%s&attempt_id=%s">'.__('Revisión', 'tutor').'</a>',$_REQUEST['page'],'view_attempt',$item->attempt_id);
 		//$actions['delete'] = sprintf('<a href="?page=%s&action=%s&attempt_id=%s">Delete</a>',$_REQUEST['page'],'delete',$item->attempt_id);
 
 		$quiz_title = "<p><strong>{$item->display_name}</strong></p>";
 		$quiz_title .= "<p>{$item->user_email}</p>";
 
 		if ($item->attempt_ended_at){
-			$ended_ago_time = human_time_diff(strtotime($item->attempt_ended_at)).__(' ago', 'tutor');
+			$ended_ago_time = human_time_diff(strtotime($item->attempt_ended_at)).__(' atrás', 'tutor');
 			$quiz_title .= "<span>{$ended_ago_time}</span>";
 		}
 
@@ -85,9 +85,9 @@ class Quiz_Attempts_List extends \Tutor_List_Table {
 		$output .= "({$earned_percentage}%) pass ({$pass_mark_percent}%) <br />";
 
 		if ($earned_percentage >= $pass_mark_percent){
-			$output .= '<span class="result-pass">'.__('Pass', 'tutor').'</span>';
+			$output .= '<span class="result-pass">'.__('Aprobado', 'tutor').'</span>';
 		}else{
-			$output .= '<span class="result-fail">'.__('Fail', 'tutor').'</span>';
+			$output .= '<span class="result-fail">'.__('Reprobado', 'tutor').'</span>';
 		}
 
 		return $output;
@@ -102,12 +102,12 @@ class Quiz_Attempts_List extends \Tutor_List_Table {
 	function get_columns(){
 		$columns = array(
 			'cb'                => '<input type="checkbox" />', //Render a checkbox instead of text
-			'student'           => __('Students', 'tutor'),
-			'quiz'              => __('Quiz', 'tutor'),
-			'course'            => __('Course', 'tutor'),
-			'total_questions'   => __('Total Questions', 'tutor'),
-			'earned_marks'      => __('Earned Points', 'tutor'),
-			'attempt_status'      => __('Attempt Status', 'tutor'),
+			'student'           => __('Estudiantes', 'tutor'),
+			'quiz'              => __('Preguntas', 'tutor'),
+			'course'            => __('Cursos', 'tutor'),
+			'total_questions'   => __('Preguntas totales', 'tutor'),
+			'earned_marks'      => __('Puntos obtenidos', 'tutor'),
+			'attempt_status'      => __('Estado de intentos', 'tutor'),
 		);
 		return $columns;
 	}

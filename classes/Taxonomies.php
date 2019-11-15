@@ -190,7 +190,7 @@ class Taxonomies{
 			unset( $columns['cb'] );
 		}
 
-		$new_columns['thumb'] = __( 'Image', 'tutor' );
+		$new_columns['thumb'] = __( 'Imagen', 'tutor' );
 
 		$columns           = array_merge( $new_columns, $columns );
 		$columns['handle'] = '';
@@ -210,7 +210,7 @@ class Taxonomies{
 
 			// Prevent esc_url from breaking spaces in urls for image embeds. Ref: https://core.trac.wordpress.org/ticket/23605 .
 			$image    = str_replace( ' ', '%20', $image );
-			$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Thumbnail', 'tutor' ) . '" class="wp-post-image" height="48" width="48" />';
+			$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Imagen destacada', 'tutor' ) . '" class="wp-post-image" height="48" width="48" />';
 		}
 		if ( 'handle' === $column ) {
 			$columns .= '<input type="hidden" name="term_id" value="' . esc_attr( $id ) . '" />';

@@ -50,7 +50,7 @@ class FormHandler {
 			}
 
 			if ( empty( $creds['user_login'] ) ) {
-				throw new \Exception( '<strong>' . __( 'Error:', 'tutor' ) . '</strong> ' . __( 'Username is required.', 'tutor' ) );
+				throw new \Exception( '<strong>' . __( 'Error:', 'tutor' ) . '</strong> ' . __( 'Nombre de usuario es requerido.', 'tutor' ) );
 			}
 
 			// On multisite, ensure user exists on current site, if not add them before allowing login.
@@ -94,7 +94,7 @@ class FormHandler {
 		$login = sanitize_user( tutils()->array_get('user_login', $_POST));
 
 		if ( empty( $login ) ) {
-			tutor_flash_set('danger', __( 'Enter a username or email address.', 'tutor' ));
+			tutor_flash_set('danger', __( 'Ingresar un nombre de usuario o un email.', 'tutor' ));
 			return false;
 		} else {
 			// Check on username first, as customers can use emails as usernames.
@@ -116,12 +116,12 @@ class FormHandler {
 		}
 
 		if ( ! $user_data ) {
-			tutor_flash_set('danger', __( 'Invalid username or email.', 'tutor' ) );
+			tutor_flash_set('danger', __( 'Nombre de usuario o email inválidos.', 'tutor' ) );
 			return false;
 		}
 
 		if ( is_multisite() && ! is_user_member_of_blog( $user_data->ID, get_current_blog_id() ) ) {
-			tutor_flash_set('danger', __( 'Invalid username or email.', 'tutor' ) );
+			tutor_flash_set('danger', __( 'Nombre de usuario o email inválidos.', 'tutor' ) );
 			return false;
 		}
 
@@ -133,7 +133,7 @@ class FormHandler {
 		$allow = apply_filters( 'allow_password_reset', true, $user_data->ID );
 
 		if ( ! $allow ) {
-			tutor_flash_set('danger', __( 'Password reset is not allowed for this user', 'tutor' ) );
+			tutor_flash_set('danger', __( 'No esta permitido resetear la contraseña en este usuario', 'tutor' ) );
 			return false;
 		} elseif ( is_wp_error( $allow ) ) {
 			tutor_flash_set('danger', $allow->get_error_message() );
@@ -151,9 +151,9 @@ class FormHandler {
 	public function reset_password_notification( $user_login = '', $reset_key = ''){
 		$this->sendNotification($user_login, $reset_key);
 
-		$html = "<h3>".__('Check your E-Mail', 'tutor')."</h3>";
-		$html .= "<p>".__("We've sent an email to this account's email address. Click the link in the email to reset your password", 'tutor')."</p>";
-		$html .= "<p>".__("If you don't see the email, check other places it might be, like your junk, spam, social, promotion or others folders.", 'tutor')."</p>";
+		$html = "<h3>".__('Chequea tu email', 'tutor')."</h3>";
+		$html .= "<p>".__("Hemos enviado un correo electrónico a la dirección de correo electrónico de esta cuenta. Haga clic en el enlace del correo electrónico para restablecer su contraseña", 'tutor')."</p>";
+		$html .= "<p>".__("Si no ve el correo electrónico, verifique otros lugares donde podría estar, como su basura, correo no deseado, redes sociales, promoción u otras carpetas.", 'tutor')."</p>";
 		tutor_flash_set('success', $html);
 	}
 
@@ -173,19 +173,19 @@ class FormHandler {
 		$user = check_password_reset_key( $reset_key, $user->user_login );
 
 		if ( is_wp_error( $user ) ) {
-			tutor_flash_set('danger', __( 'This key is invalid or has already been used. Please reset your password again if needed.', 'tutor') );
+			tutor_flash_set('danger', __( 'Esta clave no es válida o ya se ha utilizado. Restablezca su contraseña nuevamente si es necesario.', 'tutor') );
 			return false;
 		}
 
 
 		if ( $user instanceof \WP_User ) {
 			if ( !$password ) {
-				tutor_flash_set('danger', __( 'Please enter your password.', 'tutor') );
+				tutor_flash_set('danger', __( 'Por favor ingresar su contraseña.', 'tutor') );
 				return false;
 			}
 
 			if ( $password !== $confirm_password) {
-				tutor_flash_set('danger', __( 'Passwords do not match.', 'tutor') );
+				tutor_flash_set('danger', __( 'La contraseña no coincide.', 'tutor') );
 				return false;
 			}
 
@@ -223,7 +223,7 @@ class FormHandler {
 		);
 
 		$html = tutor_get_template_html('email.send-reset-password', $variable);
-		$subject = sprintf(__( 'Password Reset Request for %s', 'tutor' ), get_option( 'blogname' ));
+		$subject = sprintf(__( 'Contraseña reseteada por %s', 'tutor' ), get_option( 'blogname' ));
 
 		$header = 'Content-Type: text/html' . "\r\n";
 

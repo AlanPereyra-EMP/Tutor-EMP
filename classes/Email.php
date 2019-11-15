@@ -21,29 +21,29 @@ class Email {
 
 	public function add_options($attr){
 		$attr['email_notification'] = array(
-			'label'     => __('E-Mail Notification', 'tutor-pro'),
+			'label'     => __('Notificacioes en email', 'tutor-pro'),
 			'sections'    => array(
 				'email_settings' => array(
-					'label' => __('E-Mail Settings', 'tutor-pro'),
-					'desc' => __('Check and place necessary information here.', 'tutor-pro'),
+					'label' => __('Configuraciones de email', 'tutor-pro'),
+					'desc' => __('Verifique y coloque la información necesaria aquí.', 'tutor-pro'),
 					'fields' => array(
 						'email_from_name' => array(
 							'type'      => 'text',
-							'label'     => __('Name', 'tutor-pro'),
+							'label'     => __('Nombre', 'tutor-pro'),
 							'default'   => get_option('blogname'),
-							'desc'      => __('The name under which all the emails will be sent',	'tutor'),
+							'desc'      => __('El nombre bajo el cual se enviarán todos los correos electrónicos',	'tutor'),
 						),
 						'email_from_address' => array(
 							'type'      => 'text',
-							'label'     => __('E-Mail Address', 'tutor-pro'),
+							'label'     => __('Dirección de email', 'tutor-pro'),
 							'default'   => get_option('admin_email'),
-							'desc'      => __('The E-Mail address from which all emails will be sent', 'tutor-pro'),
+							'desc'      => __('La dirección de correo electrónico desde la cual se enviarán todos los correos electrónicos', 'tutor-pro'),
 						),
 						'email_footer_text' => array(
 							'type'      => 'textarea',
-							'label'     => __('E-Mail Footer Text', 'tutor-pro'),
+							'label'     => __('Texto de pie de página', 'tutor-pro'),
 							'default'   => '',
-							'desc'      => __('The text to appear in E-Mail template footer', 'tutor-pro'),
+							'desc'      => __('El texto que aparecerá en el pie de página de la plantilla de correo electrónico', 'tutor-pro'),
 						),
 					),
 				),
@@ -57,8 +57,7 @@ class Email {
 
 
 	public function no_pro_message(){
-		tutor_alert(sprintf(__(' %s Get Tutor LMS Pro %s to extend email functionality and send email notifications for certain events. You can easily choose the events for which you wish to send emails.', 'tutor'), "<strong> <a href='https://www.themeum.com/product/tutor-lms/?utm_source=tutor_lms_email_settings' target='_blank'>", "</a></strong>"  ) );
-
+		
 	}
 
 }

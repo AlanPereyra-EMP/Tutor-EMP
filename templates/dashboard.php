@@ -56,7 +56,7 @@ do_action('tutor_dashboard/before/wrap'); ?>
                                     <div class="tutor-dashboard-header-ratings">
 										<?php tutor_utils()->star_rating_generator($instructor_rating->rating_avg); ?>
                                         <span><?php echo esc_html($instructor_rating->rating_avg);  ?></span>
-                                        <span> (<?php echo sprintf(__('%d Ratings', 'tutor'), $instructor_rating->rating_count); ?>) </span>
+                                        <span> (<?php echo sprintf(__('%d Calificación', 'tutor'), $instructor_rating->rating_count); ?>) </span>
                                     </div>
                                     <!--<div class="tutor-dashboard-header-notifications">
                                         <?php /*_e('Notification'); */?> <span>9</span>
@@ -78,7 +78,7 @@ do_action('tutor_dashboard/before/wrap'); ?>
 								if (tutor_utils()->get_option('enable_become_instructor_btn')) {
 									?>
                                         <a class="tutor-btn bordered-btn" href="<?php echo esc_url(tutor_utils()->instructor_register_url()); ?>">
-                                            <?php echo sprintf(__("%s Become an instructor", 'tutor'), '<i class="tutor-icon-man-user"></i> &nbsp;'); ?>
+                                            <?php echo sprintf(__("%s Se un instructor", 'tutor'), '<i class="tutor-icon-man-user"></i> &nbsp;'); ?>
                                         </a>
 									<?php
 								}

@@ -35,7 +35,7 @@ class Assets{
 		wp_enqueue_script('tutor-admin', tutor()->url.'assets/js/tutor-admin.js', array('jquery', 'wp-color-picker'), tutor()->version, true );
 
 		$tutor_localize_data = array(
-			'delete_confirm_text' => __('Are you sure? it can not be undone.', 'tutor'),
+			'delete_confirm_text' => __('Estas seguro? Esto no se puede deshacer.', 'tutor'),
 		);
 		if ( ! empty($_GET['taxonomy']) && ( $_GET['taxonomy'] === 'course-category' || $_GET['taxonomy'] === 'course-tag') ){
 			$tutor_localize_data['open_tutor_admin_menu'] = true;
@@ -82,7 +82,7 @@ class Assets{
 			'enable_lesson_classic_editor' => get_tutor_option('enable_lesson_classic_editor'),
 
 			'text' => array(
-				'assignment_text_validation_msg' => __('Assignment answer can not be empty', 'tutor'),
+				'assignment_text_validation_msg' => __('La respuesta de la tarea no puede estar vacía', 'tutor'),
 			),
 		);
 
@@ -216,5 +216,5 @@ class Assets{
 		}
 		return $gen;
 	}
-	
+
 }

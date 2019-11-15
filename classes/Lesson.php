@@ -37,9 +37,9 @@ class Lesson extends Tutor_Base {
 	public function register_meta_box(){
 		$lesson_post_type = $this->lesson_post_type;
 
-		add_meta_box( 'tutor-course-select', __( 'Select Course', 'tutor' ), array($this, 'lesson_metabox'), $lesson_post_type );
-		add_meta_box( 'tutor-lesson-videos', __( 'Lesson Video', 'tutor' ), array($this, 'lesson_video_metabox'), $lesson_post_type );
-		add_meta_box( 'tutor-lesson-attachments', __( 'Attachments', 'tutor' ), array($this, 'lesson_attachments_metabox'), $lesson_post_type );
+		add_meta_box( 'tutor-course-select', __( 'Selecciona curso', 'tutor' ), array($this, 'lesson_metabox'), $lesson_post_type );
+		add_meta_box( 'tutor-lesson-videos', __( 'Video de la lección', 'tutor' ), array($this, 'lesson_video_metabox'), $lesson_post_type );
+		add_meta_box( 'tutor-lesson-attachments', __( 'Archivos', 'tutor' ), array($this, 'lesson_attachments_metabox'), $lesson_post_type );
 	}
 
 	public function lesson_metabox(){
@@ -99,7 +99,7 @@ class Lesson extends Tutor_Base {
 
 			$post_arr = array(
 				'post_type'    => $this->lesson_post_type,
-				'post_title'   => __('Draft Lesson', 'tutor'),
+				'post_title'   => __('Lecciones de borrador', 'tutor'),
 				'post_status'  => 'publish',
 				'post_author'  => get_current_user_id(),
 				'post_parent'  => $topic_id,
@@ -203,7 +203,7 @@ class Lesson extends Tutor_Base {
 	public function add_column($columns){
 		$date_col = $columns['date'];
 		unset($columns['date']);
-		$columns['course'] = __('Course', 'tutor');
+		$columns['course'] = __('Curso', 'tutor');
 		$columns['date'] = $date_col;
 
 		return $columns;
@@ -242,7 +242,7 @@ class Lesson extends Tutor_Base {
 
 		//TODO: need to show view if not signed_in
 		if ( ! $user_id){
-			die(__('Please Sign-In', 'tutor'));
+			die(__('Por favor ingresar', 'tutor'));
 		}
 
 		$lesson_id = (int) sanitize_text_field($_POST['lesson_id']);
@@ -278,5 +278,3 @@ class Lesson extends Tutor_Base {
 	}
 
 }
-
-

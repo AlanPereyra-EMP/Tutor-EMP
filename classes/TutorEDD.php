@@ -70,12 +70,12 @@ class TutorEDD extends Tutor_Base {
 			'sections'    => array(
 				'general' => array(
 					'label' => __('General', 'tutor-edd'),
-					'desc' => __('Tutor Course Attachments Settings', 'tutor-edd'),
+					'desc' => __('Configuración de archivos adjuntos del curso de tutor', 'tutor-edd'),
 					'fields' => array(
 						'enable_tutor_edd' => array(
 							'type'          => 'checkbox',
 							'label'         => __('Enable EDD', 'tutor'),
-							'desc'          => __('This will enable sell your product via EDD',	'tutor'),
+							'desc'          => __('Esto permitirá vender su producto a través de EDD',	'tutor'),
 						),
 					),
 				),
@@ -102,7 +102,7 @@ class TutorEDD extends Tutor_Base {
 	}
 
 	public function register_meta_box(){
-		add_meta_box( 'tutor-attached-edd-product', __( 'Add Product', 'tutor' ), array($this, 'course_add_product_metabox'), $this->course_post_type, 'advanced', 'high' );
+		add_meta_box( 'tutor-attached-edd-product', __( 'Añadir producto', 'tutor' ), array($this, 'course_add_product_metabox'), $this->course_post_type, 'advanced', 'high' );
 	}
 
 	/**

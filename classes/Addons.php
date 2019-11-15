@@ -85,7 +85,7 @@ class Addons {
 	 */
 
 	public function addons_page(){
-		
+
 		if ( false === ( $addons_themes_data = get_transient( 'tutor_addons_themes_data' ) ) ) {
 			//Request New
 			$api_endpoint = 'https://www.themeum.com/wp-json/addon-serve/v2/get-products';

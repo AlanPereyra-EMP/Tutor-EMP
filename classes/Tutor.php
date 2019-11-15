@@ -391,7 +391,7 @@ final class Tutor{
 		$instructor_role = tutor()->instructor_role;
 
 		remove_role($instructor_role);
-		add_role( $instructor_role, __('Tutor Instructor', 'tutor'), array() );
+		add_role( $instructor_role, __('Instructor', 'tutor'), array() );
 
 		$custom_post_type_permission = array(
 			//Manage Instructor
@@ -486,7 +486,7 @@ final class Tutor{
 	 */
 	public static function save_data(){
 		$student_dashboard_args = array(
-			'post_title'    => __('Dashboard', 'tutor'),
+			'post_title'    => __('Página personal', 'tutor'),
 			'post_content'  => '',
 			'post_type'     => 'page',
 			'post_status'   => 'publish',
@@ -495,7 +495,7 @@ final class Tutor{
 		tutor_utils()->update_option('tutor_dashboard_page_id', $student_dashboard_page_id);
 
 		$student_registration_args = array(
-			'post_title'    => __('Student Registration', 'tutor'),
+			'post_title'    => __('Registro de estudiantes', 'tutor'),
 			'post_content'  => '[tutor_student_registration_form]',
 			'post_type'     => 'page',
 			'post_status'   => 'publish',
@@ -504,7 +504,7 @@ final class Tutor{
 		tutor_utils()->update_option('student_register_page', $student_register_page_id);
 
 		$instructor_registration_args = array(
-			'post_title'    => __('Instructor Registration', 'tutor'),
+			'post_title'    => __('Registro de instructores', 'tutor'),
 			'post_content'  => '[tutor_instructor_registration_form]',
 			'post_type'     => 'page',
 			'post_status'   => 'publish',

@@ -58,8 +58,8 @@ if ( ! function_exists('tutor_course_categories_dropdown')){
 		$categories = tutor_utils()->get_course_categories();
 
 		$output = '';
-		$output .= "<select name='{$name}' {$multiple_select} class='{$classes}' data-placeholder='". __('Search Course Category. ex. Design, Development, Business', 'tutor') ."'>";
-		$output .= "<option value=''>". __('Select a category', 'tutor') ."</option>";
+		$output .= "<select name='{$name}' {$multiple_select} class='{$classes}' data-placeholder='". __('Buscar categoría de curso. ej. Diseño, Desarrollo, Negocios', 'tutor') ."'>";
+		$output .= "<option value=''>". __('Selecionar una castegoría', 'tutor') ."</option>";
 		$output .= _generate_categories_dropdown_option($post_ID, $categories, $args);
 		$output .= "</select>";
 

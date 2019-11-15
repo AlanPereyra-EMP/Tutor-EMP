@@ -36,12 +36,12 @@ class Student {
 		tutor_utils()->checking_nonce();
 
 		$required_fields = apply_filters('tutor_student_registration_required_fields', array(
-			'first_name'                => __('First name field is required', 'tutor'),
-			'last_name'                 =>  __('Last name field is required', 'tutor'),
-			'email'                     => __('E-Mail field is required', 'tutor'),
-			'user_login'                => __('User Name field is required', 'tutor'),
-			'password'                  => __('Password field is required', 'tutor'),
-			'password_confirmation'     => __('Password Confirmation field is required', 'tutor'),
+			'first_name'                => __('El campo de nombre es obligatorio', 'tutor'),
+			'last_name'                 =>  __('Se requiere el campo de apellido', 'tutor'),
+			'email'                     => __('Campo de correo electrónico es obligatorio', 'tutor'),
+			'user_login'                => __('El campo de nombre de usuario es obligatorio', 'tutor'),
+			'password'                  => __('El campo de contraseña es obligatorio', 'tutor'),
+			'password_confirmation'     => __('El campo de confirmación de contraseña es obligatorio', 'tutor'),
 		));
 
 		$validation_errors = array();
@@ -52,10 +52,10 @@ class Student {
 		}
 
 		if (!filter_var(tutor_utils()->input_old('email'), FILTER_VALIDATE_EMAIL)) {
-			$validation_errors['email'] = __('Valid E-Mail is required', 'tutor');
+			$validation_errors['email'] = __('Se requiere correo electrónico válido', 'tutor');
 		}
 		if (tutor_utils()->input_old('password') !== tutor_utils()->input_old('password_confirmation')){
-			$validation_errors['password_confirmation'] = __('Confirm password does not matched with Password field', 'tutor');
+			$validation_errors['password_confirmation'] = __('La contraseña no coincide', 'tutor');
 		}
 
 		if (count($validation_errors)){
@@ -207,16 +207,16 @@ class Student {
 
 		$validation_errors = array();
 		if ( ! $previous_password_checked){
-			$validation_errors['incorrect_previous_password'] = __('Incorrect Previous Password', 'tutor');
+			$validation_errors['incorrect_previous_password'] = __('Contraseña anterior incorrecta', 'tutor');
 		}
 		if (empty($new_password)){
-			$validation_errors['new_password_required'] = __('New Password Required', 'tutor');
+			$validation_errors['new_password_required'] = __('Nueva contraseña requerida', 'tutor');
 		}
 		if (empty($confirm_new_password)){
-			$validation_errors['confirm_password_required'] = __('Confirm Password Required', 'tutor');
+			$validation_errors['confirm_password_required'] = __('Confirmar contraseña requerida', 'tutor');
 		}
 		if ( $new_password !== $confirm_new_password){
-			$validation_errors['password_not_matched'] = __('New password and confirm password does not matched', 'tutor');
+			$validation_errors['password_not_matched'] = __('La nueva contraseña y la contraseña de confirmación no coinciden', 'tutor');
 		}
 		if (count($validation_errors)){
 			$this->error_msgs = $validation_errors;
@@ -226,7 +226,7 @@ class Student {
 
 		if ($previous_password_checked && ! empty($new_password) && $new_password === $confirm_new_password){
 			wp_set_password($new_password, $user->ID);
-			tutor_utils()->set_flash_msg( __('Password set successfully', 'tutor') );
+			tutor_utils()->set_flash_msg( __('La contraseña se configuró correctamente', 'tutor') );
 		}
 
 		wp_redirect(wp_get_raw_referer());

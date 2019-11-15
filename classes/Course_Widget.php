@@ -15,12 +15,12 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 
 class Course_Widget extends \WP_Widget {
-	
+
 	function __construct() {
 		parent::__construct(
 			'tutor_course_widget', // Base ID
 			esc_html__( 'Tutor Course', 'tutor' ), // Name
-			array( 'description' => esc_html__( 'Display courses wherever widget support is available.', 'tutor' ), ) // Args
+			array( 'description' => esc_html__( 'Mostrar cursos donde haya soporte de widgets disponible.', 'tutor' ), ) // Args
 		);
 	}
 
@@ -102,7 +102,7 @@ class Course_Widget extends \WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'tutor' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Nuevo título', 'tutor' );
 		$id = ! empty( $instance['id'] ) ? $instance['id'] : '';
 		$exclude_ids = ! empty( $instance['exclude_ids'] ) ? $instance['exclude_ids'] : '';
 		$category = ! empty( $instance['category'] ) ? $instance['category'] : '';
@@ -165,7 +165,7 @@ class Course_Widget extends \WP_Widget {
 				$this->get_field_name( 'count' ) ); ?>" type="number" value="<?php echo esc_attr( $count ); ?>"> <br />
 			<span style="color: #AAAAAA"><?php _e('Total results you like to show', 'tutor'); ?></span>
 		</p>
-		
+
 		<?php
 	}
 
