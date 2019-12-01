@@ -25,7 +25,7 @@ $earning_sum = tutor_utils()->get_earning_sum($user_id, compact('year', 'dataFor
 
 
 if ( ! $earning_sum){
-	echo '<p>'.__('No Earning info available', 'tutor' ).'</p>';
+	echo '<p>'.__('No hay información de ganancias disponible', 'tutor' ).'</p>';
 	return;
 }
 
@@ -39,12 +39,12 @@ $complete_status = "'".implode("','", $complete_status)."'";
  */
 
 $salesQuery = $wpdb->get_results( "
-              SELECT SUM(instructor_amount) as total_earning, 
-              MONTHNAME(created_at)  as month_name 
-              from {$wpdb->prefix}tutor_earnings 
-              WHERE user_id = {$user_id} AND order_status IN({$complete_status}) 
-              AND YEAR(created_at) = {$year} 
-              GROUP BY MONTH (created_at) 
+              SELECT SUM(instructor_amount) as total_earning,
+              MONTHNAME(created_at)  as month_name
+              from {$wpdb->prefix}tutor_earnings
+              WHERE user_id = {$user_id} AND order_status IN({$complete_status})
+              AND YEAR(created_at) = {$year}
+              GROUP BY MONTH (created_at)
               ORDER BY MONTH(created_at) ASC ;");
 
 $total_earning = wp_list_pluck($salesQuery, 'total_earning');
@@ -101,7 +101,7 @@ $statements = tutor_utils()->get_earning_statements($user_id, compact('year', 'd
 
 
 <div class="tutor-dashboard-item-group">
-    <h4><?php echo sprintf(__("Earning Data for the year of %s", 'tutor'), $year);?></h4>
+    <h4><?php echo sprintf(__("Datos de ingreso del año de %s", 'tutor'), $year);?></h4>
     <?php
     tutor_load_template('dashboard.earning.chart-body', compact('chartData', 'statements'));
     ?>

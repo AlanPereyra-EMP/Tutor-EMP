@@ -24,7 +24,7 @@ $end_date = date("Y-m-t");
 
 $earning_sum = tutor_utils()->get_earning_sum($user_id, compact('start_date', 'end_date'));
 if ( ! $earning_sum){
-	echo '<p>'.__('No Earning info available', 'tutor' ).'</p>';
+	echo '<p>'.__('No hay información de ganancias disponible', 'tutor' ).'</p>';
 	return;
 }
 
@@ -50,10 +50,10 @@ foreach ($period as $dt) {
  */
 
 $salesQuery = $wpdb->get_results( "
-              SELECT SUM(instructor_amount) as total_earning, 
-              DATE(created_at)  as date_format 
-              from {$wpdb->prefix}tutor_earnings 
-              WHERE user_id = {$user_id} AND order_status IN({$complete_status}) 
+              SELECT SUM(instructor_amount) as total_earning,
+              DATE(created_at)  as date_format
+              from {$wpdb->prefix}tutor_earnings
+              WHERE user_id = {$user_id} AND order_status IN({$complete_status})
               AND (created_at BETWEEN '{$start_date}' AND '{$end_date}')
               GROUP BY date_format
               ORDER BY created_at ASC ;");
@@ -108,7 +108,7 @@ $statements = tutor_utils()->get_earning_statements($user_id, compact('start_dat
 
 
 <div class="tutor-dashboard-item-group">
-    <h4><?php echo sprintf(__("Earning Data for the month of %s", 'tutor'), date("F, Y", strtotime($start_date)));?></h4>
+    <h4><?php echo sprintf(__("Datos de ingreso del mes de %s", 'tutor'), date("F, Y", strtotime($start_date)));?></h4>
     <?php
     tutor_load_template('dashboard.earning.chart-body', compact('chartData', 'statements'));
     ?>
