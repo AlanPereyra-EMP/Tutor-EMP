@@ -50,14 +50,14 @@ if ($statements->count) {
                     </td>
 
                     <td>
-                        <p><?php _e('Commission', 'tutor'); ?> : <?php echo tutor_utils()->tutor_price($statement->admin_amount); ?> </p>
+                        <p><?php _e('Comiciones', 'tutor'); ?> : <?php echo tutor_utils()->tutor_price($statement->admin_amount); ?> </p>
                         <p class="small-text"><?php _e('Calificación', 'tutor'); ?> : <?php echo $statement->admin_rate; ?> </p>
                         <p class="small-text"><?php _e('Tipo', 'tutor'); ?> : <?php echo $statement->commission_type; ?> </p>
 
-                        <p><?php _e('Deducted', 'tutor'); ?> : <?php echo $statement->deduct_fees_name; ?>  <?php echo tutor_utils()->tutor_price
+                        <p><?php _e('Deducciones', 'tutor'); ?> : <?php echo $statement->deduct_fees_name; ?>  <?php echo tutor_utils()->tutor_price
                             ($statement->deduct_fees_amount); ?>
                         </p>
-                        <p class="small-text"><?php _e('Type', 'tutor'); ?> : <?php echo $statement->deduct_fees_type; ?> </p>
+                        <p class="small-text"><?php _e('Tipo', 'tutor'); ?> : <?php echo $statement->deduct_fees_type; ?> </p>
                     </td>
                 </tr>
                 <?php

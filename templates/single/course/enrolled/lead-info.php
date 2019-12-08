@@ -53,17 +53,17 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
                     <a href="<?php echo $profile_url; ?>"> <?php echo tutor_utils()->get_tutor_avatar($post->post_author); ?></a>
                 </div>
                 <div class="tutor-single-course-author-name">
-                    <span><?php _e('by', 'tutor'); ?></span>
+                    <span><?php _e('Por', 'tutor'); ?></span>
                     <a href="<?php echo tutor_utils()->profile_url($authordata->ID); ?>"><?php echo get_the_author(); ?></a>
                 </div>
             </li>
             <li class="tutor-course-level">
-                <span><?php _e('Course level:', 'tutor'); ?></span>
+                <span><?php _e('Nivel del curso:', 'tutor'); ?></span>
 				<?php echo get_tutor_course_level(); ?>
             </li>
 
             <li class="tutor-social-share">
-                <span><?php _e('Share:', 'tutor'); ?></span>
+                <span><?php _e('Compartido:', 'tutor'); ?></span>
 				<?php tutor_social_share(); ?>
             </li>
 
@@ -79,7 +79,7 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
 			if(is_array($course_categories) && count($course_categories)){
 				?>
                 <li>
-                    <span><?php esc_html_e('Categories', 'tutor') ?></span>
+                    <span><?php esc_html_e('Categorías', 'tutor') ?></span>
 					<?php
 					foreach ($course_categories as $course_category){
 						$category_name = $course_category->name;
@@ -95,16 +95,16 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
 			if(!empty($course_duration)){
 				?>
                 <li>
-                    <span><?php esc_html_e('Total Hour', 'tutor') ?></span>
+                    <span><?php esc_html_e('Horas totales', 'tutor') ?></span>
 					<?php echo $course_duration; ?>
                 </li>
 			<?php } ?>
             <li>
-                <span><?php esc_html_e('Total Enrolled', 'tutor') ?></span>
+                <span><?php esc_html_e('Inscritos', 'tutor') ?></span>
 				<?php echo (int) tutor_utils()->count_enrolled_users_by_course(); ?>
             </li>
             <li>
-                <span><?php esc_html_e('Last Update', 'tutor') ?></span>
+                <span><?php esc_html_e('Última actualización', 'tutor') ?></span>
 				<?php echo esc_html(get_the_modified_date()); ?>
             </li>
         </ul>

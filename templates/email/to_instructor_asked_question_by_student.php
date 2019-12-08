@@ -6,10 +6,10 @@
 
 ?>
 
-<p> Dear {instructor_username}, </p>
+<p> Estimado {instructor_username}, </p>
 
 <p>
-	Mr. {student_username} asked a question on <strong>{course_name}</strong> at <strong>{enroll_time}</strong>. The course URL is: <strong>{course_url}</strong>. You will find the question below.
+	Sr/Sra. {student_username} hizo una pregunta en <strong>{course_name}</strong> el <strong>{enroll_time}</strong>. La URL es: <strong>{course_url}</strong>. Encontrará la pregunta a continuación.
 </p>
 
 <br />

@@ -32,27 +32,27 @@ $user = wp_get_current_user();
             <div class="tutor-form-col-4">
                 <div class="tutor-form-group">
                     <label>
-						<?php _e('First Name', 'tutor'); ?>
+						<?php _e('Primer nombre', 'tutor'); ?>
                     </label>
-                    <input type="text" name="first_name" value="<?php echo $user->first_name; ?>" placeholder="<?php _e('First Name', 'tutor'); ?>">
+                    <input type="text" name="first_name" value="<?php echo $user->first_name; ?>" placeholder="<?php _e('Primer nombre', 'tutor'); ?>">
                 </div>
             </div>
 
             <div class="tutor-form-col-4">
                 <div class="tutor-form-group">
                     <label>
-						<?php _e('Last Name', 'tutor'); ?>
+						<?php _e('Apellido', 'tutor'); ?>
                     </label>
-                    <input type="text" name="last_name" value="<?php echo $user->last_name; ?>" placeholder="<?php _e('Last Name', 'tutor'); ?>">
+                    <input type="text" name="last_name" value="<?php echo $user->last_name; ?>" placeholder="<?php _e('Apellido', 'tutor'); ?>">
                 </div>
             </div>
 
             <div class="tutor-form-col-4">
                 <div class="tutor-form-group">
                     <label>
-				        <?php _e('Phone Number', 'tutor'); ?>
+				        <?php _e('Número', 'tutor'); ?>
                     </label>
-                    <input type="text" name="phone_number" value="<?php echo get_user_meta($user->ID,'phone_number',true); ?>" placeholder="<?php _e('Phone Number', 'tutor'); ?>">
+                    <input type="text" name="phone_number" value="<?php echo get_user_meta($user->ID,'phone_number',true); ?>" placeholder="<?php _e('Número', 'tutor'); ?>">
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@ $user = wp_get_current_user();
             <div class="tutor-form-col-12">
                 <div class="tutor-form-group">
                     <label>
-					    <?php _e('Profile Photo', 'tutor'); ?>
+					    <?php _e('Foto de perfil', 'tutor'); ?>
                     </label>
                     <div class="tutor-profile-photo-upload-wrap">
                         <?php
@@ -86,7 +86,7 @@ $user = wp_get_current_user();
                         <img src="<?php echo $profile_photo_src; ?>" class="profile-photo-img">
                         <input type="hidden" id="tutor_profile_photo_id" name="tutor_profile_photo_id" value="<?php echo $profile_photo_id; ?>">
                         <input type="file" name="tutor_profile_photo_file" id="tutor_profile_photo_file" style="display:none"/>
-                        <button type="button" id="tutor_profile_photo_button" class="tutor-profile-photo-upload-btn"><?php _e('Upload Image', 'tutor'); ?></button>
+                        <button type="button" id="tutor_profile_photo_button" class="tutor-profile-photo-upload-btn"><?php _e('Subir imagen', 'tutor'); ?></button>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@ $user = wp_get_current_user();
         <div class="tutor-form-row">
             <div class="tutor-form-col-12">
                 <div class="tutor-form-group tutor-profile-form-btn-wrap">
-                    <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-button"><?php _e('Update Profile', 'tutor'); ?></button>
+                    <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-button"><?php _e('actualizar perfil', 'tutor'); ?></button>
                 </div>
             </div>
         </div>

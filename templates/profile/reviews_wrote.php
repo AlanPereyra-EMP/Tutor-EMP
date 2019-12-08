@@ -21,8 +21,8 @@ $reviews = tutor_utils()->get_reviews_by_user($user_id);
 
 if ( ! is_array($reviews) || ! count($reviews)){ ?>
     <div>
-		<h2><?php _e("Not Found" , 'tutor'); ?></h2>
-		<p><?php _e("Sorry, but you are looking for something that isn't here." , 'tutor'); ?></p>
+		<h2><?php _e("No encontrado" , 'tutor'); ?></h2>
+		<p><?php _e("Lo sentimos, pero estás buscando algo que no está aquí." , 'tutor'); ?></p>
     </div>
     <?php
 	return;
@@ -31,7 +31,7 @@ if ( ! is_array($reviews) || ! count($reviews)){ ?>
 
 <div class=" tutor-course-reviews-wrap">
     <div class="course-target-reviews-title">
-        <h4><?php echo sprintf(__('Reviews wrote by %s ', 'tutor'), $get_user->display_name); ?></h4>
+        <h4><?php echo sprintf(__('Reseña escrita ell %s ', 'tutor'), $get_user->display_name); ?></h4>
     </div>
 
     <div class="tutor-reviews-list">
@@ -59,7 +59,7 @@ if ( ! is_array($reviews) || ! count($reviews)){ ?>
                 <div class="review-content review-right">
 
                     <div class="individual-review-course-name">
-                        <?php _e('On', 'tutor'); ?>
+                        <?php _e('En', 'tutor'); ?>
                         <a href="<?php echo get_the_permalink($review->comment_post_ID); ?>"><?php echo get_the_title
                         ($review->comment_post_ID);
                         ?></a>

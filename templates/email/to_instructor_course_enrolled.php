@@ -6,8 +6,8 @@
 
 ?>
 
-<p> Dear {instructor_username}, </p>
+<p> Estimado {instructor_username}, </p>
 
 <p>
-	Mr. {student_username} has enrolled on <strong>{course_name}</strong> at <strong>{enroll_time}</strong>. The enrolled course URL is: <strong>{course_url}</strong>.
+	Sr/Sra. {student_username} Se ha inscrito <strong>{course_name}</strong> el <strong>{enroll_time}</strong>. La URL es: <strong>{course_url}</strong>.
 </p>

@@ -50,7 +50,7 @@ do_action('tutor_course/single/add-to-cart/before');
 
 			<div class=" tutor-course-enroll-wrap">
 				<button type="submit" class="tutor-btn-enroll tutor-btn tutor-course-purchase-btn">
-					<?php _e('Enroll Now', 'tutor'); ?>
+					<?php _e('Inscribirse ahora', 'tutor'); ?>
 				</button>
 			</div>
 		</form>

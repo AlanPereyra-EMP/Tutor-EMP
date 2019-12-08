@@ -16,9 +16,9 @@ if($assignments->count){
     <table class="tutor-dashboard-info-table tutor-dashboard-assignment-table">
         <thead>
         <tr>
-            <th><?php _e('Course Name', 'tutor'); ?></th>
-            <th><?php _e('Total Mark', 'tutor'); ?></th>
-            <th><?php _e('Total Submit', 'tutor'); ?></th>
+            <th><?php _e('Nombre de curso', 'tutor'); ?></th>
+            <th><?php _e('Calificaciones totales', 'tutor'); ?></th>
+            <th><?php _e('Cantidad de intentos', 'tutor'); ?></th>
             <th>&nbsp;</th>
         </tr>
         </thead>
@@ -39,7 +39,7 @@ if($assignments->count){
                 </td>
                 <td><?php echo $max_mark ?></td>
                 <td><?php echo $comment_count ?></td>
-                <td> <?php echo "<a title='". __('View Coures', 'tutor') ."' href='".esc_url($submitted_url.'?assignment='.$item->ID)."'><i class='tutor-icon-angle-right'></i> </a>"; ?> </td>
+                <td> <?php echo "<a title='". __('Ver cursos', 'tutor') ."' href='".esc_url($submitted_url.'?assignment='.$item->ID)."'><i class='tutor-icon-angle-right'></i> </a>"; ?> </td>
             </tr>
             <?php
         }

@@ -14,8 +14,8 @@ $_tutor_course_price_type = tutils()->price_type();
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-			<?php _e('Select product', 'tutor'); ?> <br />
-            <p class="text-muted">(<?php _e('When selling the course', 'tutor'); ?>)</p>
+			<?php _e('Seleccionar producto', 'tutor'); ?> <br />
+            <p class="text-muted">(<?php _e('Al vender el curso', 'tutor'); ?>)</p>
         </label>
     </div>
     <div class="tutor-option-field">
@@ -26,7 +26,7 @@ $_tutor_course_price_type = tutils()->price_type();
 		?>
 
         <select name="_tutor_course_product_id" class="tutor_select2" style="min-width: 300px;">
-            <option value="-1"><?php _e('Select a Product'); ?></option>
+            <option value="-1"><?php _e('Selecionar producto'); ?></option>
 			<?php
 			foreach ($products as $product){
 				echo "<option value='{$product->ID}' ".selected($product->ID, $product_id)." >{$product->post_title}</option>";
@@ -35,7 +35,7 @@ $_tutor_course_price_type = tutils()->price_type();
         </select>
 
         <p class="desc">
-			<?php _e('Sell your product, process by EDD', 'tutor'); ?>
+			<?php _e('Vende tu producto, proceso por EDD', 'tutor'); ?>
         </p>
 
     </div>
@@ -45,18 +45,18 @@ $_tutor_course_price_type = tutils()->price_type();
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-			<?php _e('Course Type', 'tutor'); ?> <br />
+			<?php _e('Tipo de curso', 'tutor'); ?> <br />
         </label>
     </div>
     <div class="tutor-option-field">
 
         <label>
             <input id="tutor_course_price_type_pro" type="radio" name="tutor_course_price_type" value="paid" <?php $_tutor_course_price_type ? checked($_tutor_course_price_type, 'paid') : checked('true', 'true'); ?> >
-            <?php _e('Paid', 'tutor'); ?>
+            <?php _e('Pago', 'tutor'); ?>
         </label>
         <label>
             <input type="radio" name="tutor_course_price_type" value="free"  <?php checked($_tutor_course_price_type, 'free'); ?> >
-	        <?php _e('Free', 'tutor'); ?>
+	        <?php _e('Gratis', 'tutor'); ?>
         </label>
     </div>
 </div>

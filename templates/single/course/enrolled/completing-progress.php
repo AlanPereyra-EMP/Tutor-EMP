@@ -16,16 +16,15 @@ do_action('tutor_course/single/enrolled/before/lead_info/progress_bar');
 ?>
 
 <div class="tutor-course-status">
-    <h4 class="tutor-segment-title"><?php _e('Course Status', 'tutor'); ?></h4>
+    <h4 class="tutor-segment-title"><?php _e('Estado del curso', 'tutor'); ?></h4>
     <div class="tutor-progress-bar-wrap">
         <div class="tutor-progress-bar">
             <div class="tutor-progress-filled" style="--tutor-progress-left: <?php echo $completed_count.'%;'; ?>"></div>
         </div>
-        <span class="tutor-progress-percent"><?php echo $completed_count; ?>% <?php _e(' Complete', 'tutor')?></span>
+        <span class="tutor-progress-percent"><?php echo $completed_count; ?>% <?php _e(' Completo', 'tutor')?></span>
     </div>
 </div>
 
 <?php
     do_action('tutor_course/single/enrolled/after/lead_info/progress_bar');
 ?>
-

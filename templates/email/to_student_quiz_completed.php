@@ -6,8 +6,8 @@
 
 ?>
 
-<p> Dear {username}, </p>
+<p> Estimado {username}, </p>
 
 <p>
-	Thank you for submitting your answers for <strong>{quiz_name}</strong> in course <strong>{course_name}</strong> at <strong>{submission_time}</strong>. This message is to confirm that we have received your answers. You can access this quiz on: <strong>{quiz_url}</strong>.
+	Gracias por enviar sus respuestas para <strong>{quiz_name}</strong> en el curso <strong>{course_name}</strong> el <strong>{submission_time}</strong>. Este mensaje es para confirmar que hemos recibido sus respuestas. Puede acceder a este cuestionario en: <strong>{quiz_url}</strong>.
 </p>

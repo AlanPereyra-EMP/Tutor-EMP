@@ -19,7 +19,7 @@ $attempt = tutor_utils()->get_attempt($attempt_id);
 
 if ( ! $attempt){
 	?>
-    <h1><?php _e('Attempt not found', 'tutor'); ?></h1>
+    <h1><?php _e('Intento fallido', 'tutor'); ?></h1>
 	<?php
 	return;
 }
@@ -33,7 +33,7 @@ $user = get_userdata($user_id);
 
 
 <div class="tutor-quiz-attempt-review-wrap">
-    <h2 class="attempt-review-title"> <i class="tutor-icon-list"></i> <?php _e('View Attempts', 'tutor'); ?></h2>
+    <h2 class="attempt-review-title"> <i class="tutor-icon-list"></i> <?php _e('Ver intentos', 'tutor'); ?></h2>
     <div class="tutor-quiz-attempt-info-row">
         <div class="attempt-view-top">
             <div class="attempt-info-col">
@@ -173,7 +173,7 @@ $user = get_userdata($user_id);
             <p class="attempt-review-at">
                 <span class="circle-arrow">&circlearrowright; </span>
                 <strong>
-	                <?php _e('Manually reviewed at: ', 'tutor'); ?>
+	                <?php _e('Calificado manualmente por: ', 'tutor'); ?>
                 </strong>
 		        <?php echo date_i18n(get_option('date_format'), strtotime($attempt->manually_reviewed_at)).' '.date_i18n(get_option('time_format'), strtotime($attempt->manually_reviewed_at)); ?>
             </p>
@@ -188,17 +188,17 @@ $user = get_userdata($user_id);
         <div class="quiz-attempt-answers-wrap">
 
             <div class="attempt-answers-header">
-                <h3><?php _e('Quiz Overview', 'tutor'); ?></h3>
+                <h3><?php _e('Vista previa de preguntas', 'tutor'); ?></h3>
             </div>
 
             <table class="wp-list-table">
                 <tr>
-                    <th><?php _e('Type', 'tutor'); ?></th>
+                    <th><?php _e('Tipo', 'tutor'); ?></th>
                     <th><?php _e('No.', 'tutor'); ?></th>
-                    <th><?php _e('Question', 'tutor'); ?></th>
-                    <th><?php _e('Given Answers', 'tutor'); ?></th>
-                    <th><?php _e('Correct/Incorrect', 'tutor'); ?></th>
-                    <th><?php _e('Manual Review', 'tutor'); ?></th>
+                    <th><?php _e('Pregunta', 'tutor'); ?></th>
+                    <th><?php _e('Seleccionar respuestas', 'tutor'); ?></th>
+                    <th><?php _e('Verdadero/Falso', 'tutor'); ?></th>
+                    <th><?php _e('Revisión manual', 'tutor'); ?></th>
                 </tr>
 				<?php
 				$answer_i = 0;
@@ -326,8 +326,8 @@ $user = get_userdata($user_id);
                         </td>
 
                         <td style="white-space: nowrap">
-							<a href="javascript:;" data-attempt-id="<?php echo $attempt_id; ?>" data-attempt-answer-id="<?php echo $answer->attempt_answer_id; ?>" data-mark-as="correct" title="<?php _e('Mark as correct', 'tutor'); ?>" class="quiz-manual-review-action"><i class="tutor-icon-mark"></i> </a>
-                            <a href="javascript:;" data-attempt-id="<?php echo $attempt_id; ?>" data-attempt-answer-id="<?php echo $answer->attempt_answer_id; ?>" data-mark-as="incorrect" title="<?php _e('Mark as In correct', 'tutor'); ?>" class="quiz-manual-review-action"><i class="tutor-icon-line-cross"></i></a>
+							<a href="javascript:;" data-attempt-id="<?php echo $attempt_id; ?>" data-attempt-answer-id="<?php echo $answer->attempt_answer_id; ?>" data-mark-as="correct" title="<?php _e('Marcado como verdadero', 'tutor'); ?>" class="quiz-manual-review-action"><i class="tutor-icon-mark"></i> </a>
+                            <a href="javascript:;" data-attempt-id="<?php echo $attempt_id; ?>" data-attempt-answer-id="<?php echo $answer->attempt_answer_id; ?>" data-mark-as="incorrect" title="<?php _e('Marcado como falso', 'tutor'); ?>" class="quiz-manual-review-action"><i class="tutor-icon-line-cross"></i></a>
                         </td>
                     </tr>
 					<?php

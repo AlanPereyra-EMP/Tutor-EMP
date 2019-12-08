@@ -30,7 +30,7 @@ if ($product) {
 }else{
 	?>
     <p class="tutor-alert-warning">
-		<?php _e('Please make sure that your product exists and valid for this course', 'tutor'); ?>
+		<?php _e('Asegúrese de que su producto exista y sea válido para este curso', 'tutor'); ?>
     </p>
 	<?php
 }

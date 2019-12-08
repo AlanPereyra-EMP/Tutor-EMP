@@ -6,7 +6,7 @@
 
 ?>
 
-<h3><?php _e('My Courses', 'tutor'); ?></h3>
+<h3><?php _e('Mis cursos', 'tutor'); ?></h3>
 
 <div class="tutor-dashboard-content-inner">
 
@@ -21,7 +21,7 @@
 			$avg_rating = tutor_utils()->get_course_rating()->rating_avg;
             $tutor_course_img = get_tutor_course_thumbnail_src();
 			?>
-        
+
             <div id="tutor-dashboard-course-<?php the_ID(); ?>" class="tutor-mycourse-wrap tutor-mycourse-<?php the_ID(); ?>">
                 <div class="tutor-mycourse-thumbnail" style="background-image: url(<?php echo esc_url($tutor_course_img); ?>)"></div>
                 <div class="tutor-mycourse-content">
@@ -42,20 +42,20 @@
                         <ul>
                             <li>
 								<?php
-								_e('Status:', 'tutor');
+								_e('Estado:', 'tutor');
 								$status = ucwords($post->post_status);
 								echo "<span>$status</span>";
 								?>
                             </li>
                             <li>
 								<?php
-								_e('Duration:', 'tutor');
+								_e('Duración:', 'tutor');
 								echo "<span>$course_duration</span>";
 								?>
                             </li>
                             <li>
 								<?php
-								_e('Students:', 'tutor');
+								_e('Estudiantes:', 'tutor');
 								echo "<span>$course_students</span>";
 								?>
                             </li>
@@ -80,8 +80,8 @@
 		endforeach;
 	else : ?>
         <div>
-            <h2><?php _e("Not Found" , 'tutor'); ?></h2>
-            <p><?php _e("Sorry, but you are looking for something that isn't here." , 'tutor'); ?></p>
+            <h2><?php _e("No encontrado" , 'tutor'); ?></h2>
+            <p><?php _e("Lo sentimos, pero estás buscando algo que no está aquí." , 'tutor'); ?></p>
         </div>
 	<?php endif; ?>
 
@@ -93,18 +93,18 @@
 
             <div class="tutor-modal-body tutor-course-delete-popup">
                 <img src="<?php echo tutor()->url . 'assets/images/delete-icon.png' ?>" alt="">
-                <h3><?php _e('Delete This Course?', 'tutor'); ?></h3>
-                <p><?php _e("You are going to delete this course, it can't be undone", 'tutor'); ?></p>
+                <h3><?php _e('Eliminar este curso?', 'tutor'); ?></h3>
+                <p><?php _e("Vas a eliminar este curso, no se puede deshacer", 'tutor'); ?></p>
                 <div class="tutor-modal-button-group">
                     <form action="" id="tutor-delete-course-form">
                         <input type="hidden" name="action" value="tutor_delete_dashboard_course">
                         <input type="hidden" name="course_id" id="tutor-course-delete-id" value="">
-                        <button type="button" class="tutor-modal-btn-cancel"><?php _e('Cancel', 'tutor') ?></button>
-                        <button type="submit" class="tutor-danger tutor-modal-course-delete-btn"><?php _e('Yes, Delete Course', 'tutor') ?></button>
+                        <button type="button" class="tutor-modal-btn-cancel"><?php _e('Cancelar', 'tutor') ?></button>
+                        <button type="submit" class="tutor-danger tutor-modal-course-delete-btn"><?php _e('Si, eliminar este curso', 'tutor') ?></button>
                     </form>
                 </div>
             </div>
-            
+
         </div> <!-- tutor-frontend-modal-content -->
     </div> <!-- tutor-frontend-modal -->
 

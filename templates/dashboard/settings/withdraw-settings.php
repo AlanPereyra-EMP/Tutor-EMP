@@ -14,19 +14,19 @@
         ?>
         <ul>
             <li>
-                <a href="<?php echo esc_url($settings_url);  ?>"> <?php _e('Profile', 'tutor'); ?></a>
+                <a href="<?php echo esc_url($settings_url);  ?>"> <?php _e('Perfil', 'tutor'); ?></a>
             </li>
             <li>
-                <a href="<?php echo esc_url($reset_password);  ?>"> <?php _e('Reset Password', 'tutor'); ?></a>
+                <a href="<?php echo esc_url($reset_password);  ?>"> <?php _e('Resetear contraseña', 'tutor'); ?></a>
             </li><?php if(current_user_can(tutor()->instructor_role)){ ?>
                 <li  class="active">
-                    <a href="<?php echo esc_url($withdraw);  ?>"> <?php _e('Withdraw', 'tutor'); ?></a>
+                    <a href="<?php echo esc_url($withdraw);  ?>"> <?php _e('Retirar', 'tutor'); ?></a>
                 </li>
             <?php } ?>
         </ul>
     </div>
 
-    <h3><?php _e('Select a withdraw method', 'tutor') ?></h3>
+    <h3><?php _e('Seleccionar método para retirar', 'tutor') ?></h3>
 
     <form id="tutor-withdraw-account-set-form" action="" method="post">
 
@@ -49,7 +49,7 @@
 
                         <label for="withdraw_method_select_<?php echo $method_id; ?>">
                             <p><?php echo tutor_utils()->avalue_dot('method_name', $method);  ?></p>
-                            <span><?php _e('Min withdraw', 'tutor'); ?> <?php echo tutor_utils()->tutor_price($min_withdraw_amount);
+                            <span><?php _e('Retiro mínimo', 'tutor'); ?> <?php echo tutor_utils()->tutor_price($min_withdraw_amount);
                                 ?></span>
                         </label>
                     </div>
@@ -114,7 +114,7 @@
                         <?php do_action("tutor_withdraw_set_account_{$method_id}_after"); ?>
 
                         <div class="withdraw-account-save-btn-wrap">
-                            <button type="submit" class="tutor_set_withdraw_account_btn tutor-btn" name="withdraw_btn_submit"><?php _e('Save Withdraw Account', 'tutor'); ?></button>
+                            <button type="submit" class="tutor_set_withdraw_account_btn tutor-btn" name="withdraw_btn_submit"><?php _e('Guardar retiros de la cuenta', 'tutor'); ?></button>
                         </div>
 
                     </div>

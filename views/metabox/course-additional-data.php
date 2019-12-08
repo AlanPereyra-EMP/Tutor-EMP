@@ -17,7 +17,7 @@ $material_includes = get_post_meta($course_id, '_tutor_course_material_includes'
 
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
-        <label for=""><?php _e('Total Course Duration', 'tutor'); ?></label>
+        <label for=""><?php _e('Duración total del curso', 'tutor'); ?></label>
     </div>
     <div class="tutor-option-field">
         <div class="tutor-option-gorup-fields-wrap">
@@ -48,13 +48,13 @@ $material_includes = get_post_meta($course_id, '_tutor_course_material_includes'
 <div class="tutor-option-field-row">
 	<div class="tutor-option-field-label">
 		<label for="">
-            <?php _e('Benefits of the course', 'tutor'); ?>
+            <?php _e('Beneficios del curso', 'tutor'); ?>
         </label>
 	</div>
 	<div class="tutor-option-field tutor-option-tooltip">
 		<textarea name="course_benefits" rows="2"><?php echo $benefits; ?></textarea>
 		<p class="desc">
-			<?php _e('List the knowledge and skills that students will learn after completing this course. (One per line)
+			<?php _e('Enumere el conocimiento y las habilidades que los estudiantes aprenderán después de completar este curso. (Uno por línea)
 ', 'tutor'); ?>
 		</p>
 	</div>
@@ -63,14 +63,14 @@ $material_includes = get_post_meta($course_id, '_tutor_course_material_includes'
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-			<?php _e('Requirements/Instructions', 'tutor'); ?> <br />
+			<?php _e('Requisitos/instruciones', 'tutor'); ?> <br />
         </label>
     </div>
     <div class="tutor-option-field tutor-option-tooltip">
         <textarea name="course_requirements" rows="2"><?php echo $requirements; ?></textarea>
 
         <p class="desc">
-			<?php _e('Additional requirements or special instructions for the students (One per line)', 'tutor'); ?>
+			<?php _e('Requisitos adicionales o instrucciones especiales para los estudiantes (uno por línea)', 'tutor'); ?>
         </p>
     </div>
 </div>
@@ -78,14 +78,14 @@ $material_includes = get_post_meta($course_id, '_tutor_course_material_includes'
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-			<?php _e('Targeted Audience', 'tutor'); ?> <br />
+			<?php _e('Públicco objetivo', 'tutor'); ?> <br />
         </label>
     </div>
     <div class="tutor-option-field tutor-option-tooltip">
         <textarea name="course_target_audience" rows="2"><?php echo $target_audience; ?></textarea>
 
         <p class="desc">
-			<?php _e('Specify the target audience that will benefit the most from the course. (One line per target audience.)', 'tutor'); ?>
+			<?php _e('Especifique el público objetivo que más se beneficiará del curso. (Una línea por público objetivo)', 'tutor'); ?>
         </p>
     </div>
 </div>
@@ -94,14 +94,14 @@ $material_includes = get_post_meta($course_id, '_tutor_course_material_includes'
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-			<?php _e('Materials Included', 'tutor'); ?> <br />
+			<?php _e('Materials Incluido', 'tutor'); ?> <br />
         </label>
     </div>
     <div class="tutor-option-field tutor-option-tooltip">
         <textarea name="course_material_includes" rows="2"><?php echo $material_includes; ?></textarea>
 
         <p class="desc">
-			<?php _e('A list of assets you will be providing for the students in this course (One per line)', 'tutor'); ?>
+			<?php _e('Una lista de los recursos que proporcionará a los estudiantes en este curso (uno por línea)', 'tutor'); ?>
         </p>
     </div>
 </div>

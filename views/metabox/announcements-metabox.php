@@ -1,7 +1,7 @@
 
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
-        <label for=""><?php _e('Title', 'tutor'); ?></label>
+        <label for=""><?php _e('Título', 'tutor'); ?></label>
     </div>
     <div class="tutor-option-field">
         <input type="text" name="announcements[title]" value="">
@@ -10,7 +10,7 @@
 
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
-        <label for=""><?php _e('Announcements', 'tutor'); ?></label>
+        <label for=""><?php _e('Anuncios', 'tutor'); ?></label>
     </div>
     <div class="tutor-option-field">
         <div class="tutor-announcement-editor tutor-course-builder-form-elem">
@@ -25,12 +25,12 @@
                 wp_editor(null, 'announcements_content', $editor_settings);
             ?>
         </div>
-        <p class="desc"><?php _e('available variable', 'tutor'); ?>, {user_display_name}</p>
+        <p class="desc"><?php _e('Variable disponible', 'tutor'); ?>, {user_display_name}</p>
     </div>
 </div>
 <div class="tutor-option-field-row">
     <div class="submit">
-        <button type="submit" name="submit" id="submit" class="tutor-btn bordered-btn"><i class="tutor-icon-speaker"></i><?php _e('Add Announcement', 'tutor'); ?></button>
+        <button type="submit" name="submit" id="submit" class="tutor-btn bordered-btn"><i class="tutor-icon-speaker"></i><?php _e('Añadir anuncios', 'tutor'); ?></button>
     </div>
 </div>
 
@@ -48,7 +48,7 @@ if (is_array($announcements) && count($announcements)){
                     <h3><?php echo $announcement->post_title; ?>
 
                         <span class="announcement-delete-btn">
-                            <a href="<?php echo wp_nonce_url(admin_url('admin.php?action=tutor_delete_announcement&topic_id='.$announcement->ID), tutor()->nonce_action, tutor()->nonce); ?>" title="<?php _e('Delete Announcement'); ?>">
+                            <a href="<?php echo wp_nonce_url(admin_url('admin.php?action=tutor_delete_announcement&topic_id='.$announcement->ID), tutor()->nonce_action, tutor()->nonce); ?>" title="<?php _e('Eliminar anuncios'); ?>">
                                 <i class="tutor-icon-garbage"></i>
                             </a>
                         </span>
@@ -56,7 +56,7 @@ if (is_array($announcements) && count($announcements)){
                 </div>
 
                 <div class="tutor-announcement-meta text-muted">
-					<?php _e( sprintf("Posted by %s, at %s ago", 'admin', human_time_diff(strtotime($announcement->post_date)) ) , 'tutor' ); ?>
+					<?php _e( sprintf("Posteado por %s, el %s", 'admin', human_time_diff(strtotime($announcement->post_date)) ) , 'tutor' ); ?>
                 </div>
 
                 <div class="tutor-announcement-content">

@@ -27,7 +27,7 @@ $is_enrolled = tutor_utils()->is_enrolled($course_id);
     <div class="tutor-single-course-segment  tutor-course-topics-wrap">
         <div class="tutor-course-topics-header">
             <div class="tutor-course-topics-header-left">
-                <h4 class="tutor-segment-title"><?php _e('Topics for this course', 'tutor'); ?></h4>
+                <h4 class="tutor-segment-title"><?php _e('Temas del curso', 'tutor'); ?></h4>
             </div>
             <div class="tutor-course-topics-header-right">
 				<?php
@@ -36,7 +36,7 @@ $is_enrolled = tutor_utils()->is_enrolled($course_id);
 
 				if($tutor_lesson_count) {
 					echo "<span> $tutor_lesson_count";
-					_e(' Lessons', 'tutor');
+					_e(' Lección', 'tutor');
 					echo "</span>";
 				}
 				if($tutor_course_duration){

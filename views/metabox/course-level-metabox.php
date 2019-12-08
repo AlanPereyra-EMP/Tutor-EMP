@@ -7,7 +7,7 @@
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-            <?php _e('Difficulty Level', 'tutor'); ?> <br />
+            <?php _e('Nivel de dificultad', 'tutor'); ?> <br />
         </label>
     </div>
     <div class="tutor-option-field tutor-course-level-meta">

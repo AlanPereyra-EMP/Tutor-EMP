@@ -6,4 +6,4 @@
 
 ?>
 
-<h2><?php _e('You are already logged in', 'tutor') ?></h2>
+<h2><?php _e('Ya has ingresado', 'tutor') ?></h2>

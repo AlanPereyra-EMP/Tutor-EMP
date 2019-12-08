@@ -13,7 +13,7 @@
 		$authorTag = '';
 
 		if ($post->post_author == $t->ID){
-			$authorTag = '<img src="'.$instructor_crown_src.'"><i class="instructor-name-tooltip" title="'. __("Author", "tutor") .'">'. __("Author", "tutor") .'</i>';
+			$authorTag = '<img src="'.$instructor_crown_src.'"><i class="instructor-name-tooltip" title="'. __("Autor", "tutor") .'">'. __("Autor", "tutor") .'</i>';
 		}
 
 		$currentInstructorHtml = '<div id="added-instructor-id-'.$t->ID.'" class="added-instructor-item added-instructor-item-'.$t->ID.'" data-instructor-id="'.$t->ID.'">
@@ -29,7 +29,7 @@
 				}
 
 				if ($post->post_author == $instructor->ID){
-					$authorTag = '<img src="'.$instructor_crown_src.'"><i class="instructor-name-tooltip" title="'. __("Author", "tutor") .'">'. __("Author", "tutor") .'</i>';
+					$authorTag = '<img src="'.$instructor_crown_src.'"><i class="instructor-name-tooltip" title="'. __("Autor", "tutor") .'">'. __("Autor", "tutor") .'</i>';
 				}
 				?>
                 <div id="added-instructor-id-<?php echo $instructor->ID; ?>" class="added-instructor-item added-instructor-item-<?php echo $instructor->ID; ?>" data-instructor-id="<?php echo $instructor->ID; ?>">
@@ -48,7 +48,7 @@
     </div>
 
     <div class="tutor-add-instructor-button-wrap">
-        <button type="button" class="tutor-btn tutor-add-instructor-btn bordered-btn"> <i class="tutor-icon-add-friend"></i> <?php _e('Add More Instructors', 'tutor'); ?> </button>
+        <button type="button" class="tutor-btn tutor-add-instructor-btn bordered-btn"> <i class="tutor-icon-add-friend"></i> <?php _e('Añadir instructores', 'tutor'); ?> </button>
     </div>
 
 	<?php
@@ -63,7 +63,7 @@
     <div class="tutor-modal-content">
         <div class="modal-header">
             <div class="modal-title">
-                <h1><?php _e("Add instructors", "tutor") ?></h1>
+                <h1><?php _e("Añadir instructores", "tutor") ?></h1>
             </div>
             <div class="lesson-modal-close-wrap">
                 <a href="javascript:;" class="modal-close-btn"><i class="tutor-icon-line-cross"></i></a>
@@ -72,12 +72,12 @@
         <div class="modal-content-body">
 
             <div class="search-bar">
-                <input type="text" class="tutor-modal-search-input" placeholder="<?php _e('Search instructors...'); ?>">
+                <input type="text" class="tutor-modal-search-input" placeholder="<?php _e('Buscar instructores...'); ?>">
             </div>
         </div>
         <div class="modal-container"></div>
         <div class="modal-footer has-padding">
-            <button type="button" class="tutor-btn add_instructor_to_course_btn"><?php _e('Add Instructors', 'tutor'); ?></button>
+            <button type="button" class="tutor-btn add_instructor_to_course_btn"><?php _e('Añadir instructores', 'tutor'); ?></button>
         </div>
     </div>
 </div>

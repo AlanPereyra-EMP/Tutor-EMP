@@ -46,7 +46,7 @@ do_action('tutor_dashboard/before/wrap'); ?>
                         </div>
                         <div class="tutor-dashboard-header-info">
                             <div class="tutor-dashboard-header-display-name">
-                                <h4><?php _e('Howdy,', 'tutor'); ?> <strong><?php echo $user->display_name; ?></strong> </h4>
+                                <h4><?php _e('Hola,', 'tutor'); ?> <strong><?php echo $user->display_name; ?></strong> </h4>
                             </div>
 							<?php $instructor_rating = tutor_utils()->get_instructor_ratings($user->ID); ?>
 							<?php
@@ -71,7 +71,7 @@ do_action('tutor_dashboard/before/wrap'); ?>
 							    $course_type = tutor()->course_post_type;
 								?>
                                 <a class="tutor-btn bordered-btn" href="<?php echo apply_filters('frontend_course_create_url', admin_url("post-new.php?post_type=".tutor()->course_post_type)); ?>">
-									<?php echo sprintf(__('%s Add A New Course ', 'tutor'), '<i class="tutor-icon-checkbox-pen-outline"></i> &nbsp;'); ?>
+									<?php echo sprintf(__('%s Añadir nuevo curso ', 'tutor'), '<i class="tutor-icon-checkbox-pen-outline"></i> &nbsp;'); ?>
                                 </a>
 								<?php
 							}else{

@@ -24,16 +24,16 @@ if ( ! empty($_GET['date_range_from']) && ! empty($_GET['date_range_to'])){
 }
 ?>
 
-    <h3><?php _e('Earning Report', 'tutor'); ?></h3>
+    <h3><?php _e('Ganancias reportadas', 'tutor'); ?></h3>
     <div class="tutor-dashboard-inline-links">
         <ul>
-            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning'); ?>"> <?php _e('Earning'); ?></a>
+            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning'); ?>"> <?php _e('Ganancias'); ?></a>
             </li>
-            <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning/report'); ?>"> <?php _e('Report'); ?> </a>
+            <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning/report'); ?>"> <?php _e('Reporte'); ?> </a>
             </li>
             <li>
                 <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning/statements'); ?>">
-                    <?php _e('Statements'); ?> </a>
+                    <?php _e('Declaraciones'); ?> </a>
             </li>
         </ul>
     </div>

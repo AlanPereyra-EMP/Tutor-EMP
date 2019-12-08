@@ -46,7 +46,7 @@ $attempt_remaining = $attempts_allowed - $attempted_count;
 			if ( ! $hide_quiz_time_display){
 				?>
                 <div class="time-remaining">
-					<?php _e('Time remaining : '); ?> <span id="tutor-quiz-time-update" data-attempt-settings="<?php echo esc_attr(json_encode($is_started_quiz)) ?>" data-attempt-meta="<?php echo esc_attr(json_encode($quiz_attempt_info)) ?>"><?php echo $remaining_time_context; ?></span>
+					<?php _e('Tiempo restante : '); ?> <span id="tutor-quiz-time-update" data-attempt-settings="<?php echo esc_attr(json_encode($is_started_quiz)) ?>" data-attempt-meta="<?php echo esc_attr(json_encode($quiz_attempt_info)) ?>"><?php echo $remaining_time_context; ?></span>
                 </div>
 			<?php } ?>
         </div>
@@ -108,7 +108,7 @@ $attempt_remaining = $attempts_allowed - $attempted_count;
 							echo '</h4>';
 
 							if ($show_question_mark){
-								echo '<p class="question-marks"> '.__('Marks : ', 'tutor').$question->question_mark.' </p>';
+								echo '<p class="question-marks"> '.__('Notas : ', 'tutor').$question->question_mark.' </p>';
 							}
 							?>
                             <p class="question-description"><?php echo stripslashes($question->question_description); ?></p>
@@ -329,7 +329,7 @@ $attempt_remaining = $attempts_allowed - $attempted_count;
                                     <div class="quiz-answer-footer-bar">
                                         <div class="quiz-footer-button">
                                             <button type="button" value="quiz_answer_submit" class="tutor-button
-                                        tutor-success tutor-quiz-answer-next-btn"><?php _e( 'Answer &amp; Next Question', 'tutor' ); ?></button>
+                                        tutor-success tutor-quiz-answer-next-btn"><?php _e( 'Respueta &amp; Siguiente pregunta', 'tutor' ); ?></button>
                                         </div>
                                     </div>
 									<?php
@@ -338,7 +338,7 @@ $attempt_remaining = $attempts_allowed - $attempted_count;
                                     <div class="quiz-answer-footer-bar">
                                         <div class="quiz-footer-button">
                                             <button type="submit" name="quiz_answer_submit_btn" value="quiz_answer_submit" class="tutor-button tutor-success"><?php
-												_e( 'Submit Quiz', 'tutor' ); ?></button>
+												_e( 'Enviar examen', 'tutor' ); ?></button>
                                         </div>
                                     </div>
 									<?php
@@ -355,7 +355,7 @@ $attempt_remaining = $attempts_allowed - $attempted_count;
                         <div class="quiz-answer-footer-bar">
                             <div class="quiz-footer-button">
                                 <button type="submit" name="quiz_answer_submit_btn" value="quiz_answer_submit" class="tutor-button
-                                tutor-success"><?php _e( 'Submit Quiz', 'tutor' ); ?></button>
+                                tutor-success"><?php _e( 'Enviar exames', 'tutor' ); ?></button>
                             </div>
                         </div>
 					<?php } ?>
@@ -375,7 +375,7 @@ $attempt_remaining = $attempts_allowed - $attempted_count;
                     <input type="hidden" value="tutor_finish_quiz_attempt" name="tutor_action"/>
 
                     <button type="submit" class="tutor-button" name="finish_quiz_btn" value="finish_quiz">
-                        <i class="icon-floppy"></i> <?php _e( 'Finish', 'tutor' ); ?>
+                        <i class="icon-floppy"></i> <?php _e( 'Terminar', 'tutor' ); ?>
                     </button>
                 </form>
             </div>
@@ -394,7 +394,7 @@ $attempt_remaining = $attempts_allowed - $attempted_count;
                     <input type="hidden" value="tutor_start_quiz" name="tutor_action"/>
 
                     <button type="submit" class="tutor-button" name="start_quiz_btn" value="start_quiz">
-                        <i class="icon-hourglass-1"></i> <?php _e( 'Start Quiz', 'tutor' ); ?>
+                        <i class="icon-hourglass-1"></i> <?php _e( 'Iniciar examen', 'tutor' ); ?>
                     </button>
                 </form>
             </div>

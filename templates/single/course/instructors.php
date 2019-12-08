@@ -18,7 +18,7 @@ do_action('tutor_course/single/enrolled/before/instructors');
 $instructors = tutor_utils()->get_instructors_by_course();
 if ($instructors){
 	?>
-	<h4 class="tutor-segment-title"><?php _e('About the instructors', 'tutor'); ?></h4>
+	<h4 class="tutor-segment-title"><?php _e('Sobre el instructor', 'tutor'); ?></h4>
 
 	<div class="tutor-course-instructors-wrap tutor-single-course-segment" id="single-course-ratings">
 		<?php
@@ -60,14 +60,14 @@ if ($instructors){
 
 						<?php
 						echo " <span class='rating-digits'>{$instructor_rating->rating_avg}</span> ";
-						echo " <span class='rating-total-meta'>({$instructor_rating->rating_count} ".__('ratings', 'tutor').")</span> ";
+						echo " <span class='rating-total-meta'>({$instructor_rating->rating_count} ".__('Calificación', 'tutor').")</span> ";
 						?>
 					</div>
 
 					<div class="courses">
 						<p>
 							<i class='tutor-icon-mortarboard'></i>
-							<?php echo tutor_utils()->get_course_count_by_instructor($instructor->ID); ?> <span class="tutor-text-mute"> <?php _e('Courses', 'tutor'); ?></span>
+							<?php echo tutor_utils()->get_course_count_by_instructor($instructor->ID); ?> <span class="tutor-text-mute"> <?php _e('Cursos', 'tutor'); ?></span>
 						</p>
 					</div>
 
@@ -79,7 +79,7 @@ if ($instructors){
 						<p>
 							<i class='tutor-icon-user'></i>
 							<?php echo $total_students; ?>
-							<span class="tutor-text-mute">  <?php _e('students', 'tutor'); ?></span>
+							<span class="tutor-text-mute">  <?php _e('Estudiantes', 'tutor'); ?></span>
 						</p>
 					</div>
 				</div>

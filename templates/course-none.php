@@ -13,4 +13,4 @@
 ?>
 
 
-<h3>There is no course</h3>
+<h3>No hay ningún curso aquí</h3>

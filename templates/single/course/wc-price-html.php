@@ -20,7 +20,7 @@ if ($is_purchasable && $price){
 }else{
 	?>
 	<div class="price">
-		<?php _e('Free', 'tutor'); ?>
+		<?php _e('Gratis', 'tutor'); ?>
 	</div>
 	<?php
 }

@@ -35,25 +35,25 @@ if ( ! $can_publish_course){
                             <button type="submit" class="tutor-dashboard-builder-draft-btn" name="course_submit_btn" value="save_course_as_draft">
                                 <!-- @TODO: Icon must be chenged -->
                                 <i class="tutor-icon-save"></i>
-                                <span><?php _e('Save', 'tutor'); ?></span>
+                                <span><?php _e('Guardar', 'tutor'); ?></span>
                             </button>
                         </div>
                     </div>
                     <div class="tutor-col-auto">
                         <div class="tutor-dashboard-builder-header-right">
-                            <a href="<?php the_permalink($course_id); ?>" target="_blank"><i class="tutor-icon-glasses"></i><?php _e('Preview', 'tutor'); ?></a>
+                            <a href="<?php the_permalink($course_id); ?>" target="_blank"><i class="tutor-icon-glasses"></i><?php _e('Vista previa', 'tutor'); ?></a>
 							<?php
 							if ($can_publish_course){
 								?>
-                                <button class="tutor-button" type="submit" name="course_submit_btn" value="publish_course"><?php _e('Publish Course', 'tutor'); ?></button>
+                                <button class="tutor-button" type="submit" name="course_submit_btn" value="publish_course"><?php _e('Publicar curso', 'tutor'); ?></button>
 								<?php
 							}else{
 								?>
-                                <button class="tutor-button" type="submit" name="course_submit_btn" value="submit_for_review"><?php _e('Submit for Review', 'tutor'); ?></button>
+                                <button class="tutor-button" type="submit" name="course_submit_btn" value="submit_for_review"><?php _e('Enviar reseña', 'tutor'); ?></button>
 								<?php
 							}
 							?>
-                            <a href="<?php echo tutor_utils()->tutor_dashboard_url(); ?>"> <?php _e('Exit', "tutor") ?></a>
+                            <a href="<?php echo tutor_utils()->tutor_dashboard_url(); ?>"> <?php _e('Salir', "tutor") ?></a>
                         </div>
                     </div>
                 </div>
@@ -71,21 +71,21 @@ if ( ! $can_publish_course){
 
                             <div class="tutor-course-builder-section tutor-course-builder-info">
                                 <div class="tutor-course-builder-section-title">
-                                    <h3><i class="tutor-icon-down"></i><span><?php esc_html_e('Course Info', 'tutor'); ?></span></h3>
+                                    <h3><i class="tutor-icon-down"></i><span><?php esc_html_e('Información del curso', 'tutor'); ?></span></h3>
                                 </div> <!--.tutor-course-builder-section-title-->
                                 <div class="tutor-course-builder-section-content">
                                     <div class="tutor-frontend-builder-item-scope">
                                         <div class="tutor-form-group">
                                             <label class="tutor-builder-item-heading">
-												<?php _e('Course Title', 'tutor'); ?>
+												<?php _e('Título del curso', 'tutor'); ?>
                                             </label>
-                                            <input type="text" name="title" value="<?php echo get_the_title(); ?>" placeholder="<?php _e('ex. Learn photoshop CS6 from scratch', 'tutor'); ?>">
+                                            <input type="text" name="title" value="<?php echo get_the_title(); ?>" placeholder="<?php _e('Ej: Aprende photoshop cs6 desde cero', 'tutor'); ?>">
                                         </div>
                                     </div> <!--.tutor-frontend-builder-item-scope-->
 
                                     <div class="tutor-frontend-builder-item-scope">
                                         <div class="tutor-form-group">
-                                            <label> <?php _e('Description', 'tutor'); ?></label>
+                                            <label> <?php _e('Descripción', 'tutor'); ?></label>
 											<?php
 											$editor_settings = array(
 												'media_buttons' => false,
@@ -103,7 +103,7 @@ if ( ! $can_publish_course){
                                     <div class="tutor-frontend-builder-item-scope">
                                         <div class="tutor-form-group">
                                             <label>
-												<?php _e('Choose a category', 'tutor'); ?>
+												<?php _e('Elige una categoría', 'tutor'); ?>
                                             </label>
                                             <div class="tutor-form-field-course-categories">
 												<?php //echo tutor_course_categories_checkbox($course_id);
@@ -123,7 +123,7 @@ if ( ! $can_publish_course){
 										?>
                                         <div class="tutor-frontend-builder-item-scope tutor-frontend-builder-course-price">
                                             <label class="tutor-builder-item-heading">
-												<?php _e('Course Price', 'tutor'); ?>
+												<?php _e('Precio del curso', 'tutor'); ?>
                                             </label>
                                             <div class="tutor-row tutor-align-items-center">
                                                 <div class="tutor-col-auto">
@@ -132,14 +132,14 @@ if ( ! $can_publish_course){
                                                         <span></span>
                                                         <div class="tutor-form-group">
                                                             <span class="tutor-input-prepand"><?php echo $currency_symbol; ?></span>
-                                                            <input type="text" name="course_price" value="<?php echo $course_price->regular_price; ?>" placeholder="<?php _e('Set course price', 'tutor'); ?>">
+                                                            <input type="text" name="course_price" value="<?php echo $course_price->regular_price; ?>" placeholder="<?php _e('Precio del curso', 'tutor'); ?>">
                                                         </div>
                                                     </label>
                                                 </div>
                                                 <div class="tutor-col-auto">
                                                     <label class="tutor-styled-radio">
                                                         <input type="radio" name="tutor_course_price_type" value="free"  <?php checked($_tutor_course_price_type, 'free'); ?> >
-                                                        <span><?php _e('Free', "tutor") ?></span>
+                                                        <span><?php _e('Gratis', "tutor") ?></span>
                                                     </label>
                                                 </div>
                                             </div>
@@ -149,7 +149,7 @@ if ( ! $can_publish_course){
                                     <div class="tutor-frontend-builder-item-scope">
                                         <div class="tutor-form-group">
                                             <label>
-												<?php _e('Course Thumbnail', 'tutor'); ?>
+												<?php _e('Imagen destacada', 'tutor'); ?>
                                             </label>
                                             <div class="tutor-form-field tutor-form-field-course-thumbnail tutor-thumbnail-wrap">
                                                 <div class="tutor-row tutor-align-items-center">
@@ -174,7 +174,7 @@ if ( ! $can_publish_course){
                                                         <div class="builder-course-thumbnail-upload-wrap">
                                                             <div><?php echo sprintf(__("Important Guideline: %1\$s 700x430 pixels %2\$s %3\$s File Support: %1\$s jpg, .jpeg,. gif, or .png %2\$s no text on the image.", "tutor"), "<strong>", "</strong>", "<br>") ?></div>
                                                             <input type="hidden" id="tutor_course_thumbnail_id" name="tutor_course_thumbnail_id" value="<?php echo $post_thumbnail_id; ?>">
-                                                            <a href="javascript:;" class="tutor-course-thumbnail-upload-btn tutor-button bordered-button"><?php _e('Upload Image', 'tutor'); ?></a>
+                                                            <a href="javascript:;" class="tutor-course-thumbnail-upload-btn tutor-button bordered-button"><?php _e('Subir imagen', 'tutor'); ?></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -190,11 +190,11 @@ if ( ! $can_publish_course){
                                 <div class="tutor-form-col-12">
                                     <div class="tutor-form-group">
                                         <div class="tutor-form-field tutor-course-builder-btn-group">
-                                            <button type="submit" class="tutor-button" name="course_submit_btn" value="save_course_as_draft"><?php _e('Save course as draft', 'tutor'); ?></button>
+                                            <button type="submit" class="tutor-button" name="course_submit_btn" value="save_course_as_draft"><?php _e('Guardar curso como borrador', 'tutor'); ?></button>
 											<?php if ($can_publish_course){ ?>
-                                                <button class="tutor-button tutor-success" type="submit" name="course_submit_btn" value="publish_course"><?php _e('Publish Course', 'tutor'); ?></button>
+                                                <button class="tutor-button tutor-success" type="submit" name="course_submit_btn" value="publish_course"><?php _e('Publicar curso', 'tutor'); ?></button>
 											<?php }else{ ?>
-                                                <button class="tutor-button tutor-success" type="submit" name="course_submit_btn" value="submit_for_review"><?php _e('Submit for Review', 'tutor'); ?></button>
+                                                <button class="tutor-button tutor-success" type="submit" name="course_submit_btn" value="submit_for_review"><?php _e('Enviar como reseña', 'tutor'); ?></button>
 											<?php } ?>
                                         </div>
                                     </div>
@@ -204,16 +204,15 @@ if ( ! $can_publish_course){
                     </div> <!--.tutor-col-8-->
                     <div class="tutor-col-4">
                         <div class="tutor-course-builder-upload-tips">
-                            <h3 class="tutor-course-builder-tips-title"><i class="tutor-icon-light-bulb"></i><?php _e('Course Upload Tips', 'tutor') ?></h3>
+                            <h3 class="tutor-course-builder-tips-title"><i class="tutor-icon-light-bulb"></i><?php _e('Tips de carga de los cursos', 'tutor') ?></h3>
                             <ul>
-                                <li><?php _e("Set the Course Price option or make it free.", 'tutor');?></li>
-                                <li><?php _e("Standard size for course thumbnail is 700x430.", 'tutor');?></li>
-                                <li><?php _e("Video section controls the course overview video.", 'tutor');?></li>
-                                <li><?php _e("Course Builder is where you create & organize a course.", 'tutor');?></li>
-                                <li><?php _e("Add Topics in the Course Builder section to create lessons, quizzes, and assignments.", 'tutor'); ?></li>
-                                <li><?php _e("Prerequisites refers to the fundamental courses to complete before taking this particular course.", 'tutor'); ?></li>
-                                <li><?php _e("Information from the Additional Data section shows up on the course single page.", 'tutor'); ?></li>
-                                <li><?php _e("Make Announcements to notify any important notes to all enrolled students at once.", 'tutor'); ?></li>
+                                <li><?php _e("Incluir ell precio del curso o dejarlo como gratito.", 'tutor');?></li>
+                                <li><?php _e("El tamaño estándar de la imagen destacada es de 700x430px.", 'tutor');?></li>
+                                <li><?php _e("Los controles de reproducción se verán sobre el video.", 'tutor');?></li>
+                                <li><?php _e("El creador de cursos es para que crees y organices los cursos.", 'tutor');?></li>
+                                <li><?php _e("Añade temas en el creador de cursos para crear lecciones, preguntas y evaluaciones.", 'tutor'); ?></li>
+                                <li><?php _e("Los prerequisitos hacen que se tenga un orden para los cursos.", 'tutor'); ?></li>
+                                <li><?php _e("Añade anuncios para que los estudiantes recivan noticias importantes.", 'tutor'); ?></li>
                             </ul>
                         </div>
                     </div> <!--.tutor-col-4-->

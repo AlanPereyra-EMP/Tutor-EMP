@@ -92,7 +92,7 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
                     <div class="tutor_add_answer_row">
                         <div class="tutor_add_answer_wrap " data-question-id="<?php echo $question->comment_ID; ?>">
                             <div class="tutor_wp_editor_show_btn_wrap">
-                                <a href="javascript:;" class="tutor_wp_editor_show_btn tutor-button tutor-success"><?php _e('Add an answer', 'tutor'); ?></a>
+                                <a href="javascript:;" class="tutor_wp_editor_show_btn tutor-button tutor-success"><?php _e('Añadir nueva respuesta', 'tutor'); ?></a>
                             </div>
                             <div class="tutor_wp_editor_wrap" style="display: none;">
                                 <form method="post" class="tutor-add-answer-form">
@@ -101,13 +101,13 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
                                     <input type="hidden" value="<?php echo $question->comment_ID; ?>" name="question_id"/>
 
                                     <div class="tutor-form-group">
-                                        <textarea id="tutor_answer_<?php echo $question->comment_ID; ?>" name="answer" class="tutor_add_answer_textarea" placeholder="<?php _e('Write your answer here...', 'tutor'); ?>"></textarea>
+                                        <textarea id="tutor_answer_<?php echo $question->comment_ID; ?>" name="answer" class="tutor_add_answer_textarea" placeholder="<?php _e('Escriba su respuesta aquí...', 'tutor'); ?>"></textarea>
                                     </div>
 
                                     <div class="tutor-form-group">
-                                        <a href="javascript:;" class="tutor_cancel_wp_editor tutor-button tutor-danger"><?php _e('Cancel', 'tutor'); ?></a>
+                                        <a href="javascript:;" class="tutor_cancel_wp_editor tutor-button tutor-danger"><?php _e('Cancelar', 'tutor'); ?></a>
                                         <button type="submit" class="tutor-button tutor_add_answer_btn tutor-success" name="tutor_answer_search_btn">
-                                            <?php _e('Add Answer', 'tutor'); ?>
+                                            <?php _e('Añadir respuesta', 'tutor'); ?>
                                         </button>
                                     </div>
                                 </form>
@@ -122,8 +122,8 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
 
             <div class="tutor-lesson-sidebar-emptyqa-wrap">
                 <i class="tutor-icon-question-2"></i>
-                <h3><?php _e('No questions yet', 'tutor'); ?></h3>
-                <p><?php _e('Be the first to ask your question! You’ll be able to add details in the next step.', 'tutor'); ?></p>
+                <h3><?php _e('No hay preguntas aún', 'tutor'); ?></h3>
+                <p><?php _e('¡Sé el primero en hacer tu pregunta! Podrás agregar detalles en el siguiente paso.', 'tutor'); ?></p>
             </div>
 
 		    <?php
@@ -134,7 +134,7 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
 
     <div class="tutor-add-question-wrap">
 
-        <h3><?php _e('Ask a new question', 'tutor'); ?></h3>
+        <h3><?php _e('Añadir una nueva pregunta', 'tutor'); ?></h3>
 
 
         <form method="post" id="tutor-ask-question-form">
@@ -143,7 +143,7 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
             <input type="hidden" value="<?php echo $course_id; ?>" name="tutor_course_id"/>
 
             <div class="tutor-form-group">
-                <input type="text" name="question_title" value="" placeholder="<?php _e('Question Title', 'tutor'); ?>">
+                <input type="text" name="question_title" value="" placeholder="<?php _e('Título de pregunta', 'tutor'); ?>">
             </div>
 
             <div class="tutor-form-group">
@@ -159,7 +159,7 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
             </div>
 
             <div class="tutor-form-group">
-                <button type="submit" class="tutor_ask_question_btn tutor-button tutor-success" name="tutor_question_search_btn"><?php _e('Submit My Question', 'tutor'); ?></button>
+                <button type="submit" class="tutor_ask_question_btn tutor-button tutor-success" name="tutor_question_search_btn"><?php _e('Enviar pregunta', 'tutor'); ?></button>
             </div>
         </form>
     </div>

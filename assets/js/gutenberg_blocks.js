@@ -9,7 +9,7 @@ var el = wp.element.createElement,
 
 
 registerBlockType( 'tutor-gutenberg/student-registration', {
-    title: 'Student Registration',
+    title: 'Registro de estudiantes',
     icon: 'welcome-learn-more',
     category: 'tutor',
     edit: function( props ) {
@@ -69,7 +69,7 @@ registerBlockType( 'tutor-gutenberg/student-dashboard', {
 //tutor_instructor_registration_form
 
 registerBlockType( 'tutor-gutenberg/instructor-registration', {
-    title: 'Instructor Registration',
+    title: 'Registro de instructores',
     icon: 'welcome-learn-more',
     category: 'tutor',
     edit: function( props ) {

@@ -7,7 +7,7 @@
 global $post; ?>
 
 
-<h3><?php _e('Wishlist', 'tutor'); ?></h3>
+<h3><?php _e('Lista de deseos', 'tutor'); ?></h3>
 <div class="tutor-dashboard-content-inner">
     <div class="tutor-row">
 
@@ -40,7 +40,7 @@ global $post; ?>
 		wp_reset_postdata();
 
 	else:
-        echo "<div class=\"tutor-col\">".esc_html('There\'s no active course')."</div>";
+        echo "<div class=\"tutor-col\">".esc_html('No hay cursos activos')."</div>";
 	endif;
 
 	?>

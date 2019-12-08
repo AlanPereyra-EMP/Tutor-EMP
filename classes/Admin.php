@@ -51,7 +51,7 @@ class Admin{
 
 		add_menu_page(__('Tutor IP', 'tutor').$pro_text, __('Tutor IP', 'tutor').$pro_text, 'manage_tutor_instructor', 'tutor', null,
 			'dashicons-welcome-learn-more', 2);
-		add_submenu_page('tutor', __('Categorías', 'tutor'), __('Categories', 'tutor'), 'manage_tutor', 'edit-tags.php?taxonomy=course-category&post_type='.$course_post_type, null );
+		add_submenu_page('tutor', __('Categorías', 'tutor'), __('Categorías', 'tutor'), 'manage_tutor', 'edit-tags.php?taxonomy=course-category&post_type='.$course_post_type, null );
 
 		add_submenu_page('tutor', __('Tags', 'tutor'), __('Tags', 'tutor'), 'manage_tutor', 'edit-tags.php?taxonomy=course-tag&post_type='.$course_post_type, null );
 

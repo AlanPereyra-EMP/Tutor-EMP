@@ -26,8 +26,8 @@ $reviews = tutor_utils()->get_reviews_by_instructor(get_current_user_id(), $offs
 			?>
             <div class="tutor-dashboard-inline-links">
                 <ul>
-                    <li> <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews'); ?>"> <?php _e('Given', 'tutor'); ?></a> </li>
-                    <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('Received', 'tutor'); ?></a> </li>
+                    <li> <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews'); ?>"> <?php _e('Obtenido', 'tutor'); ?></a> </li>
+                    <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('Resibido', 'tutor'); ?></a> </li>
                 </ul>
             </div>
 		<?php } ?>
@@ -53,7 +53,7 @@ $reviews = tutor_utils()->get_reviews_by_instructor(get_current_user_id(), $offs
 
                                 <div class="tutor-dashboard-review-heading">
                                     <div class="tutor-dashboard-review-title">
-										<?php _e('Course: ', 'tutor'); ?>
+										<?php _e('Curso: ', 'tutor'); ?>
                                         <a href="<?php echo get_the_permalink($review->comment_post_ID); ?>"><?php echo get_the_title($review->comment_post_ID); ?></a>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@ $reviews = tutor_utils()->get_reviews_by_instructor(get_current_user_id(), $offs
 			<?php }else{
 				?>
                 <div class="tutor-dashboard-content-inner">
-                    <p><?php _e("Sorry, but you are looking for something that isn't here." , 'tutor'); ?></p>
+                    <p><?php _e("Lo sentimos, pero estás buscando algo que no está aquí." , 'tutor'); ?></p>
                 </div>
 				<?php
 			} ?>

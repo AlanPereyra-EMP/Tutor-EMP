@@ -27,7 +27,7 @@ if ( ! $is_completed_course) {
             <input type="hidden" value="<?php echo get_the_ID(); ?>" name="course_id"/>
             <input type="hidden" value="tutor_complete_course" name="tutor_action"/>
 
-            <button type="submit" class="course-complete-button" name="complete_course_btn" value="complete_course"><?php _e( 'Complete Course', 'tutor' ); ?></button>
+            <button type="submit" class="course-complete-button" name="complete_course_btn" value="complete_course"><?php _e( 'Completar curso', 'tutor' ); ?></button>
         </form>
     </div>
 	<?php

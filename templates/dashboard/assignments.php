@@ -25,9 +25,9 @@ if($assignments->count){ ?>
         <table class="tutor-dashboard-info-table tutor-dashboard-assignment-table">
             <thead>
             <tr>
-                <th><?php _e('Course Name', 'tutor') ?></th>
-                <th><?php _e('Total Mark', 'tutor') ?></th>
-                <th><?php _e('Total Submit', 'tutor') ?></th>
+                <th><?php _e('Nombre de curso', 'tutor') ?></th>
+                <th><?php _e('Calificaciones totales', 'tutor') ?></th>
+                <th><?php _e('Total de enviados', 'tutor') ?></th>
                 <th>&nbsp;</th>
             </tr>
             </thead>

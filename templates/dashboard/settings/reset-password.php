@@ -16,21 +16,21 @@
 		?>
         <ul>
             <li>
-                <a href="<?php echo esc_url($settings_url);  ?>"> <?php _e('Profile', 'tutor'); ?></a>
+                <a href="<?php echo esc_url($settings_url);  ?>"> <?php _e('Perfil', 'tutor'); ?></a>
             </li>
             <li class="active">
-                <a href="<?php echo esc_url($reset_password);  ?>"> <?php _e('Reset Password', 'tutor'); ?></a>
+                <a href="<?php echo esc_url($reset_password);  ?>"> <?php _e('Resetear contraseña', 'tutor'); ?></a>
             </li>
             <?php if(current_user_can(tutor()->instructor_role)){ ?>
                 <li>
-                    <a href="<?php echo esc_url($withdraw);  ?>"> <?php _e('Withdraw', 'tutor'); ?></a>
+                    <a href="<?php echo esc_url($withdraw);  ?>"> <?php _e('Retirar', 'tutor'); ?></a>
                 </li>
             <?php } ?>
 
         </ul>
     </div>
 
-    <h3><?php _e('Reset Password', 'tutor') ?></h3>
+    <h3><?php _e('Resetear contraseña', 'tutor') ?></h3>
 
     <div class="tutor-reset-password-form-wrap">
 
@@ -66,7 +66,7 @@
             <div class="tutor-form-row">
                 <div class="tutor-form-col-12">
                     <div class="tutor-form-group">
-                        <label> <?php _e('Previous Password', 'tutor'); ?> </label>
+                        <label> <?php _e('Contraseña anterior', 'tutor'); ?> </label>
                         <input type="password" name="previous_password">
                     </div>
                 </div>
@@ -74,13 +74,13 @@
             <div class="tutor-form-row">
                 <div class="tutor-form-col-6">
                     <div class="tutor-form-group">
-                        <label><?php _e('New Password', 'tutor'); ?></label>
+                        <label><?php _e('Nueva contraseña', 'tutor'); ?></label>
                         <input type="password" name="new_password">
                     </div>
                 </div>
                 <div class="tutor-form-col-6">
                     <div class="tutor-form-group">
-                        <label><?php _e('Confirm New Password', 'tutor'); ?></label>
+                        <label><?php _e('Confirmar nueva contraseña', 'tutor'); ?></label>
                         <input type="password" name="confirm_new_password">
                     </div>
                 </div>
@@ -88,7 +88,7 @@
 
             <div class="tutor-form-group">
                 <label>&nbsp;</label>
-                <button type="submit" class="tutor-button" name="tutor_password_reset_btn"><?php _e('Reset Password', 'tutor'); ?></button>
+                <button type="submit" class="tutor-button" name="tutor_password_reset_btn"><?php _e('Resetear contraseña', 'tutor'); ?></button>
             </div>
 
 			<?php do_action('tutor_reset_password_input_after') ?>
@@ -100,7 +100,3 @@
 
 
 </div>
-
-
-
-

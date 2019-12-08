@@ -34,7 +34,7 @@ if ( $submitted_assignment){
             </a>
         </h3>
         <p>
-			<?php _e('Course' , 'tutor'); ?> :
+			<?php _e('Curso' , 'tutor'); ?> :
             <a href="<?php echo get_the_permalink($submitted_assignment->comment_parent); ?>" target="_blank">
 				<?php echo get_the_title($submitted_assignment->comment_parent); ?>
             </a>
@@ -42,14 +42,14 @@ if ( $submitted_assignment){
     </div>
 
     <div class="tutor-dashboard-assignment-review">
-        <h4><?php _e('Assignment Description:', 'tutor'); ?></h4>
+        <h4><?php _e('Descripción:', 'tutor'); ?></h4>
         <p><?php echo nl2br(stripslashes($submitted_assignment->comment_content)); ?></p>
 
 		<?php
 		$attached_files = get_comment_meta($submitted_assignment->comment_ID, 'uploaded_attachments', true);
 		if($attached_files){
 			?>
-            <h5><?php _e('Attach assignment file(s)', 'tutor'); ?></h5>
+            <h5><?php _e('Archivos adjuntos', 'tutor'); ?></h5>
             <div class="tutor-dashboard-assignment-files">
 				<?php
 				$attached_files = json_decode($attached_files, true);
@@ -72,14 +72,14 @@ if ( $submitted_assignment){
     </div>
 
     <div class="tutor-assignment-evaluate-wraps">
-        <h3><?php _e('Evaluation', 'tutor-pro'); ?></h3>
+        <h3><?php _e('Evaluación', 'tutor-pro'); ?></h3>
         <form action="" method="post">
 			<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce ); ?>
             <input type="hidden" value="tutor_evaluate_assignment_submission" name="tutor_action"/>
             <input type="hidden" value="<?php echo $assignment_submitted_id; ?>" name="assignment_submitted_id"/>
             <div class="tutor-assignment-evaluate-row">
                 <div class="tutor-option-field-label">
-                    <label for=""><?php _e('Your Mark', 'tutor-pro'); ?></label>
+                    <label for=""><?php _e('Nota', 'tutor-pro'); ?></label>
                 </div>
                 <div class="tutor-option-field">
                     <input type="number" name="evaluate_assignment[assignment_mark]" value="<?php echo $given_mark ? $given_mark : 0; ?>">
@@ -92,13 +92,13 @@ if ( $submitted_assignment){
                 </div>
                 <div class="tutor-option-field">
                     <textarea name="evaluate_assignment[instructor_note]"><?php echo $instructor_note; ?></textarea>
-                    <p class="desc"><?php _e('Write a note to students about this submission', 'tutor'); ?></p>
+                    <p class="desc"><?php _e('Escribir una nota a los estudiantes sobre esta presentación.', 'tutor'); ?></p>
                 </div>
             </div>
             <div class="tutor-assignment-evaluate-row">
                 <div class="tutor-option-field-label"></div>
                 <div class="tutor-option-field">
-                    <button type="submit" class="tutor-button tutor-button-primary tutor-success"><?php _e('Evaluate this submission', 'tutor-pro'); ?></button>
+                    <button type="submit" class="tutor-button tutor-button-primary tutor-success"><?php _e('Evaluar esta presentación', 'tutor-pro'); ?></button>
                 </div>
             </div>
         </form>

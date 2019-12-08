@@ -6,16 +6,16 @@
 
 ?>
 
-<h3><?php _e('Active Course', 'tutor'); ?></h3>
+<h3><?php _e('Cursos activos', 'tutor'); ?></h3>
 
 <div class="tutor-dashboard-content-inner">
 
     <div class="tutor-dashboard-inline-links">
         <ul>
-            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses'); ?>"> <?php _e('All Courses'); ?></a> </li>
-            <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses/active-courses'); ?>"> <?php _e('Active Courses', 'tutor'); ?> </a> </li>
+            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses'); ?>"> <?php _e('Todos los cursos'); ?></a> </li>
+            <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses/active-courses'); ?>"> <?php _e('Cursos activos', 'tutor'); ?> </a> </li>
             <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses/completed-courses'); ?>">
-					<?php _e('Completed Courses', 'tutor'); ?> </a> </li>
+					<?php _e('Cursos completos', 'tutor'); ?> </a> </li>
         </ul>
     </div>
 
@@ -40,7 +40,7 @@
                         <?php
                         tutor_utils()->star_rating_generator($avg_rating);
                         ?>
-                        <a href="<?php echo get_the_permalink().'#single-course-ratings'; ?>"><?php _e('Leave a rating', 'tutor') ?></a>
+                        <a href="<?php echo get_the_permalink().'#single-course-ratings'; ?>"><?php _e('Dejar calificación', 'tutor') ?></a>
                     </div>
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
                     <div class="tutor-meta tutor-course-metadata">
@@ -51,13 +51,13 @@
                         <ul>
                             <li>
                                 <?php
-                                _e('Total Lessons:', 'tutor');
+                                _e('Lecciones totales:', 'tutor');
                                 echo "<span>$total_lessons</span>";
                                 ?>
                             </li>
                             <li>
                                 <?php
-                                _e('Completed Lessons:', 'tutor');
+                                _e('Lecciones completadas:', 'tutor');
                                 echo "<span>$completed_lessons / $total_lessons</span>";
                                 ?>
                             </li>

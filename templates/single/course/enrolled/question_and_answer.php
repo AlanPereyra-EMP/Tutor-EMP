@@ -21,7 +21,7 @@ if ( ! $enable_q_and_a_on_course) {
 
     <div class="tutor-question-top">
         <div class="tutor-ask-question-btn-wrap">
-            <a href="javascript:;" class="tutor-ask-question-btn tutor-btn"> <?php _e('Ask a new question', 'tutor'); ?> </a>
+            <a href="javascript:;" class="tutor-ask-question-btn tutor-btn"> <?php _e('Has una nueva pregunta', 'tutor'); ?> </a>
         </div>
     </div>
 
@@ -32,7 +32,7 @@ if ( ! $enable_q_and_a_on_course) {
             <input type="hidden" value="<?php echo get_the_ID(); ?>" name="tutor_course_id"/>
 
             <div class="tutor-form-group">
-                <input type="text" name="question_title" value="" placeholder="<?php _e('Question Title', 'tutor'); ?>">
+                <input type="text" name="question_title" value="" placeholder="<?php _e('Título de pregunta', 'tutor'); ?>">
             </div>
 
             <div class="tutor-form-group">
@@ -48,8 +48,8 @@ if ( ! $enable_q_and_a_on_course) {
             </div>
 
             <div class="tutor-form-group">
-                <a href="javascript:;" class="tutor_question_cancel tutor-button tutor-danger"><?php _e('Cancel', 'tutor'); ?></a>
-                <button type="submit" class="tutor-button tutor-success tutor_ask_question_btn" name="tutor_question_search_btn"><?php _e('Post Question', 'tutor'); ?> </button>
+                <a href="javascript:;" class="tutor_question_cancel tutor-button tutor-danger"><?php _e('Cancelar', 'tutor'); ?></a>
+                <button type="submit" class="tutor-button tutor-success tutor_ask_question_btn" name="tutor_question_search_btn"><?php _e('Publicar pregunta', 'tutor'); ?> </button>
             </div>
         </form>
     </div>
@@ -120,7 +120,7 @@ if ( ! $enable_q_and_a_on_course) {
                     <div class="tutor_add_answer_row">
                         <div class="tutor_add_answer_wrap " data-question-id="<?php echo $question->comment_ID; ?>">
                             <div class="tutor_wp_editor_show_btn_wrap">
-                                <a href="javascript:;" class="tutor_wp_editor_show_btn tutor-button tutor-success"><?php _e('Add an answer', 'tutor'); ?></a>
+                                <a href="javascript:;" class="tutor_wp_editor_show_btn tutor-button tutor-success"><?php _e('Añadir nueva respuesta', 'tutor'); ?></a>
                             </div>
                             <div class="tutor_wp_editor_wrap" style="display: none;">
                                 <form method="post" class="tutor-add-answer-form">
@@ -129,13 +129,13 @@ if ( ! $enable_q_and_a_on_course) {
                                     <input type="hidden" value="<?php echo $question->comment_ID; ?>" name="question_id"/>
 
                                     <div class="tutor-form-group">
-                                        <textarea id="tutor_answer_<?php echo $question->comment_ID; ?>" name="answer" class="tutor_add_answer_textarea" placeholder="<?php _e('Write your answer here...', 'tutor'); ?>"></textarea>
+                                        <textarea id="tutor_answer_<?php echo $question->comment_ID; ?>" name="answer" class="tutor_add_answer_textarea" placeholder="<?php _e('Escribe la respuesta aquí...', 'tutor'); ?>"></textarea>
                                     </div>
 
                                     <div class="tutor-form-group">
-                                        <a href="javascript:;" class="tutor_cancel_wp_editor tutor-button tutor-danger"><?php _e('Cancel', 'tutor'); ?></a>
+                                        <a href="javascript:;" class="tutor_cancel_wp_editor tutor-button tutor-danger"><?php _e('Cancelar', 'tutor'); ?></a>
                                         <button type="submit" class="tutor-button tutor_add_answer_btn tutor-success" name="tutor_answer_search_btn">
-                                            <?php _e('Add Answer', 'tutor'); ?>
+                                            <?php _e('Añadir respuesta', 'tutor'); ?>
                                         </button>
                                     </div>
                                 </form>

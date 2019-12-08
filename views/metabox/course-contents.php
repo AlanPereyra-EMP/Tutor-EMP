@@ -14,7 +14,7 @@
 	$attached_lesson_ids = array();
 
 	if ( ! count($query_topics->posts)){
-		echo '<p class="course-empty-content">'.__('Add a topic to build your course', 'tutor').'</p>';
+		echo '<p class="course-empty-content">'.__('Agrega un tema para construir tu curso', 'tutor').'</p>';
 	}
 
 	foreach ($query_topics->posts as $topic){
@@ -43,28 +43,28 @@
                 <div class="tutor-topics-edit-form" style="display: none;">
                     <div class="tutor-option-field-row">
                         <div class="tutor-option-field-label">
-                            <label for=""><?php _e('Topic Name', 'tutor'); ?></label>
+                            <label for=""><?php _e('Tema', 'tutor'); ?></label>
                         </div>
                         <div class="tutor-option-field">
                             <input type="text" name="topic_title" class="course-edit-topic-title-input" value="<?php echo $topic->post_title; ?>">
 
                             <p class="desc">
-								<?php _e('Topic title will be publicly show where required, you can call it as a section also in course', 'tutor'); ?>
+								<?php _e('El título del tema se mostrará públicamente cuando sea necesario, puede llamarlo como una sección también en curso', 'tutor'); ?>
                             </p>
                         </div>
                     </div>
 
                     <div class="tutor-option-field-row">
                         <div class="tutor-option-field-label">
-                            <label for=""><?php _e('Topic Summary', 'tutor'); ?></label>
+                            <label for=""><?php _e('Resumen', 'tutor'); ?></label>
                         </div>
                         <div class="tutor-option-field">
                             <textarea name="topic_summery"><?php echo $topic->post_content; ?></textarea>
                             <p class="desc">
-								<?php _e('The idea of a summary is a short text to prepare students for the activities within the topic or week. The text is shown on the course page under the topic name.', 'tutor'); ?>
+								<?php _e('La idea de un resumen es un texto breve para preparar a los estudiantes para las actividades dentro del tema o la semana. El texto se muestra en la página del curso debajo del nombre del tema.', 'tutor'); ?>
                             </p>
 
-                            <button type="button" class="button button-primary tutor-topics-edit-button"><i class="tutor-icon-pencil"></i> <?php _e('Update Topic', 'tutor'); ?></button>
+                            <button type="button" class="button button-primary tutor-topics-edit-button"><i class="tutor-icon-pencil"></i> <?php _e('Subir tema', 'tutor'); ?></button>
                         </div>
                     </div>
                 </div>
@@ -128,11 +128,11 @@
 
                         <a href="javascript:;" class="tutor-btn default-btn active open-tutor-lesson-modal create-lesson-in-topic-btn" data-topic-id="<?php echo $topic->ID; ?>" data-lesson-id="0" >
                             <i class="tutor-icon-plus-square-button"></i>
-                            <?php _e('Add new lesson', 'tutor'); ?>
+                            <?php _e('Añadir lección', 'tutor'); ?>
                         </a>
                         <button type="button" class="icon-bl tutor-add-quiz-btn tutor-btn default-btn">
                             <i class="tutor-icon-doubt"></i>
-                            <?php _e('Add Topic Quiz', 'tutor'); ?>
+                            <?php _e('Añadir cuestionario de tema', 'tutor'); ?>
                         </button>
 
                         <?php do_action('tutor_course_builder_after_btn_group', $topic->ID); ?>
@@ -151,7 +151,7 @@
 	if ( count( $query_lesson->posts ) > count( $attached_lesson_ids ) ) {
 		?>
         <div class="tutor-untopics-lessons">
-            <h3><?php _e( 'Un-assigned lessons' ); ?></h3>
+            <h3><?php _e( 'Lecciones no asignadas' ); ?></h3>
 
             <div class="tutor-lessons ">
 				<?php

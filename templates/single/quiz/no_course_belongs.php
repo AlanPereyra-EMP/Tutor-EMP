@@ -6,6 +6,6 @@
 ?>
 
 <div class="tutor-alert-warning">
-	<h2><?php _e('No course found for this quiz', 'tutor'); ?></h2>
-	<p><?php _e('It seems there is no course belongs with this quiz, you can not attempt on this quiz without a course belongs, please notify to your instructor to fix this issue.', 'tutor'); ?></p>
+	<h2><?php _e('No se encontró ningún curso para este cuestionario.', 'tutor'); ?></h2>
+	<p><?php _e('Parece que no hay ningún curso que pertenezca a este cuestionario, no puede intentarlo sin que un curso pertenezca, notifique a su instructor para solucionar este problema.', 'tutor'); ?></p>
 </div>

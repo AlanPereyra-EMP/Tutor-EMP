@@ -27,7 +27,7 @@ $announcements = tutor_utils()->get_announcements(get_the_ID());
                 </div>
 
                 <div class="tutor-announcement-meta tutor-text-mute">
-					<?php _e( sprintf("Posted by %s, at %s ago", 'admin', human_time_diff(strtotime($announcement->post_date)) ) , 'tutor' ); ?>
+					<?php _e( sprintf("Publicado por %s, at %s ago", 'admin', human_time_diff(strtotime($announcement->post_date)) ) , 'tutor' ); ?>
                 </div>
 
                 <div class="tutor-announcement-content">

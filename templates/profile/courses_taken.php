@@ -39,8 +39,8 @@ $pageposts = tutor_utils()->get_courses_by_instructor($user_id);
 		endforeach;
 	else : ?>
     <div>
-		<h2><?php _e("Not Found" , 'tutor'); ?></h2>
-		<p><?php _e("Sorry, but you are looking for something that isn't here." , 'tutor'); ?></p>
+		<h2><?php _e("No encontrado" , 'tutor'); ?></h2>
+		<p><?php _e("Lo sentimos, pero estás buscando algo que no está aquí." , 'tutor'); ?></p>
     </div>
 	<?php endif; ?>
 </div>

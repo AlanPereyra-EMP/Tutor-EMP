@@ -20,7 +20,7 @@ do_action('tutor_global/before/attachments');
 if (is_array($attachments) && count($attachments)){
 	?>
     <div class="tutor-page-segment tutor-attachments-wrap">
-        <h3><?php _e('Attachments', 'tutor'); ?></h3>
+        <h3><?php _e('Adjuntos', 'tutor'); ?></h3>
         <?php
         foreach ($attachments as $attachment){
             ?>

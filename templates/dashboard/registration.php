@@ -25,20 +25,20 @@
         <div class="tutor-form-col-6">
             <div class="tutor-form-group">
                 <label>
-					<?php _e('First Name', 'tutor'); ?>
+					<?php _e('Nombre', 'tutor'); ?>
                 </label>
 
-                <input type="text" name="first_name" value="<?php echo tutor_utils()->input_old('first_name'); ?>" placeholder="<?php _e('First Name', 'tutor'); ?>">
+                <input type="text" name="first_name" value="<?php echo tutor_utils()->input_old('first_name'); ?>" placeholder="<?php _e('Nombre', 'tutor'); ?>">
             </div>
         </div>
 
         <div class="tutor-form-col-6">
             <div class="tutor-form-group">
                 <label>
-					<?php _e('Last Name', 'tutor'); ?>
+					<?php _e('Apellido', 'tutor'); ?>
                 </label>
 
-                <input type="text" name="last_name" value="<?php echo tutor_utils()->input_old('last_name'); ?>" placeholder="<?php _e('Last Name', 'tutor'); ?>">
+                <input type="text" name="last_name" value="<?php echo tutor_utils()->input_old('last_name'); ?>" placeholder="<?php _e('Apellido', 'tutor'); ?>">
             </div>
         </div>
 
@@ -48,10 +48,10 @@
         <div class="tutor-form-col-6">
             <div class="tutor-form-group">
                 <label>
-				    <?php _e('User Name', 'tutor'); ?>
+				    <?php _e('Nombre de usuario', 'tutor'); ?>
                 </label>
 
-                <input type="text" name="user_login" class="tutor_user_name" value="<?php echo tutor_utils()->input_old('user_login'); ?>" placeholder="<?php _e('User Name', 'tutor'); ?>">
+                <input type="text" name="user_login" class="tutor_user_name" value="<?php echo tutor_utils()->input_old('user_login'); ?>" placeholder="<?php _e('Nombre de usuario', 'tutor'); ?>">
             </div>
         </div>
 
@@ -71,20 +71,20 @@
         <div class="tutor-form-col-6">
             <div class="tutor-form-group">
                 <label>
-					<?php _e('Password', 'tutor'); ?>
+					<?php _e('Contraseña', 'tutor'); ?>
                 </label>
 
-                <input type="password" name="password" value="<?php echo tutor_utils()->input_old('password'); ?>" placeholder="<?php _e('Password', 'tutor'); ?>">
+                <input type="password" name="password" value="<?php echo tutor_utils()->input_old('password'); ?>" placeholder="<?php _e('Contraseña', 'tutor'); ?>">
             </div>
         </div>
 
         <div class="tutor-form-col-6">
             <div class="tutor-form-group">
                 <label>
-					<?php _e('Password confirmation', 'tutor'); ?>
+					<?php _e('Confirmación de contraseña', 'tutor'); ?>
                 </label>
 
-                <input type="password" name="password_confirmation" value="<?php echo tutor_utils()->input_old('password_confirmation'); ?>" placeholder="<?php _e('Password Confirmation', 'tutor'); ?>">
+                <input type="password" name="password_confirmation" value="<?php echo tutor_utils()->input_old('password_confirmation'); ?>" placeholder="<?php _e('Confirmación de contraseña', 'tutor'); ?>">
             </div>
         </div>
     </div>
@@ -93,7 +93,7 @@
     <div class="tutor-form-row">
         <div class="tutor-form-col-12">
             <div class="tutor-form-group tutor-reg-form-btn-wrap">
-                <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-button"><?php _e('Register', 'tutor'); ?></button>
+                <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-button"><?php _e('Registrarse', 'tutor'); ?></button>
             </div>
         </div>
     </div>

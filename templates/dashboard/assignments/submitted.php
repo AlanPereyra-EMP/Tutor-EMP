@@ -12,7 +12,7 @@ $assignments_submitted = $wpdb->get_results("SELECT * FROM {$wpdb->comments} WHE
 ?>
 
 
-<h3><?php esc_html_e('Assignment', 'tutor') ?></h3>
+<h3><?php esc_html_e('Asignatura', 'tutor') ?></h3>
 <div class="tutor-dashboard-info-table-wrap">
     <?php
 
@@ -23,11 +23,11 @@ $assignments_submitted = $wpdb->get_results("SELECT * FROM {$wpdb->comments} WHE
     <table class="tutor-dashboard-info-table tutor-dashboard-assignment-submitted-table">
         <thead>
             <tr>
-                <td><?php esc_attr_e('Student', 'tutor'); ?></td>
-                <td><?php esc_attr_e('Date & Time', 'tutor'); ?></td>
-                <td><?php esc_attr_e('Pass Mark', 'tutor'); ?></td>
-                <td><?php esc_attr_e('Total Mark', 'tutor'); ?></td>
-                <td><?php esc_attr_e('Result', 'tutor'); ?></td>
+                <td><?php esc_attr_e('Estudiante', 'tutor'); ?></td>
+                <td><?php esc_attr_e('Hora y fecha', 'tutor'); ?></td>
+                <td><?php esc_attr_e('Aprobadas', 'tutor'); ?></td>
+                <td><?php esc_attr_e('Calificacion total', 'tutor'); ?></td>
+                <td><?php esc_attr_e('Resultado', 'tutor'); ?></td>
                 <td>&nbsp;</td>
             </tr>
         </thead>

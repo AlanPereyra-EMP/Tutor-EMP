@@ -18,12 +18,12 @@ $phone = get_user_meta($uid,'phone_number',true);
 $bio = nl2br(strip_tags(get_user_meta($uid,'_tutor_profile_bio',true)));
 ?>
 
-<h3><?php _e('My Profile', 'tutor'); ?></h3>
+<h3><?php _e('Mi perfil', 'tutor'); ?></h3>
 <div class="tutor-dashboard-content-inner">
     <div class="tutor-dashboard-profile">
         <div class="tutor-dashboard-profile-item">
             <div class="heading">
-                <span><?php _e('Registration Date', 'tutor'); ?></span>
+                <span><?php _e('Fecha re registro', 'tutor'); ?></span>
             </div>
             <div class="content">
                 <p><?php echo esc_html($rdate) ?>&nbsp;</p>
@@ -31,7 +31,7 @@ $bio = nl2br(strip_tags(get_user_meta($uid,'_tutor_profile_bio',true)));
         </div>
         <div class="tutor-dashboard-profile-item">
             <div class="heading">
-                <span><?php _e('First Name', 'tutor'); ?></span>
+                <span><?php _e('Nombre', 'tutor'); ?></span>
             </div>
             <div class="content">
                 <p><?php echo $fname ? $fname : esc_html('________'); ?>&nbsp;</p>
@@ -39,7 +39,7 @@ $bio = nl2br(strip_tags(get_user_meta($uid,'_tutor_profile_bio',true)));
         </div>
         <div class="tutor-dashboard-profile-item">
             <div class="heading">
-                <span><?php _e('Last Name', 'tutor'); ?></span>
+                <span><?php _e('Apellido', 'tutor'); ?></span>
             </div>
             <div class="content">
                 <p><?php echo $lname ? $lname : __('________'); ?>&nbsp;</p>
@@ -47,7 +47,7 @@ $bio = nl2br(strip_tags(get_user_meta($uid,'_tutor_profile_bio',true)));
         </div>
         <div class="tutor-dashboard-profile-item">
             <div class="heading">
-                <span><?php _e('Username', 'tutor'); ?></span>
+                <span><?php _e('Nombre de usuario', 'tutor'); ?></span>
             </div>
             <div class="content">
                 <p><?php echo $uname; ?>&nbsp;</p>
@@ -63,7 +63,7 @@ $bio = nl2br(strip_tags(get_user_meta($uid,'_tutor_profile_bio',true)));
         </div>
         <div class="tutor-dashboard-profile-item">
             <div class="heading">
-                <span><?php _e('Phone Number', 'tutor'); ?></span>
+                <span><?php _e('Número', 'tutor'); ?></span>
             </div>
             <div class="content">
                 <p><?php echo $phone ? $phone : "________"; ?>&nbsp;</p>
@@ -83,4 +83,3 @@ $bio = nl2br(strip_tags(get_user_meta($uid,'_tutor_profile_bio',true)));
     </div>
 
 </div>
-

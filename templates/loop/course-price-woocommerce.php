@@ -15,8 +15,8 @@
 <div class="tutor-course-loop-price">
     <?php
     $course_id = get_the_ID();
-    $enroll_btn = '<div  class="tutor-loop-cart-btn-wrap"><a href="'. get_the_permalink(). '">'.__('Get Enrolled', 'tutor'). '</a></div>';
-    $price_html = '<div class="price"> '.__('Free', 'tutor').$enroll_btn. '</div>';
+    $enroll_btn = '<div  class="tutor-loop-cart-btn-wrap"><a href="'. get_the_permalink(). '">'.__('Inscribirse', 'tutor'). '</a></div>';
+    $price_html = '<div class="price"> '.__('Gratis', 'tutor').$enroll_btn. '</div>';
     if (tutor_utils()->is_course_purchasable()) {
 	    $enroll_btn = tutor_course_loop_add_to_cart(false);
 

@@ -16,7 +16,7 @@ global $wpdb;
             <a href="javascript:;" class="tutor-lesson-sidebar-hide-bar"><i class="tutor-icon-angle-left"></i> </a>
 			<?php $course_id = get_post_meta(get_the_ID(), '_tutor_course_id_for_assignments', true); ?>
             <a href="<?php echo get_the_permalink($course_id); ?>" class="tutor-topbar-home-btn">
-                <i class="tutor-icon-home"></i> <?php echo __('Go to Course Home', 'tutor') ; ?>
+                <i class="tutor-icon-home"></i> <?php echo __('Ir al curso', 'tutor') ; ?>
             </a>
         </div>
         <div class="tutor-topbar-item tutor-topbar-content-title-wrap">
@@ -40,19 +40,19 @@ global $wpdb;
 
             <ul>
                 <li>
-					<?php _e('Time Duration : ', 'tutor') ?>
-                    <strong><?php echo $time_duration["value"] ? $time_duration["value"] . ' ' .$time_duration["time"] : __('No limit', 'tutor'); ?></strong>
+					<?php _e('Duración : ', 'tutor') ?>
+                    <strong><?php echo $time_duration["value"] ? $time_duration["value"] . ' ' .$time_duration["time"] : __('Sin límite', 'tutor'); ?></strong>
                 </li>
                 <!--<li>
                     <?php /*_e('Time Remaining : ') */?>
                     <strong><?php /*echo "7 Days, 12 Hour"; */?></strong>
                 </li>-->
                 <li>
-					<?php _e('Total Points : ', 'tutor') ?>
+					<?php _e('Puntos totales : ', 'tutor') ?>
                     <strong><?php echo $total_mark; ?></strong>
                 </li>
                 <li>
-					<?php _e('Minimum Pass Points : ', 'tutor') ?>
+					<?php _e('Puntos mínimos : ', 'tutor') ?>
                     <strong><?php echo $pass_mark; ?></strong>
                 </li>
             </ul>
@@ -61,7 +61,7 @@ global $wpdb;
         <hr />
 
         <div class="tutor-assignment-content">
-            <h2><?php _e('Description', 'tutor'); ?></h2>
+            <h2><?php _e('Descripción', 'tutor'); ?></h2>
 
 			<?php the_content(); ?>
         </div>
@@ -71,7 +71,7 @@ global $wpdb;
 		if (tutor_utils()->count($assignment_attachments)){
 			?>
             <div class="tutor-assignment-attachments">
-                <h2><?php _e('Attachments', 'tutor'); ?></h2>
+                <h2><?php _e('Adjuntos', 'tutor'); ?></h2>
 				<?php
 				foreach ($assignment_attachments as $attachment_id){
 					if ($attachment_id) {
@@ -97,7 +97,7 @@ global $wpdb;
 			?>
 
             <div class="tutor-assignment-submit-form-wrap">
-                <h2><?php _e('Assignment answer form', 'tutor'); ?></h2>
+                <h2><?php _e('Formulario de respuesta de tarea', 'tutor'); ?></h2>
 
                 <form action="" method="post" id="tutor_assignment_submit_form" enctype="multipart/form-data">
 					<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce ); ?>
@@ -107,20 +107,20 @@ global $wpdb;
 					<?php $allowd_upload_files = (int) tutor_utils()->get_assignment_option(get_the_ID(), 'upload_files_limit'); ?>
 
                     <div class="tutor-form-group">
-                        <p><?php _e('Write your answer briefly', 'tutor'); ?></p>
+                        <p><?php _e('Escribe tu respuesta brevemente', 'tutor'); ?></p>
                         <textarea name="assignment_answer"></textarea>
                     </div>
 
                     <div id="form_validation_response"></div>
 
 					<?php if ($allowd_upload_files){ ?>
-                        <p><?php _e('Attach assignment files', 'tutor'); ?></p>
+                        <p><?php _e('Adjuntar archivos adjuntos', 'tutor'); ?></p>
                         <div class="tutor-assignment-attachment-upload-wrap">
 							<?php
 							for ($item = 1; $item <= $allowd_upload_files; $item++){
 								?>
                                 <div class="tutor-form-group">
-                                    <label for="tutor-assignment-input-<?php echo $item; ?>"><i class="tutor-icon-upload-file"></i><span><?php _e('Upload file', 'tutor'); ?></span></label>
+                                    <label for="tutor-assignment-input-<?php echo $item; ?>"><i class="tutor-icon-upload-file"></i><span><?php _e('Subir archivos', 'tutor'); ?></span></label>
                                     <input class="tutor-assignment-file-upload"  id="tutor-assignment-input-<?php echo $item; ?>" type="file" name="attached_assignment_files[]">
                                 </div>
 								<?php
@@ -131,7 +131,7 @@ global $wpdb;
 					}
 					?>
                     <div class="tutor-assignment-submit-btn-wrap">
-                        <button type="submit" class="tutor-button tutor-success" id="tutor_assignment_submit_btn"> <?php _e('Submit Assignment', 'tutor');
+                        <button type="submit" class="tutor-button tutor-success" id="tutor_assignment_submit_btn"> <?php _e('Enviar', 'tutor');
 							?> </button>
                     </div>
                 </form>
@@ -159,17 +159,17 @@ global $wpdb;
                     <div class="assignment-result-wrap">
                         <h4><?php echo sprintf(__('You received %s points out of %s', 'tutor'), "<span class='received-marks'>{$given_mark}</span>", "<span class='out-of-marks'>{$max_mark}</span>") ?></h4>
                         <h4 class="submitted-assignment-grade">
-							<?php _e('Your Grade is ', 'tutor'); ?>
+							<?php _e('Tu estado es ', 'tutor'); ?>
 							<?php if ($given_mark >= $pass_mark){
 								?>
                                 <span class="submitted-assignment-grade-pass">
-                                    <?php _e('Passed', 'tutor'); ?>
+                                    <?php _e('Aprobado', 'tutor'); ?>
                                 </span>
 								<?php
 							}else{
 								?>
                                 <span class="submitted-assignment-grade-failed">
-                                    <?php _e('Failed', 'tutor'); ?>
+                                    <?php _e('Desaprovado', 'tutor'); ?>
                                 </span>
 								<?php
 							} ?>
@@ -183,7 +183,7 @@ global $wpdb;
 
                 <div class="tutor-assignments-submitted-answers-wrap">
 
-                    <h2><?php _e('Your Answers', 'tutor'); ?></h2>
+                    <h2><?php _e('Tus respuestas', 'tutor'); ?></h2>
 
 					<?php echo nl2br(stripslashes($submitted_assignment->comment_content));
 
@@ -194,7 +194,7 @@ global $wpdb;
 						if (tutor_utils()->count($attached_files)){
 
 							?>
-                            <h2><?php _e('Your uploaded file(s)', 'tutor'); ?></h2>
+                            <h2><?php _e('Tus archivos cargados', 'tutor'); ?></h2>
 
 							<?php
 
@@ -216,7 +216,7 @@ global $wpdb;
 						?>
 
                         <div class="instructor-note-wrap">
-                            <h2><?php _e('Instructor Note', 'tutor'); ?></h2>
+                            <h2><?php _e('Nota para el instructor', 'tutor'); ?></h2>
                             <p><?php echo nl2br(get_comment_meta($submitted_assignment->comment_ID,'instructor_note', true)) ?></p>
                         </div>
 						<?php
@@ -234,7 +234,7 @@ global $wpdb;
                         <input type="hidden" value="tutor_assignment_start_submit" name="tutor_action"/>
                         <input type="hidden" name="assignment_id" value="<?php echo get_the_ID(); ?>">
 
-                        <button type="submit" class="tutor-button" id="tutor_assignment_start_btn"> <?php _e( 'Start assignment submit', 'tutor' ); ?> </button>
+                        <button type="submit" class="tutor-button" id="tutor_assignment_start_btn"> <?php _e( 'Comenzar envío de tarea', 'tutor' ); ?> </button>
                     </form>
                 </div>
 				<?php

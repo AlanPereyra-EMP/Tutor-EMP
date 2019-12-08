@@ -20,12 +20,12 @@ if (tutils()->array_get('reset_key', $_GET) && tutils()->array_get('user_id', $_
 		<?php tutor_nonce_field(); ?>
         <input type="hidden" name="tutor_action" value="tutor_retrieve_password">
 
-        <p><?php echo apply_filters( 'tutor_lost_password_message', esc_html__( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'tutor' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
+        <p><?php echo apply_filters( 'tutor_lost_password_message', esc_html__( '¿Perdiste tu contraseña? Por favor ingrese su nombre de usuario o dirección de correo electrónico. Recibirá un enlace para crear una nueva contraseña por correo electrónico.', 'tutor' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
 
         <div class="tutor-form-row">
             <div class="tutor-form-col-6">
                 <div class="tutor-form-group">
-                    <label><?php esc_html_e( 'Username or email', 'tutor' ); ?></label>
+                    <label><?php esc_html_e( 'Nombre de usuario o email', 'tutor' ); ?></label>
 
                     <input type="text" name="user_login" id="user_login" autocomplete="username">
                 </div>
@@ -39,8 +39,8 @@ if (tutils()->array_get('reset_key', $_GET) && tutils()->array_get('user_id', $_
         <div class="tutor-form-row">
             <div class="tutor-form-col-6">
                 <div class="tutor-form-group">
-                    <button type="submit" class="tutor-button tutor-button-primary" value="<?php esc_attr_e( 'Reset password', 'tutor' ); ?>"><?php
-						esc_html_e( 'Reset password', 'tutor' ); ?></button>
+                    <button type="submit" class="tutor-button tutor-button-primary" value="<?php esc_attr_e( 'Resetear contraseña', 'tutor' ); ?>"><?php
+						esc_html_e( 'Resetear contraseña', 'tutor' ); ?></button>
                 </div>
             </div>
         </div>

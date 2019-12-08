@@ -21,8 +21,8 @@ $reviews = tutor_utils()->get_reviews_by_user();
 		?>
         <div class="tutor-dashboard-inline-links">
             <ul>
-                <li class="active"> <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews'); ?>"> <?php _e('Given', 'tutor'); ?></a> </li>
-                <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('Received'); ?></a> </li>
+                <li class="active"> <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews'); ?>"> <?php _e('Dada', 'tutor'); ?></a> </li>
+                <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('recibida'); ?></a> </li>
             </ul>
         </div>
 	<?php } ?>
@@ -31,7 +31,7 @@ $reviews = tutor_utils()->get_reviews_by_user();
 		<?php
 		if ( ! is_array($reviews) || ! count($reviews)){ ?>
             <div class="tutor-dashboard-content-inner">
-                <p><?php _e("Sorry, but you are looking for something that isn't here." , 'tutor'); ?></p>
+                <p><?php _e("Lo sentimos, pero estás buscando algo que no está aquí." , 'tutor'); ?></p>
             </div>
 			<?php
 		}
@@ -47,13 +47,13 @@ $reviews = tutor_utils()->get_reviews_by_user();
 
                         <div class="tutor-dashboard-review-heading">
                             <div class="tutor-dashboard-review-title">
-								<?php _e('Course: ', 'tutor'); ?>
+								<?php _e('Curso: ', 'tutor'); ?>
                                 <a href="<?php echo get_the_permalink($review->comment_post_ID); ?>"><?php echo get_the_title($review->comment_post_ID); ?></a>
                             </div>
 
                             <div class="tutor-dashboard-review-links">
                                 <a href="javascript:;" class="open-tutor-edit-review-modal" data-review-id="<?php echo $review->comment_ID; ?>">
-                                    <i class="tutor-icon-pencil"></i> <span><?php _e('Edit Feedback', 'tutor'); ?></span>
+                                    <i class="tutor-icon-pencil"></i> <span><?php _e('Editar reseña', 'tutor'); ?></span>
                                 </a>
                             </div>
                         </div>
@@ -61,7 +61,7 @@ $reviews = tutor_utils()->get_reviews_by_user();
                     <div class="individual-dashboard-review-body">
                         <div class="individual-star-rating-wrap">
 							<?php tutor_utils()->star_rating_generator($review->rating); ?>
-                            <p class="review-meta"><?php  echo sprintf(__('%s ago', 'tutor'), human_time_diff(strtotime($review->comment_date)));  ?></p>
+                            <p class="review-meta"><?php  echo sprintf(__('%s atrás', 'tutor'), human_time_diff(strtotime($review->comment_date)));  ?></p>
                         </div>
 
 						<?php echo wpautop(stripslashes($review->comment_content)); ?>
@@ -79,7 +79,7 @@ $reviews = tutor_utils()->get_reviews_by_user();
     <div class="tutor-modal-content">
         <div class="modal-header">
             <div class="modal-title">
-                <h1><?php _e('Edit Review', 'tutor'); ?></h1>
+                <h1><?php _e('Editar reseña, 'tutor'); ?></h1>
             </div>
             <div class="modal-close-wrap">
                 <a href="javascript:;" class="modal-close-btn"><i class="tutor-icon-line-cross"></i> </a>

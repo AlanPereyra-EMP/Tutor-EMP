@@ -26,9 +26,9 @@ get_header();
 				$course_id = tutor_utils()->get_course_id_by_lesson();
 				?>
 
-                <h2><?php _e('Please enroll This course first', 'tutor'); ?></h2>
-                <h3> <?php echo sprintf(__('Course name : %s'), 'tutor'), get_the_title($course_id); ?> </h3>
-                <a href="<?php echo get_permalink($course_id); ?>" class="tutor-button"><?php _e('View Course', 'tutor'); ?></a>
+                <h2><?php _e('Pro favor inscribase a este curso primero', 'tutor'); ?></h2>
+                <h3> <?php echo sprintf(__('Nombre de curso : %s'), 'tutor'), get_the_title($course_id); ?> </h3>
+                <a href="<?php echo get_permalink($course_id); ?>" class="tutor-button"><?php _e('Ver curso', 'tutor'); ?></a>
             </div>
         </div>
     </div><!-- .wrap -->

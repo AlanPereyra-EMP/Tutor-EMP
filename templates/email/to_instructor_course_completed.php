@@ -6,8 +6,8 @@
 
 ?>
 
-<p> Dear {instructor_username}, </p>
+<p> Estimado {instructor_username}, </p>
 
 <p>
-	Mr. {student_username} has recently completed <strong>{course_name}</strong> at <strong>{completion_time}</strong>. The completed course URL is: <strong>{course_url}</strong>.
+	Sr/Sra. {student_username} ha completado receintemente <strong>{course_name}</strong> el <strong>{completion_time}</strong>. La URL es: <strong>{course_url}</strong>.
 </p>

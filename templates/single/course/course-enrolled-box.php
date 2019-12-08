@@ -40,9 +40,9 @@ global $wp_query;
                 <a href="<?php echo $lesson_url; ?>" class="tutor-button tutor-success">
                     <?php
                         if($completed_lessons){
-                            _e( 'Continue to lesson', 'tutor' );
+                            _e( 'Ir a la lección', 'tutor' );
                         }else{
-                            _e( 'Start Course', 'tutor' );
+                            _e( 'Empezar curso', 'tutor' );
                         }
                     ?>
                 </a>
@@ -64,7 +64,7 @@ global $wp_query;
             <?php
                 $enrolled = tutor_utils()->is_enrolled();
 
-                echo sprintf(__('You have been enrolled on %s.', 'tutor'),  "<span>". date_i18n(get_option('date_format'), strtotime($enrolled->post_date)
+                echo sprintf(__('Ya has empezado el curso el... %s.', 'tutor'),  "<span>". date_i18n(get_option('date_format'), strtotime($enrolled->post_date)
                     )."</span>"  );
                 ?>
         </p>
@@ -73,4 +73,3 @@ global $wp_query;
     </div>
 
 </div> <!-- tutor-price-preview-box -->
-

@@ -12,9 +12,9 @@ $rating = $isLoggedIn ? tutor_utils()->get_course_rating_by_user() : '';
     <a href="javascript:;" class="write-course-review-link-btn">
 		<?php
 		if($isLoggedIn && (!empty($rating->rating) || !empty($rating->review))){
-			_e('Edit review', 'tutor');
+			_e('Editar reseña', 'tutor');
 		}else{
-			_e('Write a review', 'tutor');
+			_e('Escribir reseña', 'tutor');
 		}
 		?>
     </a>
@@ -31,10 +31,10 @@ $rating = $isLoggedIn ? tutor_utils()->get_course_rating_by_user() : '';
 						?>
                     </div>
                     <div class="tutor-form-group">
-                        <textarea name="review" placeholder="<?php _e('write a review', 'tutor'); ?>"><?php echo stripslashes($rating->review); ?></textarea>
+                        <textarea name="review" placeholder="<?php _e('Escribir reseña', 'tutor'); ?>"><?php echo stripslashes($rating->review); ?></textarea>
                     </div>
                     <div class="tutor-form-group">
-                        <button type="submit" class="tutor_submit_review_btn tutor-button tutor-success"><?php _e('Submit Review', 'tutor'); ?></button>
+                        <button type="submit" class="tutor_submit_review_btn tutor-button tutor-success"><?php _e('Enviar reseña', 'tutor'); ?></button>
                     </div>
                 </div>
             </form>

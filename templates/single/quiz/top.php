@@ -21,10 +21,10 @@ do_action('tutor_quiz/single/before/top');
 ?>
 
 <div class="tutor-quiz-header">
-    <span class="tutor-quiz-badge"><?php _e('Quiz', 'tutor'); ?></span>
+    <span class="tutor-quiz-badge"><?php _e('Examen', 'tutor'); ?></span>
     <h2><?php echo get_the_title(); ?></h2>
     <h5>
-		<?php _e('Course', 'tutor'); ?> :
+		<?php _e('Courso', 'tutor'); ?> :
         <a href="<?php echo get_the_permalink($course->ID); ?>"><?php echo get_the_title($course->ID); ?></a>
     </h5>
     <ul class="tutor-quiz-meta">
@@ -35,7 +35,7 @@ do_action('tutor_quiz/single/before/top');
 		if($total_questions){
 			?>
             <li>
-                <strong><?php _e('Questions', 'tutor'); ?> :</strong>
+                <strong><?php _e('Preguntas', 'tutor'); ?> :</strong>
 				<?php echo $total_questions; ?>
             </li>
 			<?php
@@ -46,7 +46,7 @@ do_action('tutor_quiz/single/before/top');
 			$time_type = tutor_utils()->get_quiz_option(get_the_ID(), 'time_limit.time_type');
 			?>
             <li>
-                <strong><?php _e('Time', 'tutor'); ?> :</strong>
+                <strong><?php _e('Tiempo', 'tutor'); ?> :</strong>
 				<?php echo $time_limit.' '.$time_type; ?>
             </li>
 			<?php
@@ -54,29 +54,29 @@ do_action('tutor_quiz/single/before/top');
 
 		?>
         <li>
-            <strong><?php _e('Attempts Allowed', 'tutor'); ?> :</strong>
-	        <?php echo $attempts_allowed == 0 ? __('No limit', 'tutor') : $attempts_allowed; ?>
+            <strong><?php _e('Intentos permitidos', 'tutor'); ?> :</strong>
+	        <?php echo $attempts_allowed == 0 ? __('Sin límite', 'tutor') : $attempts_allowed; ?>
         </li>
 	    <?php
 
 		if($attempted_count){
 			?>
             <li>
-                <strong><?php _e('Attempted', 'tutor'); ?> :</strong>
+                <strong><?php _e('Intentos', 'tutor'); ?> :</strong>
 				<?php echo $attempted_count; ?>
             </li>
 			<?php
 		}
 		?>
         <li>
-            <strong><?php _e('Attempts Remaining', 'tutor'); ?> :</strong>
-			<?php echo $attempts_allowed == 0 ? __('No limit', 'tutor') : $attempt_remaining; ?>
+            <strong><?php _e('Intentos restantes', 'tutor'); ?> :</strong>
+			<?php echo $attempts_allowed == 0 ? __('Sin límite', 'tutor') : $attempt_remaining; ?>
         </li>
 		<?php
 		if($passing_grade){
 			?>
             <li>
-                <strong><?php _e('Passing Grade', 'tutor'); ?> :</strong>
+                <strong><?php _e('Progreso', 'tutor'); ?> :</strong>
 				<?php echo $passing_grade . '%'; ?>
 
             </li>

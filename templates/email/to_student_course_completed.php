@@ -6,8 +6,8 @@
 
 ?>
 
-<p> Dear {student_username}, </p>
+<p> Estimado {student_username}, </p>
 
 <p>
-	Thank you for completing <strong>{course_name}</strong> on <strong>{completion_time}</strong>. This message is to confirm that you have successfully completed the mentioned course. For future access, the course will be available on <strong>{course_url}</strong>.
+	Gracias po completar <strong>{course_name}</strong> en <strong>{completion_time}</strong>. Este mensaje es para confirmar que ha completado con éxito el curso mencionado. Para acceso futuro, el curso estará disponible en: <strong>{course_url}</strong>.
 </p>

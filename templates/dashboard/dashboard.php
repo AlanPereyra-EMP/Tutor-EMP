@@ -6,7 +6,7 @@
 
 ?>
 
-<h3><?php _e('Dashboard', 'tutor') ?></h3>
+<h3><?php _e('Página personal', 'tutor') ?></h3>
 
 <div class="tutor-dashboard-content-inner">
 
@@ -25,19 +25,19 @@
     <div class="tutor-dashboard-info-cards">
         <div class="tutor-dashboard-info-card">
             <p>
-                <span><?php _e('Enrolled Course', 'tutor'); ?></span>
+                <span><?php _e('Cursos empezados', 'tutor'); ?></span>
                 <span class="tutor-dashboard-info-val"><?php echo esc_html($enrolled_course_count); ?></span>
             </p>
         </div>
         <div class="tutor-dashboard-info-card">
             <p>
-                <span><?php _e('Active Course', 'tutor'); ?></span>
+                <span><?php _e('Cursos activos', 'tutor'); ?></span>
                 <span class="tutor-dashboard-info-val"><?php echo esc_html($active_course_count); ?></span>
             </p>
         </div>
         <div class="tutor-dashboard-info-card">
             <p>
-                <span><?php _e('Completed Course', 'tutor'); ?></span>
+                <span><?php _e('Cursos completado', 'tutor'); ?></span>
                 <span class="tutor-dashboard-info-val"><?php echo esc_html($completed_course_count); ?></span>
             </p>
         </div>
@@ -47,19 +47,19 @@
 			?>
             <div class="tutor-dashboard-info-card">
                 <p>
-                    <span><?php _e('Total Students', 'tutor'); ?></span>
+                    <span><?php _e('Estudiantes totales', 'tutor'); ?></span>
                     <span class="tutor-dashboard-info-val"><?php echo esc_html($total_students); ?></span>
                 </p>
             </div>
             <div class="tutor-dashboard-info-card">
                 <p>
-                    <span><?php _e('Total Courses', 'tutor'); ?></span>
+                    <span><?php _e('Cursos totales', 'tutor'); ?></span>
                     <span class="tutor-dashboard-info-val"><?php echo esc_html(count($my_courses)); ?></span>
                 </p>
             </div>
             <div class="tutor-dashboard-info-card">
                 <p>
-                    <span><?php _e('Total Earning', 'tutor'); ?></span>
+                    <span><?php _e('Ganancias totales', 'tutor'); ?></span>
                     <span class="tutor-dashboard-info-val"><?php echo tutor_utils()->tutor_price($earning_sum->instructor_amount); ?></span>
                 </p>
             </div>
@@ -73,13 +73,13 @@
 	if(count($instructor_course)) {
 		?>
         <div class="tutor-dashboard-info-table-wrap">
-            <h3><?php _e('Most Popular Courses', 'tutor'); ?></h3>
+            <h3><?php _e('Cursos más populares', 'tutor'); ?></h3>
             <table class="tutor-dashboard-info-table">
                 <thead>
                 <tr>
-                    <td><?php _e('Course Name', 'tutor'); ?></td>
-                    <td><?php _e('Enrolled', 'tutor'); ?></td>
-                    <td><?php _e('Status', 'tutor'); ?></td>
+                    <td><?php _e('Nombre del curso', 'tutor'); ?></td>
+                    <td><?php _e('Comenzado', 'tutor'); ?></td>
+                    <td><?php _e('Estado', 'tutor'); ?></td>
                 </tr>
                 </thead>
                 <tbody>

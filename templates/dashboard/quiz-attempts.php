@@ -15,7 +15,7 @@ $per_page = 20;
 $current_page = max( 1, tutils()->array_get('current_page', $_GET) );
 $offset = ($current_page-1)*$per_page;
 ?>
-    <h3><?php _e('My Quiz Attempts', 'tutor'); ?></h3>
+    <h3><?php _e('Mis intentos de evaluaciones', 'tutor'); ?></h3>
 <?php
 $course_id = tutor_utils()->get_assigned_courses_ids_by_instructors();
 $quiz_attempts = tutor_utils()->get_quiz_attempts_by_course_ids($offset, $per_page, $course_id);
@@ -26,12 +26,12 @@ if ( $quiz_attempts_count ){
     <div class="tutor-quiz-attempt-history">
         <table>
             <tr>
-                <th><?php _e('Title (Quiz & Course)', 'tutor'); ?></th>
-                <th><?php _e('Students', 'tutor'); ?></th>
-                <th><?php _e('Count', 'tutor'); ?></th>
-                <th><?php _e('Earned Mark', 'tutor'); ?></th>
-                <th><?php _e('Status', 'tutor'); ?></th>
-                <th><?php _e('Review', 'tutor'); ?></th>
+                <th><?php _e('Título (Pregunta y curso)', 'tutor'); ?></th>
+                <th><?php _e('Estudiantes', 'tutor'); ?></th>
+                <th><?php _e('Cantidad', 'tutor'); ?></th>
+                <th><?php _e('Notas obtenidas', 'tutor'); ?></th>
+                <th><?php _e('Estado', 'tutor'); ?></th>
+                <th><?php _e('Reseñas', 'tutor'); ?></th>
             </tr>
 			<?php
 			foreach ( $quiz_attempts as $attempt){
@@ -56,7 +56,7 @@ if ( $quiz_attempts_count ){
 							<?php echo __('Course:', 'tutor'); ?> <?php echo get_the_title($attempt->course_id); ?>
                         </div>
                     </td>
-                    <td class="td-course-title" title="<?php _e('Course Title', 'tutor'); ?>">
+                    <td class="td-course-title" title="<?php _e('Nombre del curso', 'tutor'); ?>">
 						<?php
 						$quiz_title = "<div><strong>{$attempt->display_name}</strong></div>";
 						$quiz_title .= "<div>{$attempt->user_email}</div>";
@@ -101,5 +101,5 @@ if ( $quiz_attempts_count ){
 		?>
     </div>
 <?php } else {
-	_e('There is no quiz attempts', 'tutor');
+	_e('No hay intentos de evaluaciones', 'tutor');
 } ?>

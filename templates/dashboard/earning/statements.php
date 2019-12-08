@@ -24,12 +24,12 @@ if ( ! empty($_GET['date_range_from']) && ! empty($_GET['date_range_to'])){
 ?>
     <div class="tutor-dashboard-inline-links">
         <ul>
-            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning'); ?>"> <?php _e('Earning'); ?></a>
+            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning'); ?>"> <?php _e('Ganancias'); ?></a>
             </li>
-            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning/report'); ?>"> <?php _e('Report'); ?> </a></li>
+            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning/report'); ?>"> <?php _e('reporte'); ?> </a></li>
             <li class="active">
                 <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('earning/statements'); ?>">
-					<?php _e('Statements'); ?> </a>
+					<?php _e('Declaraciones'); ?> </a>
             </li>
         </ul>
     </div>
@@ -113,7 +113,7 @@ switch ($sub_page){
 ?>
 
 <div class="tutor-dashboard-item-group">
-    <h4><?php _e('Statements', 'tutor'); ?></h4>
+    <h4><?php _e('Declaraciones', 'tutor'); ?></h4>
 
 
 <?php
@@ -131,10 +131,10 @@ if ($statements->count) {
     <div class="tutor-dashboard-statement-table-wrap">
         <table class="tutor-dashboard-statement-table">
             <tr>
-                <th><?php _e('Course Info', 'tutor'); ?></th>
-                <th><?php _e('Earning', 'tutor'); ?></th>
-                <th><?php _e('Commission', 'tutor'); ?></th>
-                <th><?php _e('Deduct', 'tutor'); ?></th>
+                <th><?php _e('Info del curso', 'tutor'); ?></th>
+                <th><?php _e('Ganancias', 'tutor'); ?></th>
+                <th><?php _e('Comisiones', 'tutor'); ?></th>
+                <th><?php _e('Deducido', 'tutor'); ?></th>
             </tr>
 
             <?php
@@ -145,7 +145,7 @@ if ($statements->count) {
 
                         <p class="small-text">
                             <span class="statement-order-<?php echo $statement->order_status; ?>"><?php echo $statement->order_status; ?></span>
-                            &nbsp; <strong><?php _e('Date:', 'tutor') ?></strong>
+                            &nbsp; <strong><?php _e('Fecha:', 'tutor') ?></strong>
                             <i><?php echo date_i18n(get_option('date_format', strtotime($statement->created_at))).' '.date_i18n(get_option('time_format', strtotime($statement->created_at))) ?></i>
                         </p>
 
@@ -156,11 +156,11 @@ if ($statements->count) {
                         </p>
 
                         <p>
-                            <strong><?php _e('Price: ', 'tutor'); ?></strong>
+                            <strong><?php _e('Precio: ', 'tutor'); ?></strong>
                             <?php echo tutor_utils()->tutor_price($statement->course_price_total); ?>
                         </p>
 
-                        <p class="small-text"><strong><?php _e('Order ID'); ?> #<?php echo $statement->order_id; ?></strong></p>
+                        <p class="small-text"><strong><?php _e('ID de orden'); ?> #<?php echo $statement->order_id; ?></strong></p>
 
                         <?php
                         $order = new WC_Order($statement->order_id);
@@ -169,20 +169,20 @@ if ($statements->count) {
                     </td>
                     <td>
                         <p><?php echo tutor_utils()->tutor_price($statement->instructor_amount); ?></p>
-                        <p class="small-text"> <?php _e('As per');  ?> <?php echo $statement->instructor_rate ?> (<?php echo $statement->commission_type ?>) </p>
+                        <p class="small-text"> <?php _e('Según por');  ?> <?php echo $statement->instructor_rate ?> (<?php echo $statement->commission_type ?>) </p>
                     </td>
 
                     <td>
                         <p><?php echo tutor_utils()->tutor_price($statement->admin_amount); ?> </p>
-                        <p class="small-text"><?php _e('Rate', 'tutor'); ?> : <?php echo $statement->admin_rate; ?> </p>
-                        <p class="small-text"><?php _e('Type', 'tutor'); ?> : <?php echo $statement->commission_type; ?> </p>
+                        <p class="small-text"><?php _e('Calificación', 'tutor'); ?> : <?php echo $statement->admin_rate; ?> </p>
+                        <p class="small-text"><?php _e('Tipo', 'tutor'); ?> : <?php echo $statement->commission_type; ?> </p>
 
                     </td>
 
                     <td>
                         <p><?php echo $statement->deduct_fees_name; ?>  <?php echo tutor_utils()->tutor_price($statement->deduct_fees_amount); ?>
                         </p>
-                        <p class="small-text"><?php _e('Type', 'tutor'); ?> : <?php echo $statement->deduct_fees_type; ?> </p>
+                        <p class="small-text"><?php _e('Tipo', 'tutor'); ?> : <?php echo $statement->deduct_fees_type; ?> </p>
                     </td>
                 </tr>
                 <?php
@@ -214,4 +214,3 @@ if ($statements->count){
 
     <?php
 }
-

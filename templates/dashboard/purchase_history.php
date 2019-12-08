@@ -6,7 +6,7 @@
 
 ?>
 
-<h2><?php _e('Purchase History', 'tutor'); ?></h2>
+<h2><?php _e('Historial de compras', 'tutor'); ?></h2>
 
 <?php
 $orders = tutor_utils()->get_orders_by_user_id();
@@ -17,10 +17,10 @@ if (tutor_utils()->count($orders)){
         <table>
             <tr>
                 <th><?php _e('ID', 'tutor'); ?></th>
-                <th><?php _e('Courses', 'tutor'); ?></th>
-                <th><?php _e('Amount', 'tutor'); ?></th>
-                <th><?php _e('Status', 'tutor'); ?></th>
-                <th><?php _e('Date', 'tutor'); ?></th>
+                <th><?php _e('Cursos', 'tutor'); ?></th>
+                <th><?php _e('Cantidad', 'tutor'); ?></th>
+                <th><?php _e('Estado', 'tutor'); ?></th>
+                <th><?php _e('Fecha', 'tutor'); ?></th>
             </tr>
             <?php
             foreach ($orders as $order){
@@ -53,7 +53,7 @@ if (tutor_utils()->count($orders)){
 
 	<?php
 }else{
-	echo _e('No purchase history available', 'tutor');
+	echo _e('No hay historial de compras disponible', 'tutor');
 }
 
 ?>

@@ -15,14 +15,14 @@ do_action( 'tutor_before_reset_password_form' ); ?>
 	<input type="hidden" name="user_id" value="<?php echo tutils()->array_get('user_id', $_GET); ?>" />
 
 	<p>
-		<?php echo apply_filters( 'tutor_reset_password_message', esc_html__( 'Enter Password and Confirm Password to reset your password', 'tutor' )
+		<?php echo apply_filters( 'tutor_reset_password_message', esc_html__( 'Ingrese la contraseña y confirme la contraseña para restablecer su contraseña', 'tutor' )
 		); ?>
 	</p>
 
 	<div class="tutor-form-row">
 		<div class="tutor-form-col-6">
 			<div class="tutor-form-group">
-				<label><?php esc_html_e( 'Password', 'tutor' ); ?></label>
+				<label><?php esc_html_e( 'Contraseña', 'tutor' ); ?></label>
 				<input type="password" name="password" id="password">
 			</div>
 		</div>
@@ -31,7 +31,7 @@ do_action( 'tutor_before_reset_password_form' ); ?>
 	<div class="tutor-form-row">
 		<div class="tutor-form-col-6">
 			<div class="tutor-form-group">
-				<label><?php esc_html_e( 'Confirm Password', 'tutor' ); ?></label>
+				<label><?php esc_html_e( 'Confirmar contraseña', 'tutor' ); ?></label>
 				<input type="password" name="confirm_password" id="confirm_password">
 			</div>
 		</div>
@@ -44,8 +44,8 @@ do_action( 'tutor_before_reset_password_form' ); ?>
 	<div class="tutor-form-row">
 		<div class="tutor-form-col-6">
 			<div class="tutor-form-group">
-				<button type="submit" class="tutor-button tutor-button-primary" value="<?php esc_attr_e( 'Reset password', 'tutor' ); ?>"><?php
-					esc_html_e( 'Reset password', 'tutor' ); ?></button>
+				<button type="submit" class="tutor-button tutor-button-primary" value="<?php esc_attr_e( 'Resetear Contraseña', 'tutor' ); ?>"><?php
+					esc_html_e( 'Resetear contraseña', 'tutor' ); ?></button>
 			</div>
 		</div>
 	</div>

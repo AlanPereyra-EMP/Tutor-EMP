@@ -27,7 +27,7 @@ if ( ! is_array($reviews) || ! count($reviews)){
 
 <div class="tutor-single-course-segment">
     <div class="course-student-rating-title">
-        <h4 class="tutor-segment-title"><?php _e('Student Feedback', 'tutor'); ?></h4>
+        <h4 class="tutor-segment-title"><?php _e('Feedback de los estudiantes', 'tutor'); ?></h4>
     </div>
     <div class="tutor-course-reviews-wrap">
         <div class="tutor-course-student-rating-wrap">
@@ -63,7 +63,7 @@ if ( ! is_array($reviews) || ! count($reviews)){
                                     <div class="rating-meter-col rating-text-col">
                                         <?php
                                         echo $value.' ';
-                                        echo $value > 1 ? __('ratings', 'tutor') : __('rating', 'tutor'); ?>
+                                        echo $value > 1 ? __('Valoración', 'tutor') : __('Valoración', 'tutor'); ?>
                                     </div>
                                 </div>
 							<?php } ?>
@@ -90,7 +90,7 @@ if ( ! is_array($reviews) || ! count($reviews)){
                             <div class="review-time-name">
                                 <p> <a href="<?php echo $profile_url; ?>">  <?php echo $review->display_name; ?> </a> </p>
                                 <p class="review-meta">
-                                    <?php echo sprintf(__('%s ago', 'tutor'), human_time_diff(strtotime($review->comment_date))); ?>
+                                    <?php echo sprintf(__('%s atrás', 'tutor'), human_time_diff(strtotime($review->comment_date))); ?>
                                 </p>
                             </div>
                             <div class="individual-review-rating-wrap">
