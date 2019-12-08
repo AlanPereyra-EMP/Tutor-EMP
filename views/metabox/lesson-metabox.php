@@ -1,6 +1,6 @@
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
-        <label for=""><?php _e('Select Course', 'tutor'); ?></label>
+        <label for=""><?php _e('Seleccionar curso', 'tutor'); ?></label>
     </div>
     <div class="tutor-option-field">
         <?php
@@ -8,7 +8,7 @@
         ?>
 
         <select name="selected_course" class="tutor_select2">
-            <option value=""><?php _e('Select a course'); ?></option>
+            <option value=""><?php _e('Seleccionar un curso'); ?></option>
 
 	        <?php
             $course_id = get_post_meta(get_the_ID(), '_tutor_course_id_for_lesson', true);
@@ -19,7 +19,7 @@
         </select>
 
         <p class="desc">
-            <?php _e('Choose the course for this lesson', 'tutor'); ?>
+            <?php _e('Elige el curso para esta lección', 'tutor'); ?>
         </p>
     </div>
 </div>

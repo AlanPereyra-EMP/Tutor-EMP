@@ -10,7 +10,7 @@ $current_tab = tutils()->array_get('settings_tab', $_GET);
 	if ( ! $this->is_gutenberg_enable){
 		?>
         <div class="settings-tabs-heading">
-            <h3><?php _e('Course Settings', 'tutor'); ?></h3>
+            <h3><?php _e('Configuraciones de curso', 'tutor'); ?></h3>
         </div>
 		<?php
 	}

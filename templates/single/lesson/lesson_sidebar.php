@@ -39,7 +39,7 @@ $enable_q_and_a_on_course = tutor_utils()->get_option('enable_q_and_a_on_course'
         <div class="tutor-tabs-btn-group">
             <a href="#tutor-lesson-sidebar-tab-content" class="<?php echo $enable_q_and_a_on_course ? "active" : ""; ?>"> <i class="tutor-icon-education"></i> <span> <?php esc_html_e('Lista de lecciones', 'tutor'); ?></span></a>
 			<?php if($enable_q_and_a_on_course) { ?>
-                <a href="#tutor-lesson-sidebar-qa-tab-content"> <i class="tutor-icon-question-1"></i> <span><?php esc_html_e('Buscar preguntas y respuestas', 'tutor'); ?></span></a>
+                <a href="#tutor-lesson-sidebar-qa-tab-content"> <i class="tutor-icon-question-1"></i> <span><?php esc_html_e('Buscar P y R', 'tutor'); ?></span></a>
 			<?php } ?>
         </div>
 
