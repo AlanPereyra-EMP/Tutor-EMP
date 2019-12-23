@@ -206,7 +206,7 @@ if ( ! $can_publish_course){
                         <div class="tutor-course-builder-upload-tips">
                             <h3 class="tutor-course-builder-tips-title"><i class="tutor-icon-light-bulb"></i><?php _e('Tips de carga de los cursos', 'tutor') ?></h3>
                             <ul>
-                                <li><?php _e("Incluir ell precio del curso o dejarlo como gratito.", 'tutor');?></li>
+                                <li><?php _e("Incluir el precio del curso o dejarlo como gratito.", 'tutor');?></li>
                                 <li><?php _e("El tamaño estándar de la imagen destacada es de 700x430px.", 'tutor');?></li>
                                 <li><?php _e("Los controles de reproducción se verán sobre el video.", 'tutor');?></li>
                                 <li><?php _e("El creador de cursos es para que crees y organices los cursos.", 'tutor');?></li>

@@ -12,7 +12,7 @@ if ( ! empty($_POST['tutor_quiz_builder_quiz_id'])){
 }
 
 if ( ! $quiz){
-	die('No quiz found');
+	die('Examen no encontrado');
 }
 
 ?>
@@ -22,16 +22,16 @@ if ( ! $quiz){
     <div id="tutor-quiz-modal-tab-items-wrap" class="tutor-quiz-modal-tab-items-wrap">
 
         <a href="#quiz-builder-tab-quiz-info" class="tutor-quiz-modal-tab-item active">
-            <i class="tutor-icon-list"></i> <?php _e('Quiz Info', 'tutor'); ?>
+            <i class="tutor-icon-list"></i> <?php _e('Info de examen', 'tutor'); ?>
         </a>
         <a href="#quiz-builder-tab-questions" class="tutor-quiz-modal-tab-item">
-            <i class="tutor-icon-doubt"></i> <?php _e('Questions', 'tutor'); ?>
+            <i class="tutor-icon-doubt"></i> <?php _e('Preguntas', 'tutor'); ?>
         </a>
         <a href="#quiz-builder-tab-settings" class="tutor-quiz-modal-tab-item">
-            <i class="tutor-icon-settings-1"></i> <?php _e('Settings', 'tutor'); ?>
+            <i class="tutor-icon-settings-1"></i> <?php _e('Configuraciones', 'tutor'); ?>
         </a>
         <a href="#quiz-builder-tab-advanced-options" class="advanced-options-tab-item tutor-quiz-modal-tab-item">
-            <i class="tutor-icon-filter-tool-black-shape"></i> <?php _e('Advanced Options', 'tutor'); ?>
+            <i class="tutor-icon-filter-tool-black-shape"></i> <?php _e('Opciones avanzadas', 'tutor'); ?>
         </a>
 
     </div>
@@ -44,7 +44,7 @@ if ( ! $quiz){
                 <div class="tutor-quiz-builder-group">
                     <div class="tutor-quiz-builder-row">
                         <div class="tutor-quiz-builder-col">
-                            <input type="text" name="quiz_title" placeholder="<?php _e('Type your quiz title here', 'tutor'); ?>" value="<?php echo
+                            <input type="text" name="quiz_title" placeholder="<?php _e('Escriba el título de su prueba aquí', 'tutor'); ?>" value="<?php echo
                             $quiz->post_title; ?>">
                         </div>
                     </div>
@@ -65,10 +65,10 @@ if ( ! $quiz){
 
             <div class="tutor-quiz-builder-modal-control-btn-group">
                 <div class="quiz-builder-btn-group-left">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-first-step"><?php _e('Save &amp; Next', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-first-step"><?php _e('Guardar &amp; siguiente', 'tutor'); ?></a>
                 </div>
                 <div class="quiz-builder-btn-group-right">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn  quiz-modal-btn-cancel"><?php _e('Cancel', 'tutor');
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn  quiz-modal-btn-cancel"><?php _e('Cancelar', 'tutor');
 						?></a>
                 </div>
             </div>
@@ -118,7 +118,7 @@ if ( ! $quiz){
                 <div class="tutor-quiz-builder-form-row">
                     <a href="javascript:;" class="tutor-quiz-add-question-btn tutor-quiz-open-question-form">
                         <i class="tutor-icon-add-line"></i>
-						<?php _e('Add Question', 'tutor'); ?>
+						<?php _e('Añadir pregunta', 'tutor'); ?>
                     </a>
                 </div>
 
@@ -128,11 +128,11 @@ if ( ! $quiz){
 
             <div class="tutor-quiz-builder-modal-control-btn-group">
                 <div class="quiz-builder-btn-group-left">
-                    <a href="#quiz-builder-tab-quiz-info" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Back', 'tutor'); ?></a>
-                    <a href="#quiz-builder-tab-settings" class="quiz-modal-tab-navigation-btn quiz-modal-btn-next"><?php _e('Next', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-quiz-info" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Anterior', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-settings" class="quiz-modal-tab-navigation-btn quiz-modal-btn-next"><?php _e('Siguiente', 'tutor'); ?></a>
                 </div>
                 <div class="quiz-builder-btn-group-right">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php _e('Cancel', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php _e('Cancelar', 'tutor'); ?></a>
                 </div>
             </div>
 
@@ -143,7 +143,7 @@ if ( ! $quiz){
 
                 <div class="quiz-builder-modal-settins">
                     <div class="tutor-quiz-builder-group">
-                        <h4> <?php _e('Time Limit', 'tutor'); ?> </h4>
+                        <h4> <?php _e('Tiempo límite', 'tutor'); ?> </h4>
                         <div class="tutor-quiz-builder-row">
                             <div class="tutor-quiz-builder-col auto-width">
                                 <input type="text" name="quiz_option[time_limit][time_value]" value="<?php echo tutor_utils()->get_quiz_option($quiz_id, 'time_limit.time_value', 0) ?>">
@@ -151,11 +151,11 @@ if ( ! $quiz){
                             <div class="tutor-quiz-builder-col auto-width">
                                 <?php $limit_time_type = tutor_utils()->get_quiz_option($quiz_id, 'time_limit.time_type', 'minutes') ?>
                                 <select name="quiz_option[time_limit][time_type]">
-                                    <option value="seconds" <?php selected('seconds', $limit_time_type); ?> ><?php _e('Seconds', 'tutor'); ?></option>
-                                    <option value="minutes" <?php selected('minutes', $limit_time_type); ?> ><?php _e('Minutes', 'tutor'); ?></option>
-                                    <option value="hours" <?php selected('hours', $limit_time_type); ?>  ><?php _e('Hours', 'tutor'); ?></option>
-                                    <option value="days" <?php selected('days', $limit_time_type); ?>  ><?php _e('Days', 'tutor'); ?></option>
-                                    <option value="weeks" <?php selected('weeks', $limit_time_type); ?>  ><?php _e('Weeks', 'tutor'); ?></option>
+                                    <option value="seconds" <?php selected('seconds', $limit_time_type); ?> ><?php _e('Segundos', 'tutor'); ?></option>
+                                    <option value="minutes" <?php selected('minutes', $limit_time_type); ?> ><?php _e('Minutos', 'tutor'); ?></option>
+                                    <option value="hours" <?php selected('hours', $limit_time_type); ?>  ><?php _e('Horas', 'tutor'); ?></option>
+                                    <option value="days" <?php selected('days', $limit_time_type); ?>  ><?php _e('Días', 'tutor'); ?></option>
+                                    <option value="weeks" <?php selected('weeks', $limit_time_type); ?>  ><?php _e('Semanas', 'tutor'); ?></option>
                                 </select>
                             </div>
                             <div class="tutor-quiz-builder-col auto-width">
@@ -163,14 +163,14 @@ if ( ! $quiz){
                                     <input type="checkbox" value="1" name="quiz_option[hide_quiz_time_display]" <?php checked('1', tutor_utils()->get_quiz_option($quiz_id, 'hide_quiz_time_display')); ?> />
                                     <div class="btn-slider btn-round"></div>
                                 </label>
-                                <span><?php _e('Hide quiz time - display', 'tutor'); ?></span>
+                                <span><?php _e('Ocultar tiempo límite', 'tutor'); ?></span>
                             </div>
                         </div>
-                        <p class="help"><?php _e('Time limit for this quiz. 0 means no time limit.', 'tutor'); ?></p>
+                        <p class="help"><?php _e('Límite de tiempo para este cuestionario. 0 significa que no hay límite de tiempo.', 'tutor'); ?></p>
                     </div> <!-- .tutor-quiz-builder-group -->
 
                     <div class="tutor-quiz-builder-group">
-                        <h4><?php _e('Attempts Allowed', 'tutor'); ?> <span>(<?php _e('Optional', 'tutor'); ?>)</span></h4>
+                        <h4><?php _e('Intentos permitidos', 'tutor'); ?> <span>(<?php _e('Opcional', 'tutor'); ?>)</span></h4>
                         <div class="tutor-quiz-builder-row">
                             <div class="tutor-quiz-builder-col">
                                 <?php
@@ -185,27 +185,27 @@ if ( ! $quiz){
                                 </div>
                             </div>
                         </div>
-                        <p class="help"><?php _e('Restriction on the number of attempts a student is allowed to take for this quiz. 0 for no limit', 'tutor'); ?></p>
+                        <p class="help"><?php _e('Restricción en el número de intentos que un estudiante puede realizar para este cuestionario. 0 sin límite', 'tutor'); ?></p>
                     </div> <!-- .tutor-quiz-builder-group -->
 
                     <div class="tutor-quiz-builder-group">
-                        <h4><?php _e('Passing Grade (%)', 'tutor'); ?></h4>
+                        <h4><?php _e('Progreso (%)', 'tutor'); ?></h4>
                         <div class="tutor-quiz-builder-row">
                             <div class="tutor-quiz-builder-col">
                                 <input type="number" name="quiz_option[passing_grade]" value="<?php echo tutor_utils()->get_quiz_option($quiz_id, 'passing_grade', 80) ?>" size="10">
                             </div>
                         </div>
-                        <p class="help"><?php _e('Set the passing percentage for this quiz', 'tutor'); ?></p>
+                        <p class="help"><?php _e('Establecer el porcentaje de aprobación para esta prueba', 'tutor'); ?></p>
                     </div> <!-- .tutor-quiz-builder-group -->
 
                     <div class="tutor-quiz-builder-group">
-                        <h4><?php _e('Max questions allowed to answer', 'tutor'); ?></h4>
+                        <h4><?php _e('Max preguntas permitidas para responder', 'tutor'); ?></h4>
                         <div class="tutor-quiz-builder-row">
                             <div class="tutor-quiz-builder-col">
                                 <input type="number" name="quiz_option[max_questions_for_answer]" value="<?php echo tutor_utils()->get_quiz_option($quiz_id, 'max_questions_for_answer', 10) ?>">
                             </div>
                         </div>
-                        <p class="help"><?php _e('This amount of question will be available for students to answer, and question will comes randomly from all available questions belongs with a quiz, if this amount greater then available question, then all questions will be available for a student to answer.', 'tutor'); ?></p>
+                        <p class="help"><?php _e('Esta cantidad de preguntas estará disponible para que los estudiantes respondan, y la pregunta vendrá al azar de todas las preguntas disponibles que pertenece a un cuestionario, si esta cantidad es mayor que la pregunta disponible, entonces todas las preguntas estarán disponibles para que un estudiante las responda.', 'tutor'); ?></p>
                     </div> <!-- .tutor-quiz-builder-group -->
 
 	                <?php do_action('tutor_quiz_edit_modal_settings_tab_after', $quiz) ?>
@@ -216,8 +216,8 @@ if ( ! $quiz){
 
             <div class="tutor-quiz-builder-modal-control-btn-group">
                 <div class="quiz-builder-btn-group-left">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Back', 'tutor'); ?></a>
-                    <a href="#quiz-builder-tab-advanced-options" class="quiz-modal-tab-navigation-btn quiz-modal-settings-save-btn"><?php _e('Save', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Anterior', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-advanced-options" class="quiz-modal-tab-navigation-btn quiz-modal-settings-save-btn"><?php _e('Guardar', 'tutor'); ?></a>
                 </div>
                 <!--<div class="quiz-builder-btn-group-right">
                     <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php /*_e('Cancel', 'tutor'); */?></a>
@@ -235,34 +235,34 @@ if ( ! $quiz){
                             <input type="checkbox" value="1" name="quiz_option[quiz_auto_start]" <?php checked('1', tutor_utils()->get_quiz_option($quiz_id, 'quiz_auto_start')); ?> />
                             <div class="btn-slider btn-round"></div>
                         </label>
-                        <span><?php _e('Quiz Auto Start', 'tutor'); ?></span>
+                        <span><?php _e('Comienzo automático de examen', 'tutor'); ?></span>
                     </div>
                 </div>
-                <p class="help"><?php _e('If you enable this option, the quiz will start automatically after the page is loaded.', 'tutor'); ?></p>
+                <p class="help"><?php _e('Si habilita esta opción, la prueba comenzará automáticamente después de cargar la página.', 'tutor'); ?></p>
             </div>
 
             <div class="tutor-quiz-builder-group">
                 <div class="tutor-quiz-builder-row">
                     <div class="tutor-quiz-builder-col auto-width">
-                        <h4><?php _e('Question Layout', 'tutor'); ?></h4>
+                        <h4><?php _e('Diseño de preguntas', 'tutor'); ?></h4>
 
                         <select name="quiz_option[question_layout_view]">
                             <option value=""><?php _e('Set question layout view', 'tutor'); ?></option>
-                            <option value="single_question" <?php selected('single_question', tutor_utils()->get_quiz_option($quiz_id, 'question_layout_view')); ?>> <?php _e('Single Question', 'tutor'); ?> </option>
-                            <option value="question_pagination" <?php selected('question_pagination', tutor_utils()->get_quiz_option($quiz_id, 'question_layout_view') ); ?>> <?php _e('Question Pagination', 'tutor'); ?> </option>
-                            <option value="question_below_each_other" <?php selected('question_below_each_other', tutor_utils()->get_quiz_option($quiz_id, 'question_layout_view') ); ?>> <?php _e('Question below each other', 'tutor'); ?> </option>
+                            <option value="single_question" <?php selected('single_question', tutor_utils()->get_quiz_option($quiz_id, 'question_layout_view')); ?>> <?php _e('Pregunta simple', 'tutor'); ?> </option>
+                            <option value="question_pagination" <?php selected('question_pagination', tutor_utils()->get_quiz_option($quiz_id, 'question_layout_view') ); ?>> <?php _e('Paginación de preguntas', 'tutor'); ?> </option>
+                            <option value="question_below_each_other" <?php selected('question_below_each_other', tutor_utils()->get_quiz_option($quiz_id, 'question_layout_view') ); ?>> <?php _e('Pregunta una debajo de la otra', 'tutor'); ?> </option>
                         </select>
                     </div>
 
                     <div class="tutor-quiz-builder-col auto-width">
-                        <h4><?php _e('Questions Order', 'tutor'); ?></h4>
+                        <h4><?php _e('Orden de preguntas', 'tutor'); ?></h4>
 
                         <select name="quiz_option[questions_order]">
                             <option value="rand" <?php selected('rand', tutils()->get_quiz_option($quiz_id, 'questions_order')); ?>> <?php _e('Random', 'tutor'); ?> </option>
-                            <option value="sorting" <?php selected('sorting', tutils()->get_quiz_option($quiz_id, 'questions_order')); ?>> <?php _e('Sorting', 'tutor'); ?> </option>
+                            <option value="sorting" <?php selected('sorting', tutils()->get_quiz_option($quiz_id, 'questions_order')); ?>> <?php _e('Clasificación', 'tutor'); ?> </option>
 
-                            <option value="asc" <?php selected('asc', tutils()->get_quiz_option($quiz_id, 'questions_order') ); ?>> <?php _e('Ascending', 'tutor'); ?> </option>
-                            <option value="desc" <?php selected('desc', tutils()->get_quiz_option($quiz_id, 'questions_order') ); ?>> <?php _e('Descending', 'tutor'); ?> </option>
+                            <option value="asc" <?php selected('asc', tutils()->get_quiz_option($quiz_id, 'questions_order') ); ?>> <?php _e('Ascendente', 'tutor'); ?> </option>
+                            <option value="desc" <?php selected('desc', tutils()->get_quiz_option($quiz_id, 'questions_order') ); ?>> <?php _e('Descendente', 'tutor'); ?> </option>
                         </select>
                     </div>
 
@@ -277,28 +277,28 @@ if ( ! $quiz){
                             <input type="checkbox" value="1" name="quiz_option[hide_question_number_overview]" <?php checked('1', tutor_utils()->get_quiz_option($quiz_id, 'hide_question_number_overview')); ?> />
                             <div class="btn-slider btn-round"></div>
                         </label>
-                        <span><?php _e('Hide question number', 'tutor'); ?></span>
+                        <span><?php _e('Ocultar nummero de pregunta', 'tutor'); ?></span>
                     </div>
                 </div>
-                <p class="help"><?php _e('Show/hide question number during attempt.', 'tutor'); ?></p>
+                <p class="help"><?php _e('Mostrar / ocultar el número de pregunta durante el intento.', 'tutor'); ?></p>
             </div>
 
             <div class="tutor-quiz-builder-group">
-                <h4><?php _e('Short answer characters limit', 'tutor'); ?></h4>
+                <h4><?php _e('Límite de caracteres de respuesta corta', 'tutor'); ?></h4>
                 <div class="tutor-quiz-builder-row">
                     <div class="tutor-quiz-builder-col">
                         <input type="number" name="quiz_option[short_answer_characters_limit]" value="<?php echo tutor_utils()->get_quiz_option
                         ($quiz_id, 'short_answer_characters_limit', 200); ?>" >
                     </div>
                 </div>
-                <p class="help"><?php _e('Student will place answer in short answer question type within this characters limit.', 'tutor'); ?></p>
+                <p class="help"><?php _e('El estudiante colocará la respuesta en el tipo de pregunta de respuesta corta dentro de este límite de caracteres.', 'tutor'); ?></p>
             </div>
 
 
             <div class="tutor-quiz-builder-modal-control-btn-group">
                 <div class="quiz-builder-btn-group-left">
-                    <a href="#quiz-builder-tab-settings" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Back', 'tutor'); ?></a>
-                    <a href="#quiz-builder-tab-advanced-options" class="quiz-modal-tab-navigation-btn quiz-modal-settings-save-btn"><?php _e('Save', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-settings" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Atrás', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-advanced-options" class="quiz-modal-tab-navigation-btn quiz-modal-settings-save-btn"><?php _e('Guardar', 'tutor'); ?></a>
                 </div>
                 <!--<div class="quiz-builder-btn-group-right">
                     <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php /*_e('Cancel', 'tutor'); */?></a>

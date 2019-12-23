@@ -20,28 +20,28 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
 
 <div class="tutor-single-course-segment tutor-single-course-lead-info">
 
-	<?php
-	$disable = get_tutor_option('disable_course_review');
-	if ( ! $disable){
-		?>
-        <div class="tutor-leadinfo-top-meta">
-        <span class="tutor-single-course-rating">
-            <?php
-            $course_rating = tutor_utils()->get_course_rating();
-            tutor_utils()->star_rating_generator($course_rating->rating_avg);
-            ?>
-            <span class="tutor-single-rating-count">
-                <?php
-                echo $course_rating->rating_avg;
-                echo '<i>('.$course_rating->rating_count.')</i>';
-                ?>
-            </span>
-        </span>
-        </div>
-	<?php } ?>
-
 	<?php do_action('tutor_course/single/title/before'); ?>
-    <h1 class="tutor-course-header-h1"><?php the_title(); ?></h1>
+    <h1 class="tutor-course-header-h1 "><?php the_title(); ?></h1>
+
+		<?php
+		$disable = get_tutor_option('disable_course_review');
+		if ( ! $disable){
+			?>
+					<div class="tutor-leadinfo-top-meta">
+					<span class="tutor-single-course-rating">
+							<?php
+							$course_rating = tutor_utils()->get_course_rating();
+							tutor_utils()->star_rating_generator($course_rating->rating_avg);
+							?>
+							<span class="tutor-single-rating-count">
+									<?php
+									echo $course_rating->rating_avg;
+									echo '<i>('.$course_rating->rating_count.')</i>';
+									?>
+							</span>
+					</span>
+					</div>
+		<?php } ?>
 
 	<?php do_action('tutor_course/single/title/after'); ?>
 	<?php do_action('tutor_course/single/lead_meta/before'); ?>
@@ -97,11 +97,11 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
                     <?php echo $course_duration; ?>
                 </li>
 			<?php } ?>
-            <li>
+            <li class="">
                 <span><?php esc_html_e('Inscritos', 'tutor') ?></span>
                 <?php echo (int) tutor_utils()->count_enrolled_users_by_course(); ?>
             </li>
-            <li>
+            <li class="">
                 <span><?php esc_html_e('Última actialización', 'tutor') ?></span>
 				<?php echo esc_html(get_the_modified_date()); ?>
             </li>

@@ -31,7 +31,7 @@ if (is_array($course_benefits) && count($course_benefits)){
 			<h4 class="tutor-segment-title"><?php _e('Que voy a aprender', 'tutor'); ?></h4>
 		</div>
 
-		<div class="tutor-course-benefits-content">
+		<div class="">
 			<ul class="tutor-course-benefits-items tutor-custom-list-style">
 				<?php
 				foreach ($course_benefits as $benefit){

@@ -1,6 +1,6 @@
 <?php
 if ($question_type === 'open_ended'){
-	echo '<p class="open-ended-notice" style="color: #ff0000;">No option is necessary for this answer type</p>';
+	echo '<p class="open-ended-notice" style="color: #ff0000;">No es necesaria ninguna opción para este tipo de respuesta</p>';
 	return '';
 }
 
@@ -22,7 +22,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
 		?>
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Answer title', 'tutor'); ?></h4>
+            <h4><?php _e('Título de respuesta', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <input type="text" name="quiz_answer[<?php echo $question_id; ?>][answer_title]" value="<?php echo $answer_title; ?>">
@@ -31,7 +31,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
         </div>
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Upload Image', 'tutor'); ?></h4>
+            <h4><?php _e('Imagenn destacada', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <div class="tutor-media-upload-wrap">
@@ -55,23 +55,23 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
             </div>
         </div>
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Display format for options', 'tutor'); ?></h4>
+            <h4><?php _e('Formato de visualización para opciones', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col auto-width">
                     <label>
                         <input type="radio" name="quiz_answer[<?php echo $question_id; ?>][answer_view_format]" value="text" <?php
-                        echo $answer_view_format ? checked('text', $answer_view_format) : 'checked="checked"' ?>> <?php _e('Only text', 'tutor'); ?>
+                        echo $answer_view_format ? checked('text', $answer_view_format) : 'checked="checked"' ?>> <?php _e('Solo texto', 'tutor'); ?>
                     </label>
                 </div>
                 <div class="tutor-quiz-builder-col auto-width">
                     <label>
                         <input type="radio" name="quiz_answer[<?php echo $question_id; ?>][answer_view_format]" value="image" <?php echo
-                        checked('image', $answer_view_format) ?> > <?php _e('Only Image', 'tutor'); ?>
+                        checked('image', $answer_view_format) ?> > <?php _e('Solo imagen', 'tutor'); ?>
                     </label>
                 </div>
                 <div class="tutor-quiz-builder-col auto-width">
                     <label>
-                        <input type="radio" name="quiz_answer[<?php echo $question_id; ?>][answer_view_format]" value="text_image" <?php echo checked('text_image', $answer_view_format) ?> > <?php _e('Text &amp; Image both', 'tutor'); ?>
+                        <input type="radio" name="quiz_answer[<?php echo $question_id; ?>][answer_view_format]" value="text_image" <?php echo checked('text_image', $answer_view_format) ?> > <?php _e('Texto &amp; Entre imágenes', 'tutor'); ?>
                     </label>
                 </div>
             </div>
@@ -80,23 +80,23 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
 	}elseif($question_type === 'fill_in_the_blank'){
 		?>
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Question Title', 'tutor'); ?></h4>
+            <h4><?php _e('Título de pregunta', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <input type="text" name="quiz_answer[<?php echo $question_id; ?>][answer_title]" value="<?php echo $answer_title; ?>">
                 </div>
             </div>
-            <p class="help"><?php _e( 'Please make sure that <b>{dash}</b> variable contains in your question title to show dash, You can use multiple variable', 'tutor' ); ?></p>
+            <p class="help"><?php _e( 'Por favor asegúrese de que <b>{dash}</b> variable contiene en el título de su pregunta para mostrar guión, puede usar múltiples variables', 'tutor' ); ?></p>
         </div>
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Correct Answer(s)', 'tutor'); ?></h4>
+            <h4><?php _e('Pregunta correcta', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <input type="text" name="quiz_answer[<?php echo $question_id; ?>][answer_two_gap_match]" value="<?php echo $answer_two_gap_match; ?>">
                 </div>
             </div>
-            <p class="help"><?php _e( 'Separate multiple answer by pipe <b>( | )</b> , 1 answer per variable assigned in question', 'tutor' ); ?></p>
+            <p class="help"><?php _e( 'Separar la respuesta múltiple con <b>( | )</b> , 1 respuesta por variable asignada en cuestión', 'tutor' ); ?></p>
         </div>
 
 
@@ -104,7 +104,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
 	}elseif($question_type === 'matching'){
 		?>
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Answer title', 'tutor'); ?></h4>
+            <h4><?php _e('Título de respuesta', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <input type="text" name="quiz_answer[<?php echo $question_id; ?>][answer_title]" value="<?php echo $answer_title; ?>">
@@ -112,7 +112,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
             </div>
         </div>
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Matched Answer title', 'tutor'); ?></h4>
+            <h4><?php _e('Título de respuesta coincidente', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <input type="text" name="quiz_answer[<?php echo $question_id; ?>][matched_answer_title]" value="<?php echo $answer_two_gap_match; ?>">
@@ -121,7 +121,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
         </div>
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Upload Image', 'tutor'); ?></h4>
+            <h4><?php _e('Suir imagen', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <div class="tutor-media-upload-wrap">
@@ -146,24 +146,24 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
         </div>
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Display format for options', 'tutor'); ?></h4>
+            <h4><?php _e('Formato de visualización para opciones', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col auto-width">
                     <label>
                         <input type="radio" name="quiz_answer[<?php echo $question_id; ?>][answer_view_format]" value="text" <?php echo $answer_view_format ? checked('text', $answer_view_format) : 'checked="checked"' ?>>
-                        <?php _e('Only text', 'tutor'); ?>
+                        <?php _e('Solo texto', 'tutor'); ?>
                     </label>
                 </div>
                 <div class="tutor-quiz-builder-col auto-width">
                     <label>
                         <input type="radio" name="quiz_answer[<?php echo $question_id; ?>][answer_view_format]" value="image" <?php echo checked('image', $answer_view_format) ?> >
-                        <?php _e('Only Image', 'tutor'); ?>
+                        <?php _e('Solo imagen', 'tutor'); ?>
                     </label>
                 </div>
                 <div class="tutor-quiz-builder-col auto-width">
                     <label>
                         <input type="radio" name="quiz_answer[<?php echo $question_id; ?>][answer_view_format]" value="text_image" <?php echo checked('text_image', $answer_view_format) ?> >
-                        <?php _e('Text &amp; Image both', 'tutor'); ?>
+                        <?php _e('Texto &amp; Entre imagenes', 'tutor'); ?>
                     </label>
                 </div>
             </div>
@@ -174,7 +174,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
 		?>
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Upload Image', 'tutor'); ?></h4>
+            <h4><?php _e('Subir imagenes', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <div class="tutor-media-upload-wrap">
@@ -199,7 +199,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
         </div>  <!-- /.tutor-quiz-builder-group -->
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Image matched text', 'tutor'); ?></h4>
+            <h4><?php _e('Texto de imagen coincidente', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <input type="text" name="quiz_answer[<?php echo $question_id; ?>][answer_title]" value="<?php echo $answer_title; ?>">
@@ -211,7 +211,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
 	}elseif($question_type === 'image_answering'){
 		?>
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Upload Image', 'tutor'); ?></h4>
+            <h4><?php _e('Subir imagen', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <div class="tutor-media-upload-wrap">
@@ -236,7 +236,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
         </div> <!-- /.tutor-quiz-builder-group -->
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Answer input value', 'tutor'); ?></h4>
+            <h4><?php _e('Responder valor de entrada', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <input type="text" name="quiz_answer[<?php echo $question_id; ?>][answer_title]" value="<?php echo $answer_title; ?>">

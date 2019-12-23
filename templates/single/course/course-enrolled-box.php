@@ -29,6 +29,11 @@ global $wp_query;
         ?>
     </div>
 
+<?php $count_completed_lesson = tutor_course_completing_progress_bar(); ?>
+
+
+    <?php tutor_course_material_includes_html(); ?>
+    <?php tutor_course_topics(); ?>
     <div class="tutor-lead-info-btn-group">
 	    <?php do_action('tutor_course/single/actions_btn_group/before'); ?>
 
@@ -40,7 +45,7 @@ global $wp_query;
                 <a href="<?php echo $lesson_url; ?>" class="tutor-button tutor-success">
                     <?php
                         if($completed_lessons){
-                            _e( 'Ir a la lección', 'tutor' );
+                            _e( 'Ir a la última lección', 'tutor' );
                         }else{
                             _e( 'Empezar curso', 'tutor' );
                         }
@@ -53,10 +58,6 @@ global $wp_query;
 
         <?php do_action('tutor_course/single/actions_btn_group/after'); ?>
     </div>
-
-
-	<?php tutor_course_price(); ?>
-    <?php tutor_course_material_includes_html(); ?>
 
     <div class="tutor-single-course-segment  tutor-course-enrolled-wrap">
         <p>

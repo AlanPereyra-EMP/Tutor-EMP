@@ -25,7 +25,7 @@ if (is_array($materials) && count($materials)){
 
 	<div class="tutor-single-course-segment  tutor-course-material-includes-wrap">
         <h4 class="tutor-segment-title"><?php _e('Material incluido', 'tutor'); ?></h4>
-		<div class="tutor-course-target-audience-content">
+		<div class="tutor-course-target-audience-content tutor-course-content-ul">
 			<ul class="tutor-course-target-audience-items tutor-custom-list-style">
 				<?php
 				foreach ($materials as $material){

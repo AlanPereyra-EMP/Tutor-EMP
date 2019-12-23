@@ -1,4 +1,4 @@
-<h2><?php _e( 'Tutor Fields', 'tutor' ); ?></h2>
+<h2><?php _e( 'Campos Tutor IP', 'tutor' ); ?></h2>
 
 <?php
 /**
@@ -17,7 +17,7 @@ wp_enqueue_media();
 	</tr>
 
 	<tr class="user-description-wrap">
-		<th><label for="description"><?php _e('Profile Bio'); ?></label></th>
+		<th><label for="description"><?php _e('Biografía'); ?></label></th>
 		<td>
 			<?php
 			$settings = array(
@@ -29,12 +29,12 @@ wp_enqueue_media();
 			wp_editor(get_user_meta($user->ID, '_tutor_profile_bio', true), '_tutor_profile_bio', $settings);
 			?>
 
-			<p class="description"><?php _e('Write a little bit more about you, it will show publicly.'); ?></p>
+			<p class="description"><?php _e('Escribe un poco más sobre ti, se mostrará públicamente.'); ?></p>
 		</td>
 	</tr>
 
 	<tr class="user-description-wrap">
-		<th><label for="description"><?php _e('Profile Photo'); ?></label></th>
+		<th><label for="description"><?php _e('Foto de perfil'); ?></label></th>
 		<td>
 			<div class="tutor-video-poster-wrap">
 				<p class="video-poster-img">
@@ -46,11 +46,10 @@ wp_enqueue_media();
 					?>
 				</p>
 				<input type="hidden" name="_tutor_profile_photo" value="<?php echo $user_profile_photo; ?>">
-				<button type="button" class="tutor_video_poster_upload_btn button button-primary"><?php _e('Upload', 'tutor'); ?></button>
+				<button type="button" class="tutor_video_poster_upload_btn button button-primary"><?php _e('Subir', 'tutor'); ?></button>
 			</div>
 
 		</td>
 	</tr>
 
 </table>
-

@@ -18,7 +18,6 @@ class Assets{
 		wp_enqueue_style('tutor-select2', tutor()->url.'assets/packages/select2/select2.min.css', array(), tutor()->version);
 		wp_enqueue_style('tutor-admin', tutor()->url.'assets/css/tutor-admin.css', array(), tutor()->version);
 		wp_enqueue_style('tutor-icon', tutor()->url.'assets/icons/css/tutor-icon.css', array(), tutor()->version);
-
 		/**
 		 * Scripts
 		 */
@@ -99,6 +98,9 @@ class Assets{
 		 * Tutor Icon
 		 */
 		wp_enqueue_style('tutor-icon', tutor()->url.'assets/icons/css/tutor-icon.css', array(), tutor()->version);
+
+		// Tutor IP
+		wp_enqueue_style('tutor-ip', tutor()->url.'assets/css/tutor-ip.css', array(), tutor()->version);
 
 
 		//Plyr

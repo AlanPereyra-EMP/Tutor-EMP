@@ -8,7 +8,7 @@
 		?>
         <div class="modal-classic-btn-wrap">
             <a class="tutor-classic-editor-btn btn-sm" target="_blank" href="<?php echo esc_url(get_admin_url("/")); ?>post.php?post=<?php echo $post->ID; ?>&action=edit" >
-                <i class="tutor-icon-classic-editor topic-edit-icon"></i> <?php echo __('Classic Editor', 'tutor'); ?>
+                <i class="tutor-icon-classic-editor topic-edit-icon"></i> <?php echo __('Editor clásico', 'tutor'); ?>
             </a>
         </div>
 		<?php
@@ -21,7 +21,7 @@
 
         <div class="tutor-option-field-row">
             <div class="tutor-option-field tutor-lesson-modal-title-wrap">
-                <input type="text" name="lesson_title" value="<?php echo $post->post_title; ?>" placeholder="<?php _e('Lesson title', 'tutor'); ?>">
+                <input type="text" name="lesson_title" value="<?php echo $post->post_title; ?>" placeholder="<?php _e('Título de lección', 'tutor'); ?>">
             </div>
         </div>
 
@@ -36,7 +36,7 @@
 
         <div class="tutor-option-field-row">
             <div class="tutor-option-field-label">
-                <label for=""><?php _e('Feature Image'); ?></label>
+                <label for=""><?php _e('Imagen destacada'); ?></label>
             </div>
             <div class="tutor-option-field">
                 <div class="tutor-option-gorup-fields-wrap">
@@ -68,6 +68,6 @@
     </div>
 
     <div class="modal-footer">
-        <button type="button" class="tutor-btn active update_lesson_modal_btn"><?php _e('Update Lesson', 'tutor'); ?></button>
+        <button type="button" class="tutor-btn active update_lesson_modal_btn"><?php _e('Subir lección', 'tutor'); ?></button>
     </div>
 </form>

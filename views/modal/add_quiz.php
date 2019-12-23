@@ -12,16 +12,16 @@ if ( ! empty($_POST['tutor_quiz_builder_quiz_id'])){
     <div id="tutor-quiz-modal-tab-items-wrap" class="tutor-quiz-modal-tab-items-wrap">
 
         <a href="#quiz-builder-tab-quiz-info" class="tutor-quiz-modal-tab-item active">
-            <i class="tutor-icon-list"></i> <?php _e('Quiz Info', 'tutor'); ?>
+            <i class="tutor-icon-list"></i> <?php _e('Info de examen', 'tutor'); ?>
         </a>
         <a href="#quiz-builder-tab-questions" class="tutor-quiz-modal-tab-item">
-            <i class="tutor-icon-doubt"></i> <?php _e('Questions', 'tutor'); ?>
+            <i class="tutor-icon-doubt"></i> <?php _e('Preguntas', 'tutor'); ?>
         </a>
         <a href="#quiz-builder-tab-settings" class="tutor-quiz-modal-tab-item">
-            <i class="tutor-icon-settings-1"></i> <?php _e('Settings', 'tutor'); ?>
+            <i class="tutor-icon-settings-1"></i> <?php _e('Configuraciones', 'tutor'); ?>
         </a>
         <a href="#quiz-builder-tab-advanced-options" class="tutor-quiz-modal-tab-item">
-            <i class="tutor-icon-filter-tool-black-shape"></i> <?php _e('Advanced Options', 'tutor'); ?>
+            <i class="tutor-icon-filter-tool-black-shape"></i> <?php _e('Opciones avanzadas', 'tutor'); ?>
         </a>
 
     </div>
@@ -34,7 +34,7 @@ if ( ! empty($_POST['tutor_quiz_builder_quiz_id'])){
                 <div class="tutor-quiz-builder-group">
                     <div class="tutor-quiz-builder-row">
                         <div class="tutor-quiz-builder-col">
-                            <input type="text" name="quiz_title" placeholder="<?php _e('Type your quiz title here', 'tutor'); ?>">
+                            <input type="text" name="quiz_title" placeholder="<?php _e('Escribe el título de la pregunta aquí', 'tutor'); ?>">
                         </div>
                     </div>
                     <p class="warning quiz_form_msg"></p>
@@ -49,10 +49,10 @@ if ( ! empty($_POST['tutor_quiz_builder_quiz_id'])){
             </div>
             <div class="tutor-quiz-builder-modal-control-btn-group">
                 <div class="quiz-builder-btn-group-left">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-first-step"><?php _e('Save &amp; Next', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-first-step"><?php _e('Guardar &amp; Siguiente', 'tutor'); ?></a>
                 </div>
                 <div class="quiz-builder-btn-group-right">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn  quiz-modal-btn-cancel"><?php _e('Cancel', 'tutor');
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn  quiz-modal-btn-cancel"><?php _e('Cancelar', 'tutor');
 						?></a>
                 </div>
             </div>
@@ -63,12 +63,12 @@ if ( ! empty($_POST['tutor_quiz_builder_quiz_id'])){
             </div>
             <div class="tutor-quiz-builder-modal-control-btn-group">
                 <div class="quiz-builder-btn-group-left">
-                    <a href="#quiz-builder-tab-quiz-info" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Back', 'tutor');
+                    <a href="#quiz-builder-tab-quiz-info" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Anterior', 'tutor');
 						?></a>
-                    <a href="#quiz-builder-tab-settings" class="quiz-modal-tab-navigation-btn quiz-modal-btn-next"><?php _e('Next', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-settings" class="quiz-modal-tab-navigation-btn quiz-modal-btn-next"><?php _e('Siguiente', 'tutor'); ?></a>
                 </div>
                 <div class="quiz-builder-btn-group-right">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php _e('Cancel', 'tutor');
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php _e('Cancelar', 'tutor');
 						?></a>
                 </div>
             </div>
@@ -80,12 +80,12 @@ if ( ! empty($_POST['tutor_quiz_builder_quiz_id'])){
             </div>
             <div class="tutor-quiz-builder-modal-control-btn-group">
                 <div class="quiz-builder-btn-group-left">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Back', 'tutor');
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-back"><?php _e('Anterior', 'tutor');
 						?></a>
-                    <a href="#quiz-builder-tab-advanced-options" class="quiz-modal-tab-navigation-btn quiz-modal-btn-next"><?php _e('Next', 'tutor'); ?></a>
+                    <a href="#quiz-builder-tab-advanced-options" class="quiz-modal-tab-navigation-btn quiz-modal-btn-next"><?php _e('Siguiente', 'tutor'); ?></a>
                 </div>
                 <div class="quiz-builder-btn-group-right">
-                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php _e('Cancel', 'tutor');
+                    <a href="#quiz-builder-tab-questions" class="quiz-modal-tab-navigation-btn quiz-modal-btn-cancel"><?php _e('Cancelar', 'tutor');
 						?></a>
                 </div>
             </div>

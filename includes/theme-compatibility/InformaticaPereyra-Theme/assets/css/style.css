@@ -1,0 +1,39 @@
+/* Tutor IP */
+.tutor-container {
+    margin-bottom: 100px;
+}
+@media (min-width: 575px){
+  .tutor-template-segment.tutor-login-wrap {
+      margin-top: 100px;
+      margin-bottom: 100px;
+  }
+  .tutor-container {
+      margin-top: 100px;
+  }
+}
+.tutor-single-lesson-wrap {
+    min-height: 75vh;
+}
+.tutor-sidebar-tabs-wrap {
+    box-shadow: 0px -5px 13px rgba(0, 0, 0, .2), 0px 13px 13px rgba(0, 0, 0, .2);
+}
+.tutor-wrap.tutor-courses-wrap.tutor-container {
+    margin: 0;
+    max-width: inherit;
+}
+.tutor-course.tutor-course-loop{
+    box-shadow: 0px -5px 13px rgba(0, 0, 0, .2);
+}
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart::before {
+    display: none;
+}
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    padding: 10px;
+}
+.tutor-single-course-sidebar {
+    position: sticky;
+    top: 100px;
+}
+span.result-pass{
+  min-width: 130px;
+}

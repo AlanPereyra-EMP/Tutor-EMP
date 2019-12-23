@@ -21,6 +21,8 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
 ?>
 <div class="tutor-single-course-segment tutor-single-course-lead-info">
 
+	<h1 class="tutor-course-header-h1 "><?php the_title(); ?></h1>
+
 	<?php
 	$disable = get_tutor_option('disable_course_review');
 	if ( ! $disable){
@@ -41,7 +43,7 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
         </div>
 	<?php } ?>
 
-    <h1 class="tutor-course-header-h1"><?php the_title(); ?></h1>
+
 
 	<?php do_action('tutor_course/single/title/after'); ?>
 	<?php do_action('tutor_course/single/lead_meta/before'); ?>
@@ -99,11 +101,11 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
 					<?php echo $course_duration; ?>
                 </li>
 			<?php } ?>
-            <li>
+            <li class="">
                 <span><?php esc_html_e('Inscritos', 'tutor') ?></span>
 				<?php echo (int) tutor_utils()->count_enrolled_users_by_course(); ?>
             </li>
-            <li>
+            <li class="">
                 <span><?php esc_html_e('Última actualización', 'tutor') ?></span>
 				<?php echo esc_html(get_the_modified_date()); ?>
             </li>
@@ -111,7 +113,9 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
     </div>
 
     <div class="tutor-course-enrolled-info">
-		<?php $count_completed_lesson = tutor_course_completing_progress_bar(); ?>
+		<?php
+		 // $count_completed_lesson = tutor_course_completing_progress_bar();
+		  ?>
 
         <!--<div class="tutor-lead-info-btn-group">
 			<?php
