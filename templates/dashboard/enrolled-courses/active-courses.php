@@ -32,7 +32,7 @@
             <div class="tutor-mycourse-wrap tutor-mycourse-<?php the_ID(); ?>">
 
 
-              <a href="<?php echo get_the_permalink().'#single-course-ratings'; ?>" style="width:35%;"><img src="<?php echo esc_url($tutor_course_img); ?>" class="tutor-mycourse-thumbnail"  alt=""></a>
+              <a href="<?php echo get_the_permalink().'#single-course-ratings'; ?>" class="tutor-course-a"><img src="<?php echo esc_url($tutor_course_img); ?>" class="tutor-mycourse-thumbnail"  alt=""></a>
 
                 <div class="tutor-mycourse-content">
 

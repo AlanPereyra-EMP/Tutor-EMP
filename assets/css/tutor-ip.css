@@ -59,7 +59,15 @@
       display: block;
   }
 }
+@media (min-width:580px) {
+  .tutor-course-a{
+    width: 50%;
+  }
+}
 @media (min-width: 992px){
+  .tutor-course-a{
+    width: 35%;
+  }
   .single-instructor-wrap .tutor-instructor-left{
     padding-right: 30px;
   }
