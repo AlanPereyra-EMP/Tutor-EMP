@@ -45,7 +45,7 @@ $passing_grade = tutor_utils()->get_quiz_option($quiz_id, 'passing_grade', 0);
 					}
 					?>
                 </td>
-                <td  title="<?php _e('Prefguntas', 'tutor-pro'); ?>">
+                <td  title="<?php _e('Preguntas', 'tutor-pro'); ?>">
 					<?php echo $attempt->total_questions; ?>
                 </td>
 

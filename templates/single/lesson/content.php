@@ -30,16 +30,17 @@ if ($best_watch_time > 0){
 
 <div class="tutor-single-page-top-bar">
     <div class="tutor-topbar-item tutor-hide-sidebar-bar">
-        <a href="javascript:;" class="tutor-lesson-sidebar-hide-bar"><i class="tutor-icon-angle-left"></i> </a>
-        <?php $course_id = get_post_meta(get_the_ID(), '_tutor_course_id_for_lesson', true); ?>
-        <a href="<?php echo get_the_permalink($course_id); ?>" class="tutor-topbar-home-btn">
-            <i class="tutor-icon-home"></i> <?php echo __('Página principal', 'tutor') ; ?>
-        </a>
+        <a href="javascript:;" class="tutor-lesson-sidebar-hide-bar">Temario<i class="tutor-icon-angle-left"></i> </a>
+
     </div>
     <div class="tutor-topbar-item tutor-topbar-content-title-wrap">
-        <?php
+			<!-- <?php $course_id = get_post_meta(get_the_ID(), '_tutor_course_id_for_lesson', true); ?>
+			<a href="<?php echo get_the_permalink($course_id); ?>" class="tutor-topbar-home-btn">
+					<i class="tutor-icon-home"></i> <?php echo __('Página principal', 'tutor') ; ?>
+			</a> -->
+        <!-- <?php
         tutor_utils()->get_lesson_type_icon(get_the_ID(), true, true);
-        the_title(); ?>
+        the_title(); ?> -->
     </div>
 
     <div class="tutor-topbar-item tutor-topbar-mark-to-done">

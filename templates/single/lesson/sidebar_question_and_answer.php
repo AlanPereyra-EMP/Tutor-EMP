@@ -26,6 +26,37 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
 <?php do_action('tutor_course/question_and_answer/before'); ?>
 <div class="tutor-queston-and-answer-wrap">
 
+	<div class="tutor-add-question-wrap">
+
+			<h3><?php _e('Añadir una nueva pregunta', 'tutor'); ?></h3>
+
+
+			<form method="post" id="tutor-ask-question-form">
+		<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce ); ?>
+					<input type="hidden" value="add_question" name="tutor_action"/>
+					<input type="hidden" value="<?php echo $course_id; ?>" name="tutor_course_id"/>
+
+					<div class="tutor-form-group">
+							<input type="text" name="question_title" value="" placeholder="<?php _e('Título de pregunta', 'tutor'); ?>">
+					</div>
+
+					<div class="tutor-form-group">
+			<?php
+			$editor_settings = array(
+				'teeny' => true,
+				'media_buttons' => false,
+				'quicktags' => false,
+				'editor_height' => 100,
+			);
+			wp_editor(null, 'question', $editor_settings);
+			?>
+					</div>
+
+					<div class="tutor-form-group">
+							<button type="submit" class="tutor_ask_question_btn tutor-button tutor-success" name="tutor_question_search_btn"><?php _e('Enviar pregunta', 'tutor'); ?></button>
+					</div>
+			</form>
+	</div>
 
     <div class="tutor_question_answer_wrap">
 		<?php
@@ -129,39 +160,6 @@ $course_id = get_post_meta($post->ID, '_tutor_course_id_for_lesson', true);
 		    <?php
         }
 		?>
-    </div>
-
-
-    <div class="tutor-add-question-wrap">
-
-        <h3><?php _e('Añadir una nueva pregunta', 'tutor'); ?></h3>
-
-
-        <form method="post" id="tutor-ask-question-form">
-			<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce ); ?>
-            <input type="hidden" value="add_question" name="tutor_action"/>
-            <input type="hidden" value="<?php echo $course_id; ?>" name="tutor_course_id"/>
-
-            <div class="tutor-form-group">
-                <input type="text" name="question_title" value="" placeholder="<?php _e('Título de pregunta', 'tutor'); ?>">
-            </div>
-
-            <div class="tutor-form-group">
-				<?php
-				$editor_settings = array(
-					'teeny' => true,
-					'media_buttons' => false,
-					'quicktags' => false,
-					'editor_height' => 100,
-				);
-				wp_editor(null, 'question', $editor_settings);
-				?>
-            </div>
-
-            <div class="tutor-form-group">
-                <button type="submit" class="tutor_ask_question_btn tutor-button tutor-success" name="tutor_question_search_btn"><?php _e('Enviar pregunta', 'tutor'); ?></button>
-            </div>
-        </form>
     </div>
 
 

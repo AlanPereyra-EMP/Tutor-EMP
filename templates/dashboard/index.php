@@ -20,7 +20,7 @@ if (isset($wp_query->query_vars['tutor_dashboard_page']) && $wp_query->query_var
 ?>
 
 <div class="tutor-wrap tutor-dashboard tutor-dashboard-student">
-    <div class="tutor-container">
+    <div class="tutor-container col-12  col-md-10 col-lg-9">
         <div class="tutor-row">
             <div class="tutor-col-3">
                 <ul class="tutor-dashboard-permalinks">

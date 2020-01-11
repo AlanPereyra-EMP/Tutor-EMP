@@ -32,7 +32,7 @@ if (isset($wp_query->query_vars['profile_sub_page']) && $wp_query->query_vars['p
 <?php do_action('tutor_student/before/wrap'); ?>
 
     <div <?php tutor_post_class('tutor-full-width-student-profile tutor-page-wrap'); ?>>
-        <div class="tutor-container">
+        <div class="tutor-container" style="background:#fff;border-radius:30px;">
             <div class="tutor-row">
                 <div class="tutor-col-12">
                     <div class="tutor-dashboard-header">
@@ -41,7 +41,7 @@ if (isset($wp_query->query_vars['profile_sub_page']) && $wp_query->query_vars['p
                         </div>
                         <div class="tutor-dashboard-header-info">
                             <div class="tutor-dashboard-header-display-name">
-                                <h4><?php _e('Howdy,', 'tutor'); ?> <strong><?php echo $get_user->display_name; ?></strong> </h4>
+                                <h4><?php _e('Hola,', 'tutor'); ?> <strong><?php echo $get_user->display_name; ?></strong> </h4>
                             </div>
                             <?php
                             if (user_can($user_id, tutor()->instructor_role)){
@@ -86,10 +86,10 @@ if (isset($wp_query->query_vars['profile_sub_page']) && $wp_query->query_vars['p
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
         <div <?php tutor_post_class('tutor-dashboard-student'); ?>>
 
-            <div class="tutor-container">
+            <!-- <div class="tutor-container"> -->
                 <div class="tutor-row">
                     <div class="tutor-col-3">
                         <?php

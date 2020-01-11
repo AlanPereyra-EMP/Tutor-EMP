@@ -25,7 +25,7 @@ if ($attempted_count){
             <tr>
                 <th><?php _e('Nombre de curso', 'tutor'); ?></th>
                 <th><?php _e('Preguntas', 'tutor'); ?></th>
-                <th><?php _e('Calificaciones totale', 'tutor'); ?></th>
+                <th><?php _e('Calificaciones totales', 'tutor'); ?></th>
                 <th><?php _e('Notas obtenidas', 'tutor'); ?></th>
                 <th><?php _e('Aprobados', 'tutor'); ?></th>
             </tr>
@@ -38,7 +38,7 @@ if ($attempted_count){
                     <td class="td-course-title" title="<?php _e('Nombre de curso', 'tutor'); ?>">
                         <div>
                             <?php
-                                echo $earned_percentage >= $passing_grade ? '<span class="result-pass">'.__('Pass', 'tutor').'</span>' : '<span class="result-fail">'.__('Fail', 'tutor').'</span>';
+                                echo $earned_percentage >= $passing_grade ? '<span class="result-pass">'.__('Aprobado', 'tutor').'</span>' : '<span class="result-fail">'.__('Desaprobado', 'tutor').'</span>';
                             ?>
 
                             <?php

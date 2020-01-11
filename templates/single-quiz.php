@@ -29,19 +29,23 @@ $enable_spotlight_mode = tutor_utils()->get_option('enable_spotlight_mode');
         <div id="tutor-single-entry-content" class="tutor-quiz-single-entry-wrap tutor-single-entry-content">
             <input type="hidden" name="tutor_quiz_id" id="tutor_quiz_id" value="<?php the_ID(); ?>">
             <div class="tutor-single-page-top-bar">
-                <div class="tutor-topbar-item tutor-hide-sidebar-bar">
-                    <a href="javascript:;" class="tutor-lesson-sidebar-hide-bar"><i class="tutor-icon-angle-left"></i> </a>
-                    <a href="<?php echo get_the_permalink($course->ID); ?>"  class="tutor-topbar-home-btn">
-                        <i class="tutor-icon-home"></i> <?php echo __('Ir a la página inicial del curso', 'tutor') ; ?>
-                    </a>
-                </div>
-                <div class="tutor-topbar-item tutor-topbar-content-title-wrap">
-                    <?php
-                    tutor_utils()->get_lesson_type_icon(get_the_ID(), true, true);
-                    the_title(); ?>
-                </div>
+              <div class="tutor-topbar-item tutor-hide-sidebar-bar">
+                  <a href="javascript:;" class="tutor-lesson-sidebar-hide-bar"><i class="tutor-icon-angle-left"></i> </a>
 
-                <div class="tutor-topbar-item tutor-topbar-mark-to-done" style="width: 150px;"></div>
+              </div>
+              <div class="tutor-topbar-item tutor-topbar-content-title-wrap">
+                <?php $course_id = get_post_meta(get_the_ID(), '_tutor_course_id_for_lesson', true); ?>
+                <a href="<?php echo get_the_permalink($course_id); ?>" class="tutor-topbar-home-btn">
+                    <i class="tutor-icon-home"></i> <?php echo __('Página principal', 'tutor') ; ?>
+                </a>
+                  <!-- <?php
+                  tutor_utils()->get_lesson_type_icon(get_the_ID(), true, true);
+                  the_title(); ?> -->
+              </div>
+
+              <div class="tutor-topbar-item tutor-topbar-mark-to-done">
+                  <?php tutor_lesson_mark_complete_html(); ?>
+              </div>
             </div>
             <div class="tutor-quiz-single-wrap ">
                 <input type="hidden" name="tutor_quiz_id" id="tutor_quiz_id" value="<?php the_ID(); ?>">

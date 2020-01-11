@@ -40,7 +40,7 @@ do_action('tutor_dashboard/before/wrap'); ?>
         <div class="tutor-container">
             <div class="tutor-row">
                 <div class="tutor-col-12">
-                    <div class="tutor-dashboard-header">
+                    <div class="tutor-dashboard-header ip-dashboard-header">
                         <div class="tutor-dashboard-header-avatar">
                             <img src="<?php echo get_avatar_url($user_id, array('size' => 150)); ?>" />
                         </div>

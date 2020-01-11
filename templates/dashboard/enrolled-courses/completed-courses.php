@@ -74,7 +74,7 @@
 		wp_reset_postdata();
 
 	else:
-        echo "<div class='tutor-mycourse-wrap'><div class='tutor-mycourse-content'>".__('There\'s no completed course', 'tutor')."</div></div>";
+        echo "<div class='tutor-mycourse-wrap'><div class='tutor-mycourse-content'>".__('No hay cursos completos', 'tutor')."</div></div>";
 	endif;
 
 	?>

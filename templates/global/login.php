@@ -30,10 +30,10 @@ if ( ! defined( 'ABSPATH' ) )
 	    // Default 'redirect' value takes the user back to the request URI.
 	    'redirect' => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
 	    'form_id' => 'loginform',
-	    'label_username' => __( 'Username or Email Address', 'tutor' ),
-	    'label_password' => __( 'Password', 'tutor' ),
-	    'label_remember' => __( 'Remember Me', 'tutor' ),
-	    'label_log_in' => __( 'Log In', 'tutor' ),
+	    'label_username' => __( 'Nombre de usuario o email', 'tutor' ),
+	    'label_password' => __( 'Contraseña', 'tutor' ),
+	    'label_remember' => __( 'Recordarme', 'tutor' ),
+	    'label_log_in' => __( 'Ingresar', 'tutor' ),
 	    'id_username' => 'user_login',
 	    'id_password' => 'user_pass',
 	    'id_remember' => 'rememberme',
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) )
 	    // Set 'value_remember' to true to default the "Remember me" checkbox to checked.
 	    'value_remember' => false,
 	    'wp_lostpassword_url' => apply_filters('tutor_lostpassword_url', wp_lostpassword_url()),
-	    'wp_lostpassword_label' => __('Forgot Password?', 'tutor'),
+	    'wp_lostpassword_label' => __('Contraseña olvidada?', 'tutor'),
     );
 
     //action="' . esc_url( site_url( 'wp-login.php', 'login_post' ) ) . '"
@@ -56,9 +56,9 @@ if ( ! defined( 'ABSPATH' ) )
 
     $form = '
 		<form name="' . $args['form_id'] . '" id="' . $args['form_id'] . '" method="post">
-	
+
 		'.$nonce_field.'
-		
+
 		<input type="hidden" name="tutor_action" value="tutor_user_login" />
 			<p class="login-username">
 				<input type="text" placeholder="'.esc_html( $args['label_username'] ).'" name="log" id="' . esc_attr( $args['id_username'] ) . '" class="input" value="' . esc_attr( $args['value_username'] ) . '" size="20" />
@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) )
 			</p>
 			<div class="tutor-login-rememeber-wrap">
 			' . ( $args['remember'] ? '<p class="login-remember"><label><input name="rememberme" type="checkbox" id="' . esc_attr( $args['id_remember'] ) . '" value="forever"' . ( $args['value_remember'] ? ' checked="checked"' : '' ) . ' /> ' . esc_html( $args['label_remember'] ) . '</label></p>' : '' ) . '
-			
+
 			    <a href="'.$args['wp_lostpassword_url'].'">'.$args['wp_lostpassword_label'].'</a>
 			</div>
 			<p class="login-submit">
@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) )
 				<input type="hidden" name="redirect_to" value="' . esc_url( $args['redirect'] ) . '" />
 			</p>
 			<p class="tutor-form-register-wrap">
-			    <a href="'. esc_url($register_url). '">'.esc_html('Create a new account').'</a>
+			    <a href="'. esc_url($register_url). '">'.esc_html('Crear una cuenta nueva').'</a>
             </p>
 		</form>';
     echo $form;

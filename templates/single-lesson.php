@@ -26,9 +26,6 @@ $enable_spotlight_mode = tutor_utils()->get_option('enable_spotlight_mode');
         </div>
         <div id="tutor-single-entry-content" class="tutor-lesson-content tutor-single-entry-content tutor-single-entry-content-<?php the_ID(); ?>">
 		    <?php tutor_lesson_content(); ?>
-        <div class="show-until-md my-5 py-5">
-          <?php tutor_lessons_sidebar(); ?>
-        </div>
         </div>
     </div>
 <?php do_action('tutor_lesson/single/after/wrap');
