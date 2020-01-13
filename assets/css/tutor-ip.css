@@ -65,6 +65,9 @@
   }
 }
 @media (min-width: 992px){
+  .tutor-col-8.tutor-col-md-100 {
+      z-index: -1;
+  }
   .tutor-course-a{
     width: 35%;
   }
@@ -222,9 +225,6 @@ form.tutor-ResetPassword.lost_reset_password {
 .instructor-bio.my-auto {
     margin-top: auto;
     margin-bottom: auto;
-}
-.tutor-col-8.tutor-col-md-100 {
-    z-index: -1;
 }
 .tutor-cart-box-login-form-inner {
     border-radius: 30px;

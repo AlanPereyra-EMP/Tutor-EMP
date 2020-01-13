@@ -10,7 +10,7 @@ $studentList->prepare_items();
 	<form id="students-filter" method="get">
 		<input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
 		<?php
-		$studentList->search_box(__('Search', 'tutor'), 'students');
+		$studentList->search_box(__('Buscar', 'tutor'), 'students');
 		$studentList->display(); ?>
 	</form>
 </div>
