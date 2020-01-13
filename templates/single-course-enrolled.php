@@ -32,6 +32,18 @@ do_action('tutor_course/single/enrolled/before/wrap');
                 </div>
             </div>
             <div class="tutor-col-8 tutor-col-md-100 ">
+              <?php
+            	$excerpt = tutor_get_the_excerpt();
+
+            	if (! empty($excerpt)){
+            		?>
+                    <div class="tutor-course-summery">
+                        <h4  class="tutor-segment-title"><?php esc_html_e('Sobre este curso', 'tutor') ?></h4>
+            			<?php echo $excerpt; ?>
+                    </div>
+            		<?php
+            	}
+            	?>
                 <?php tutor_course_content(); ?>
                 <?php tutor_course_target_reviews_html(); ?>
                 <?php tutor_course_target_review_form_html(); ?>

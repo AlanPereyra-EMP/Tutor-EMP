@@ -134,17 +134,7 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
 	<?php do_action('tutor_course/single/lead_meta/after'); ?>
 	<?php do_action('tutor_course/single/excerpt/before'); ?>
 
-	<?php
-	$excerpt = tutor_get_the_excerpt();
-	if (! empty($excerpt)){
-		?>
-        <div class="tutor-course-summery">
-            <h4  class="tutor-segment-title"><?php esc_html_e('About Course', 'tutor') ?></h4>
-			<?php echo $excerpt; ?>
-        </div>
-		<?php
-	}
-	?>
+
 
 	<?php do_action('tutor_course/single/excerpt/after'); ?>
 
