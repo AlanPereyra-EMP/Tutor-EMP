@@ -3,9 +3,6 @@
   .ip-dashboard-header{
     margin-top: -90px;
   }
-  .bg-ip-lead-info{
-    padding-top: 90px!important;
-  }
   .tutor-single-lesson-segment.tutor-lesson-video-wrap {
       border: 1px solid #fff;
   }
@@ -18,6 +15,9 @@
 
 }
 @media(max-width:991px){
+  .bg-ip-lead-info{
+    padding-top: 90px!important;
+  }
   .tutor-full-width-student-profile {
       padding-top: 220px;
   }
