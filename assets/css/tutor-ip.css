@@ -63,6 +63,10 @@
   .tutor-course-a{
     width: 50%;
   }
+  .tutor-template-segment.tutor-login-wrap {
+      margin-top: 110px;
+      margin-bottom: 110px;
+  }
 }
 @media (min-width: 992px){
   .tutor-single-lesson-tabs-wrap{
@@ -85,10 +89,6 @@
   }
   .tutor-dashboard-header{
     padding: 30px;
-  }
-  .tutor-template-segment.tutor-login-wrap {
-      margin-top: 110px;
-      margin-bottom: 110px;
   }
   .tutor-container {
       margin-top: 30px;
