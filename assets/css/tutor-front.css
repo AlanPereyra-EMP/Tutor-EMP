@@ -469,8 +469,7 @@ body {
 }
 
 .tutor-single-course-meta ul li span {
-  color: var(--tutor-light-color);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .tutor-single-course-meta.tutor-lead-meta {
