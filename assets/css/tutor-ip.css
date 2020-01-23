@@ -243,3 +243,8 @@ form.tutor-ResetPassword.lost_reset_password {
 .tutor-dashboard-info-cards .tutor-dashboard-info-card p{
     box-shadow: 0px 13px 13px rgba(0, 0, 0, .2)!important;
 }
+.tutor-single-lesson-segment.tutor-lesson-video-wrap {
+    max-width: 125vh;
+    margin-left: auto;
+    margin-right: auto;
+}
