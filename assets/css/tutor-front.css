@@ -2695,8 +2695,6 @@ div[class*="tutor-course-col"] {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
   padding: 0;
 }
 
