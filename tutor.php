@@ -4,7 +4,7 @@ Plugin Name: Tutor IP
 Plugin URI: https://informatica.pereyra.online
 Description: Tutor IP es un fork del plugin Tutor LMS hecho por Themeum y mejorado a una versión PRO por Informatica Pereyra,
 Author: Informatica Pereyra
-Version: 1.5.0
+Version: 1.6.0
 Author URI: informatica.pereyra.online
 Requires at least: 4.5
 Tested up to: 5.3
