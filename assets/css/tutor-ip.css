@@ -238,3 +238,6 @@ form.tutor-ResetPassword.lost_reset_password {
     margin-left: auto;
     margin-right: auto;
 }
+span.tutor-lesson-duration {
+    color: #000;
+}
