@@ -21,9 +21,9 @@ get_header();
 <?php do_action('tutor/template/login/before/wrap'); ?>
     <div <?php tutor_post_class('tutor-page-wrap'); ?>>
 
-        <div class="bg-transparent-personalized tutor-template-segment tutor-login-wrap">
+        <div class="bg-white tutor-template-segment tutor-login-wrap">
             <div class="tutor-login-title">
-                <h4><?php _e('Inicie sesión para ver esta sección', 'tutor'); ?></h4>
+                <h4 class="text-dark"><?php _e('Inicie sesión para ver esta sección', 'tutor'); ?></h4>
             </div>
 
             <div class="tutor-template-login-form">
