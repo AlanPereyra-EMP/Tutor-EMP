@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 ?>
 
-<div class="tutor-price-preview-box">
+<div class="border-30px tutor-price-preview-box">
     <div class="tutor-price-box-thumbnail">
 		<?php
 		if(tutor_utils()->has_video_in_single()){

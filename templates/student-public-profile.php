@@ -32,7 +32,7 @@ if (isset($wp_query->query_vars['profile_sub_page']) && $wp_query->query_vars['p
 <?php do_action('tutor_student/before/wrap'); ?>
 
     <div <?php tutor_post_class('tutor-full-width-student-profile tutor-page-wrap'); ?>>
-        <div class="tutor-container" style="background:#fff;border-radius:30px;">
+        <div class="tutor-container bg-transparent-personalized" style="border-radius:30px;">
             <div class="tutor-row">
                 <div class="tutor-col-12">
                     <div class="tutor-dashboard-header">
