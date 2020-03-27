@@ -247,3 +247,6 @@ form.tutor-ResetPassword.lost_reset_password {
 table.tutor-dashboard-info-table td {
     color: #000;
 }
+.tutor-login-rememeber-wrap p label, .tutor-login-rememeber-wrap a, p.tutor-form-register-wrap a {
+    color: #000;
+}
