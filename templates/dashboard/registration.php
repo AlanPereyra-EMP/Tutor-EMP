@@ -6,7 +6,7 @@
 
 ?>
 
-<form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" class="p-3">
 	<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce ); ?>
     <input type="hidden" value="tutor_register_student" name="tutor_action"/>
 
@@ -93,7 +93,7 @@
     <div class="tutor-form-row">
         <div class="tutor-form-col-12">
             <div class="tutor-form-group tutor-reg-form-btn-wrap">
-                <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-button"><?php _e('Registrarse', 'tutor'); ?></button>
+                <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-button container-fluid d-block mt-3"><?php _e('Registrarse', 'tutor'); ?></button>
             </div>
         </div>
     </div>
