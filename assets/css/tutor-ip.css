@@ -248,5 +248,11 @@ table.tutor-dashboard-info-table td {
     color: #000;
 }
 .tutor-login-rememeber-wrap p label, .tutor-login-rememeber-wrap a, p.tutor-form-register-wrap a {
-    color: #000;
+    color: #000!important;
+}
+p.tutor-form-register-wrap {
+    background: transparent!important;
+    border: 1px #000 solid;
+    padding: 11px;
+    border-radius: 5px;
 }
