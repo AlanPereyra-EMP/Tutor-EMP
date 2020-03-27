@@ -241,3 +241,6 @@ form.tutor-ResetPassword.lost_reset_password {
 .tutor-dashboard-content{
   color: #fff
 }
+.tutor-dashboard-header-ratings span{
+  color: #fff;
+}
