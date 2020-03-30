@@ -32,7 +32,7 @@ get_header();
                     <?php do_action('tutor_course/single/after/sidebar'); ?>
                 </div>
             </div><!-- tutor-col-4  -->
-            <div class="tutor-col-8 tutor-col-md-100">
+            <div class="bg-transparent-personalized tutor-col-8 tutor-col-md-100">
               <?php
             	$excerpt = tutor_get_the_excerpt();
 
