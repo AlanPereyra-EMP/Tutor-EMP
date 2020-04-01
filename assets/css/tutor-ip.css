@@ -259,3 +259,8 @@ p.tutor-form-register-wrap {
 .tutor-lesson-content-area h2 {
     margin-top: 74px!important;
 }
+button.course-complete-button.tutor-button {
+    width: 100%;
+    margin-top: 67px;
+    display: block;
+}

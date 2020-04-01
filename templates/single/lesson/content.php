@@ -43,10 +43,6 @@ if ($best_watch_time > 0){
         the_title(); ?> -->
     </div>
 
-    <div class="tutor-topbar-item tutor-topbar-mark-to-done">
-        <?php tutor_lesson_mark_complete_html(); ?>
-    </div>
-
 </div>
 
 
@@ -56,6 +52,9 @@ if ($best_watch_time > 0){
 	<?php tutor_lesson_video(); ?>
 	<?php the_content(); ?>
 	<?php get_tutor_posts_attachments(); ?>
+	<div class="tutor-topbar-item tutor-topbar-mark-to-done">
+			<?php tutor_lesson_mark_complete_html(); ?>
+	</div>
 </div>
 
 <?php do_action('tutor_lesson/single/after/content'); ?>
