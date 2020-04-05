@@ -15,6 +15,9 @@
 
 }
 @media(max-width:991px){
+  .tutor-col-3.tutor-dashboard-left-menu {
+      order: 2;
+  }
   .bg-ip-lead-info{
     padding-top: 90px!important;
   }
@@ -151,6 +154,7 @@
 .tutor-course-status {
     background: #fff;
     border-radius: 5px;
+    order: 1;
 }
 a.tutor-lesson-sidebar-hide-bar {
     display: none;
@@ -263,4 +267,13 @@ button.course-complete-button.tutor-button {
     width: 100%;
     margin-top: 67px;
     display: block;
+}
+.tutor-meta.tutor-course-metadata{
+  order:2;
+}
+a.tutor-mycourse-edit{
+  display: none;
+}
+a.tutor-mycourse-delete-btn {
+    margin-left: auto;
 }
