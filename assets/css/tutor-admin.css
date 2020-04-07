@@ -127,7 +127,8 @@ Option Field
     padding: 7px 12px;
     margin: 0 10px 0 0;
     width: 400px;
-    min-height: 35px
+    min-height: 35px;
+    width:100%;
 }
 
 .tutor_lesson_modal_form .tutor-option-field-row input[type=text],
@@ -141,9 +142,9 @@ Option Field
 }
 
 .tutor-option-field {
-    display: block;
     margin: 0 0 0 200px;
     max-width: 800px;
+    display: inline-grid;
 }
 .rtl .tutor-option-field{
     margin: 0 200px 0 0;
@@ -157,6 +158,9 @@ Option Field
     display: block;
     float: left;
     width: 200px;
+}
+.tutor-option-field.tutor-course-level-meta label {
+    padding: 10px 0px;
 }
 .rtl .tutor-option-field-label{
     float: right;
@@ -429,10 +433,9 @@ p.course-empty-content {
 }
 .tutor-course-builder-header {
     line-height: 50px;
-    position: absolute;
-    top: -56px;
-    right: 40px;
+    margin-left: 20px;
 }
+
 .rtl .tutor-course-builder-header{
     right: auto;
     left: 40px;
@@ -585,9 +588,9 @@ a.tutor-btn.default-btn:hover,
 }
 
 
-.tutor-add-quiz-button-wrap > * + *{
+/* .tutor-add-quiz-button-wrap > * + *{
     margin-left: 15px;
-}
+} */
 
 a.tutor-button.bordered-button:hover,
 .tutor-button.bordered-button:hover,
@@ -2680,9 +2683,9 @@ Course Settings Tabs
     margin: 0;
     line-height: 1.4;
 }
-.course-settings-tabs-container {
+/* .course-settings-tabs-container {
     display: flex;
-}
+} */
 .course-settings-tabs-container .settings-tabs-navs-wrap{
     flex: 0 0 200px;
     background: #F5F5F5;
