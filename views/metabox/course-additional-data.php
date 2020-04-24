@@ -78,7 +78,7 @@ $material_includes = get_post_meta($course_id, '_tutor_course_material_includes'
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-			<?php _e('Públicco objetivo', 'tutor'); ?> <br />
+			<?php _e('Público objetivo', 'tutor'); ?> <br />
         </label>
     </div>
     <div class="tutor-option-field tutor-option-tooltip">
@@ -94,7 +94,7 @@ $material_includes = get_post_meta($course_id, '_tutor_course_material_includes'
 <div class="tutor-option-field-row">
     <div class="tutor-option-field-label">
         <label for="">
-			<?php _e('Materials Incluido', 'tutor'); ?> <br />
+			<?php _e('Materiales Incluidos', 'tutor'); ?> <br />
         </label>
     </div>
     <div class="tutor-option-field tutor-option-tooltip">

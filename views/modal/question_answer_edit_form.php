@@ -31,7 +31,7 @@ $answer_two_gap_match = ! empty($old_answer->answer_two_gap_match) ? $old_answer
         </div>
 
         <div class="tutor-quiz-builder-group">
-            <h4><?php _e('Imagenn destacada', 'tutor'); ?></h4>
+            <h4><?php _e('Imagen destacada', 'tutor'); ?></h4>
             <div class="tutor-quiz-builder-row">
                 <div class="tutor-quiz-builder-col">
                     <div class="tutor-media-upload-wrap">

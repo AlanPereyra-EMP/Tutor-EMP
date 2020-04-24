@@ -45,7 +45,7 @@ get_header();
             		<?php
             	}
             	?>
-	            <?php do_action('tutor_course/single/before/inner-wrap'); ?>
+	            
 
 
 	            <?php tutor_course_content(); ?>

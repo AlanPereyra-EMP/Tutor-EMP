@@ -31,5 +31,6 @@ if ( ! defined( 'ABSPATH' ) )
 	<?php tutor_course_price(); ?>
 	<?php tutor_course_benefits_html(); ?>
     <?php tutor_single_course_add_to_cart(); ?>
+		<?php do_action('tutor_course/single/before/inner-wrap'); ?>
 
 </div> <!-- tutor-price-preview-box -->

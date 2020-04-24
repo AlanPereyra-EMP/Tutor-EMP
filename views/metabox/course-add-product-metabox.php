@@ -26,7 +26,7 @@ $_tutor_course_price_type = tutils()->price_type();
 		$product_id = tutor_utils()->get_course_product_id();
 		?>
 
-        <select name="_tutor_course_product_id" class="tutor_select2" style="min-width: 300px;">
+        <select name="_tutor_course_product_id" class="tutor_select2">
             <option value="-1"><?php _e('Selecionar un producto'); ?></option>
 			<?php
 			foreach ($products as $product){

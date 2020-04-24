@@ -15,7 +15,7 @@ $instructorList->prepare_items();
 ?>
 
 <div class="wrap">
-	<h2><?php _e('P y R', 'tutor'); ?></h2>
+	<h2><?php _e('Dudas', 'tutor'); ?></h2>
 
 	<form id="question_answers-filter" method="get">
 		<input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />

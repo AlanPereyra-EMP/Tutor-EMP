@@ -277,3 +277,42 @@ a.tutor-mycourse-edit{
 a.tutor-mycourse-delete-btn {
     margin-left: auto;
 }
+.tutor-price-preview-box .woocommerce-message, .tutor-price-preview-box .woocommerce-error {
+    visibility: hidden;
+    padding: 1em 0;
+    height: 0;
+}
+.tutor-price-preview-box a.button.wc-forward {
+    visibility: visible;
+    width: 100%;
+    box-shadow: none!important;
+    text-align: center;
+    padding: 7px 0;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.tutor-price-preview-box a.button.wc-forward:hover{
+  text-decoration: none;
+}
+.next-lesson-ip {
+    position: absolute;
+    right: 20px;
+}
+.next-lesson-ip a{
+    padding: 8px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.tutor-quiz-attempt-history{
+  color:#000;
+}
+.tutor-wrap.tutor-courses-wrap.tutor-container {
+    border-top: 70px solid transparent;
+}
+.tutor-pagination-wrap a, .tutor-course-archive-results-wrap {
+    color: #fff;
+}
+.tutor-pagination-wrap{
+  color: #ffa;
+}
