@@ -1261,6 +1261,9 @@ Quiz Modal
   .modal-footer {
     padding: 0!important;
   }
+  a.tutor-delete-lesson-btn {
+    font-size: 24px;
+  }
 }
 .tutor-modal-wrap.loading .tutor-modal-content:before {
     position: absolute;
