@@ -1242,6 +1242,26 @@ Quiz Modal
     -ms-flex-pack: center;
     justify-content: center;
 }
+@media(max-width:782px){
+  .tutor-modal-wrap .tutor-modal-content{
+    width:100%;
+    max-height: 100%;
+
+  }
+  .admin-bar .tutor-modal-wrap .tutor-modal-content{
+    max-height: 100%;
+    margin-top: 0;
+  }
+  iframe#tutor_lesson_modal_editor_ifr {
+    min-height: 600px!important;
+  }
+  button.tutor-btn.active.update_lesson_modal_btn {
+    width: 100%;
+  }
+  .modal-footer {
+    padding: 0!important;
+  }
+}
 .tutor-modal-wrap.loading .tutor-modal-content:before {
     position: absolute;
     top: 0;

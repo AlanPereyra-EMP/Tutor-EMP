@@ -26,8 +26,8 @@ $reviews = tutor_utils()->get_reviews_by_instructor(get_current_user_id(), $offs
 			?>
             <div class="tutor-dashboard-inline-links">
                 <ul>
-                    <li> <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews'); ?>"> <?php _e('Obtenido', 'tutor'); ?></a> </li>
-                    <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('Resibido', 'tutor'); ?></a> </li>
+                    <li> <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews'); ?>"> <?php _e('Dada', 'tutor'); ?></a> </li>
+                    <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('Resibida', 'tutor'); ?></a> </li>
                 </ul>
             </div>
 		<?php } ?>
@@ -40,7 +40,7 @@ $reviews = tutor_utils()->get_reviews_by_instructor(get_current_user_id(), $offs
                 <div class="tutor-dashboard-reviews">
                     <p class="tutor-dashboard-pagination-results-stats">
 						<?php
-						echo sprintf(__('Showing results %d to %d out of %d', 'tutor'), $offset +1, min($reviews->count, $offset +1+tutor_utils()->count($reviews->results)), $reviews->count) ;
+						echo sprintf(__('Mostrando resultados %d de %d hasta %d', 'tutor'), $offset +1, min($reviews->count, $offset +1+tutor_utils()->count($reviews->results)), $reviews->count) ;
 						?>
                     </p>
 

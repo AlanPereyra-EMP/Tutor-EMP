@@ -84,5 +84,5 @@ if ($attempted_count){
     </div>
 
 <?php } else {
-    echo __('Los datos de pregunntas están vacíos', 'tutor');
+    echo __('Los datos de preguntas están vacíos', 'tutor');
 } ?>

@@ -69,7 +69,7 @@
                                         class="tutor-icon-pencil"></i>
                                 Edit</a>
                             <a href="#tutor-course-delete" class="tutor-mycourse-delete-btn" data-course-id="<?php echo $post->ID; ?>">
-                                <i class="tutor-icon-garbage"></i> Delete
+                                <i class="tutor-icon-garbage"></i> Eliminar
                             </a>
                         </div>
                     </div>

@@ -316,3 +316,6 @@ a.tutor-mycourse-delete-btn {
 .tutor-pagination-wrap{
   color: #ffa;
 }
+.tutor-dashboard-content .tutor-quiz-attempt-history table tr td strong {
+    color: #000!important;
+}
