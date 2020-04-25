@@ -1263,6 +1263,7 @@ Quiz Modal
   }
   a.tutor-delete-lesson-btn {
     font-size: 24px;
+    padding: 0px 15px;
   }
 }
 .tutor-modal-wrap.loading .tutor-modal-content:before {
