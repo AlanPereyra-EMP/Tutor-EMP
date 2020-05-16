@@ -40,7 +40,7 @@ global $post; ?>
 		wp_reset_postdata();
 
 	else:
-        echo "<div class=\"tutor-col\">".esc_html('No hay cursos activos')."</div>";
+        echo "<div class=\"tutor-col\">".esc_html('No hay cursos en la lista')."</div>";
 	endif;
 
 	?>

@@ -15,7 +15,7 @@ $per_page = 20;
 $current_page = max( 1, tutils()->array_get('current_page', $_GET) );
 $offset = ($current_page-1)*$per_page;
 ?>
-    <h3><?php _e('Mis intentos de evaluaciones', 'tutor'); ?></h3>
+    <h3><?php _e('Exámenes de alumnos', 'tutor'); ?></h3>
 <?php
 $course_id = tutor_utils()->get_assigned_courses_ids_by_instructors();
 $quiz_attempts = tutor_utils()->get_quiz_attempts_by_course_ids($offset, $per_page, $course_id);
@@ -42,7 +42,7 @@ if ( $quiz_attempts_count ){
                 <tr class="<?php echo esc_attr($earned_percentage >= $passing_grade ? 'pass' : 'fail') ?>">
                     <td title="<?php echo __('Quiz', 'tutor'); ?>">
 						<?php
-						echo $earned_percentage >= $passing_grade ? '<span class="result-pass">'.__('Pass', 'tutor').'</span>' : '<span class="result-fail">'.__('Fail', 'tutor').'</span>';
+						echo $earned_percentage >= $passing_grade ? '<span class="result-pass">'.__('Aprobado', 'tutor').'</span>' : '<span class="result-fail">'.__('Desaprobado', 'tutor').'</span>';
 						if ($attempt->attempt_ended_at){
 							$ended_ago_time = human_time_diff(strtotime($attempt->attempt_ended_at)).__(' ago', 'tutor');
 							echo " <small>{$ended_ago_time}</small>";

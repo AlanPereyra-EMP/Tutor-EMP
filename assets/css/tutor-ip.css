@@ -1,4 +1,4 @@
-/* Custom Tutor IP */
+/* Small displays */
 @media(max-width:440px){
   .ip-dashboard-header{
     margin-top: -90px;
@@ -12,8 +12,23 @@
   .tutor-wrap .tutor-container {
 
   }
-
 }
+
+/* Breakpoint start mobile */
+@media (min-width:580px) {
+  .tutor-col-8, .tutor-col-8 h4, .tutor-col-8 h5, .tutor-col-8 h3 a, .tutor-col-8 .tutor-custom-list-style li:before{
+    color: #fff!important;
+  }
+  .tutor-course-a{
+    width: 50%;
+  }
+  .tutor-template-segment.tutor-login-wrap {
+      margin-top: 110px;
+      margin-bottom: 110px;
+  }
+}
+
+/* Breakpoint tablet */
 @media(max-width:991px){
   .tutor-col-3.tutor-dashboard-left-menu {
       order: 2;
@@ -61,18 +76,8 @@
       display: block;
   }
 }
-@media (min-width:580px) {
-  .tutor-col-8, .tutor-col-8 h4, .tutor-col-8 h5, .tutor-col-8 h3 a, .tutor-col-8 .tutor-custom-list-style li:before{
-    color: #fff!important;
-  }
-  .tutor-course-a{
-    width: 50%;
-  }
-  .tutor-template-segment.tutor-login-wrap {
-      margin-top: 110px;
-      margin-bottom: 110px;
-  }
-}
+
+/* Breakpoint start desktop */
 @media (min-width: 992px){
   .tutor-single-lesson-tabs-wrap{
       position: sticky;
@@ -132,17 +137,16 @@
       border: none;
   }
 }
+/* Breakpoint desktop */
 @media(min-width:1500px){
   .tutor-course-col-3{
     width: 33.3%!important;
   }
 }
 
-.tutor-single-course-meta.tutor-lead-meta ul li, .tutor-single-course-meta.tutor-lead-meta ul li a, .tutor-course-header-h1, .tutor-single-course-lead-info{
+/* All sizes */
+.tutor-single-course-meta.tutor-lead-meta ul li, .tutor-single-course-meta.tutor-lead-meta ul li a, .tutor-course-header-h1, .tutor-single-course-lead-info, .tutor-single-course-meta.tutor-meta-top span, .tutor-single-course-meta.tutor-meta-top a, .tutor-single-course-meta.tutor-meta-top strong, .tutor-single-course-meta.tutor-meta-top li{
   color: #fff!important;
-}
-.tutor-single-course-meta.tutor-meta-top span, .tutor-single-course-meta.tutor-meta-top a, .tutor-single-course-meta.tutor-meta-top strong, .tutor-single-course-meta.tutor-meta-top li {
-    color: #fff!important;
 }
 .mx-a {
     margin-left: auto;
@@ -242,16 +246,13 @@ form.tutor-ResetPassword.lost_reset_password {
     margin-left: auto;
     margin-right: auto;
 }
-.tutor-dashboard-content{
+.tutor-dashboard-content, .tutor-dashboard-header-ratings span, .tutor-pagination-wrap a, .tutor-course-archive-results-wrap {
   color: #fff
 }
-.tutor-dashboard-header-ratings span{
-  color: #fff;
-}
-table.tutor-dashboard-info-table td {
+table.tutor-dashboard-info-table td, .tutor-quiz-attempt-history {
     color: #000;
 }
-.tutor-login-rememeber-wrap p label, .tutor-login-rememeber-wrap a, p.tutor-form-register-wrap a {
+.tutor-login-rememeber-wrap p label, .tutor-login-rememeber-wrap a, p.tutor-form-register-wrap a, .tutor-dashboard-content .tutor-quiz-attempt-history table tr td strong {
     color: #000!important;
 }
 p.tutor-form-register-wrap {
@@ -304,18 +305,22 @@ a.tutor-mycourse-delete-btn {
     border-radius: 5px;
     text-decoration: none;
 }
-.tutor-quiz-attempt-history{
-  color:#000;
-}
 .tutor-wrap.tutor-courses-wrap.tutor-container {
     border-top: 70px solid transparent;
-}
-.tutor-pagination-wrap a, .tutor-course-archive-results-wrap {
-    color: #fff;
 }
 .tutor-pagination-wrap{
   color: #ffa;
 }
-.tutor-dashboard-content .tutor-quiz-attempt-history table tr td strong {
-    color: #000!important;
+.tutor-course-loop-title{
+  order: 1;
+}
+.tutor-course-loop-title h2 {
+    padding: 0;
+}
+a.button.product_type_variable.add_to_cart_button {
+    padding: 10px!important;
+    border-radius: 5px;
+}
+li.tutor-dashboard-menu-withdraw {
+    border-bottom: 1px solid #fff;
 }

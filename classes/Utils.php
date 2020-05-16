@@ -1863,13 +1863,13 @@ class Utils {
 		$user_id = $this->get_user_id($user_id);
 		$title = __('Cursos empezados', 'tutor')." &ndash; ".date(get_option('date_format')) .' @ '.date(get_option('time_format') ) ;
 
-		$enrolment_status = 'completed';
+		$enrolment_status = 'completado';
 
 		if ($this->is_course_purchasable($course_id)) {
 			/**
 			 * We need to verify this enrollment, we will change the status later after payment confirmation
 			 */
-			$enrolment_status = 'pending';
+			$enrolment_status = 'pendiente';
 		}
 
 		$enroll_data = apply_filters('tutor_enroll_data',
@@ -1924,7 +1924,7 @@ class Utils {
 
 			if (is_array($enrolled_ids) && count($enrolled_ids)){
 				foreach ($enrolled_ids as $enrolled_id){
-					$wpdb->update( $wpdb->posts, array( 'post_status' => 'completed' ), array( 'ID' => $enrolled_id ) );
+					$wpdb->update( $wpdb->posts, array( 'post_status' => 'completado' ), array( 'ID' => $enrolled_id ) );
 				}
 			}
 		}
@@ -2028,13 +2028,13 @@ class Utils {
 		return apply_filters(
 			'tutor_get_enrolled_statuses',
 			array (
-				'pending',
-				'processing',
-				'on-hold',
-				'completed',
-				'cancelled',
-				'refunded',
-				'failed',
+				'pendiente',
+				'procesando',
+				'en espera',
+				'completado',
+				'cancelado',
+				'reembolsado',
+				'fallido',
 			)
 		);
 	}
@@ -2073,18 +2073,16 @@ class Utils {
 	public function tutor_dashboard_pages(){
 		$nav_items = apply_filters('tutor_dashboard/nav_items', array(
 			'index'             => __('Página personal', 'tutor'),
-			'my-profile'        => __('Mi perfil', 'tutor'),
+			'my-courses'        => array('title' => __('Mis cursos', 'tutor'), 'auth_cap' => tutor()->instructor_role),
+			'quiz-attempts'     => array('title' => __('Exámenes de alumnos', 'tutor'), 'auth_cap' => tutor()->instructor_role),
+			'earning'           => array('title' => __('Ganancias', 'tutor'), 'auth_cap' => tutor()->instructor_role),
+			'withdraw'          => array('title' => __('Retirar', 'tutor'), 'auth_cap' => tutor()->instructor_role),
+			// 'my-profile'        => __('Mi perfil', 'tutor'),
 			'create-course'     => array('title' => __('Crear curso', 'tutor'), 'show_ui' => false, 'auth_cap' => tutor()->instructor_role),
 			'enrolled-courses'  => __('Cursos comenzados', 'tutor'),
 			'wishlist'          => __('Lista de deseos', 'tutor'),
+			'my-quiz-attempts'  => __('Mis evaluaciones', 'tutor'),
 			'reviews'           => __('Reviews', 'tutor'),
-			'my-quiz-attempts'  => __('Mis intentos de evaluaciones', 'tutor'),
-
-			'my-courses'        => array('title' => __('Mis cursos', 'tutor'), 'auth_cap' => tutor()->instructor_role),
-			'earning'           => array('title' => __('Ganancias', 'tutor'), 'auth_cap' => tutor()->instructor_role),
-			'withdraw'          => array('title' => __('Retirar', 'tutor'), 'auth_cap' => tutor()->instructor_role),
-			'quiz-attempts'     => array('title' => __('Intentos de exámenes', 'tutor'), 'auth_cap' => tutor()->instructor_role),
-
 			'purchase_history'  => __('Historial de compras', 'tutor'),
 		));
 

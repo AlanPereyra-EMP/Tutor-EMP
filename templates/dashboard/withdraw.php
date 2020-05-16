@@ -35,7 +35,7 @@ $user_id = get_current_user_id();
 			}else{
 				?>
 
-                <p class="withdraw-balance-col"> <?php echo sprintf( __('You currently have %s %s %s and this is insufficient balance to withdraw',
+                <p class="withdraw-balance-col"> <?php echo sprintf( __('Actualmente tienes %s %s %s y esto es menor al mínimo para hacer un retiro',
 						'tutor'), "<strong class='available_balance'>", $balance_formatted, '</strong>' ); ?>
                 </p>
 

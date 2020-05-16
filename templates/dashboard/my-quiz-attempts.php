@@ -15,7 +15,7 @@
 $previous_attempts = tutor_utils()->get_all_quiz_attempts_by_user();
 $attempted_count = is_array($previous_attempts) ? count($previous_attempts) : 0;
 ?>
-    <h3><?php _e('Mis intentos de evaluaciones', 'tutor'); ?></h3>
+    <h3><?php _e('Mis evaluaciones', 'tutor'); ?></h3>
 <?php
 if ($attempted_count){
 
@@ -84,5 +84,5 @@ if ($attempted_count){
     </div>
 
 <?php } else {
-    echo __('Los datos de preguntas están vacíos', 'tutor');
+    echo __('No hay evaluaciones aún', 'tutor');
 } ?>
