@@ -324,3 +324,8 @@ a.button.product_type_variable.add_to_cart_button {
 li.tutor-dashboard-menu-withdraw {
     border-bottom: 1px solid #fff;
 }
+.tutor-wrap.tutor-courses-wrap.tutor-container {
+    margin: 0;
+    max-width: inherit;
+    min-height: 75vh;
+}
