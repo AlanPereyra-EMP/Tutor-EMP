@@ -1863,13 +1863,13 @@ class Utils {
 		$user_id = $this->get_user_id($user_id);
 		$title = __('Cursos empezados', 'tutor')." &ndash; ".date(get_option('date_format')) .' @ '.date(get_option('time_format') ) ;
 
-		$enrolment_status = 'completado';
+		$enrolment_status = 'completed';
 
 		if ($this->is_course_purchasable($course_id)) {
 			/**
 			 * We need to verify this enrollment, we will change the status later after payment confirmation
 			 */
-			$enrolment_status = 'pendiente';
+			$enrolment_status = 'pending';
 		}
 
 		$enroll_data = apply_filters('tutor_enroll_data',
@@ -1924,7 +1924,7 @@ class Utils {
 
 			if (is_array($enrolled_ids) && count($enrolled_ids)){
 				foreach ($enrolled_ids as $enrolled_id){
-					$wpdb->update( $wpdb->posts, array( 'post_status' => 'completado' ), array( 'ID' => $enrolled_id ) );
+					$wpdb->update( $wpdb->posts, array( 'post_status' => 'completed' ), array( 'ID' => $enrolled_id ) );
 				}
 			}
 		}
@@ -2028,13 +2028,13 @@ class Utils {
 		return apply_filters(
 			'tutor_get_enrolled_statuses',
 			array (
-				'pendiente',
-				'procesando',
-				'en espera',
-				'completado',
-				'cancelado',
-				'reembolsado',
-				'fallido',
+				'pending',
+				'processing',
+				'on-hold',
+				'completed',
+				'cancelled',
+				'refunded',
+				'failed',
 			)
 		);
 	}
