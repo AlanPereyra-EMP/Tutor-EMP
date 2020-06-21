@@ -154,6 +154,7 @@
 }
 .tutor-container {
     margin-bottom: 30px;
+    color: #fff;
 }
 .tutor-course-status {
     background: #fff;
@@ -222,7 +223,7 @@ table.tutor-dashboard-info-table{
 form.tutor-ResetPassword.lost_reset_password {
     padding: 50px 20px;
 }
-.tutor-dashboard .tutor-container {
+.tutor-dashboard .tutor-container, .tutor-container.bg-transparent-personalized {
     background: rgba(0,0,0,0.5);
 }
 .mce-panel.mce-fullscreen {
@@ -328,4 +329,7 @@ li.tutor-dashboard-menu-withdraw {
     margin: 0;
     max-width: inherit;
     min-height: 75vh;
+}
+.tutor-dashboard-header-info h4 {
+    color: #fff;
 }

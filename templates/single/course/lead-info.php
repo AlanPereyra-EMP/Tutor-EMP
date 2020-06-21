@@ -102,7 +102,7 @@ $profile_url = tutor_utils()->profile_url($authordata->ID);
                 <?php echo (int) tutor_utils()->count_enrolled_users_by_course(); ?>
             </li>
             <li class="">
-                <span><?php esc_html_e('Última actialización', 'tutor') ?></span>
+                <span><?php esc_html_e('Última actualización', 'tutor') ?></span>
 				<?php echo esc_html(get_the_modified_date()); ?>
             </li>
         </ul>
