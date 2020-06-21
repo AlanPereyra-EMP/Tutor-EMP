@@ -30,13 +30,13 @@ if ($best_watch_time > 0){
 
 <div class="tutor-single-page-top-bar">
     <div class="tutor-topbar-item tutor-hide-sidebar-bar">
-        <a href="javascript:;" class="tutor-lesson-sidebar-hide-bar">Temario<i class="tutor-icon-angle-left"></i> </a>
+        <a href="javascript:;" class="tutor-lesson-sidebar-hide-bar">Desplegar temario<i class="tutor-icon-angle-left"></i> </a>
 
     </div>
 
-		<div class="next-lesson-ip ml-auto">
+		<!-- <div class="next-lesson-ip ml-auto">
 			<?php next_post_link( '%link', 'Siguiente lección'); ?>
-		</div>
+		</div> -->
 
     <div class="tutor-topbar-item tutor-topbar-content-title-wrap">
 
