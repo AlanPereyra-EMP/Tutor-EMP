@@ -71,7 +71,7 @@ if (isset($wp_query->query_vars['profile_sub_page']) && $wp_query->query_vars['p
                                                 if($icon_url){
                                                     if($i==0){
                                                         ?>
-                                                            <h4><?php esc_html_e("Follow me", "tutor"); ?></h4>
+                                                            <h4><?php esc_html_e("Redes sociales:", "tutor"); ?></h4>
                                                         <?php
                                                     }
                                                     echo "<a href='".esc_url($icon_url)."' target='_blank' class='".$social_icon['icon_classes']."'></a>";

@@ -148,7 +148,7 @@
 .tutor-single-course-meta.tutor-lead-meta ul li, .tutor-single-course-meta.tutor-lead-meta ul li a, .tutor-course-header-h1, .tutor-single-course-lead-info, .tutor-single-course-meta.tutor-meta-top span, .tutor-single-course-meta.tutor-meta-top a, .tutor-single-course-meta.tutor-meta-top strong, .tutor-single-course-meta.tutor-meta-top li{
   color: #fff!important;
 }
-.mx-a {
+.mx-a, .tutor-dashboard-social-icons {
     margin-left: auto;
     margin-right: auto;
 }
