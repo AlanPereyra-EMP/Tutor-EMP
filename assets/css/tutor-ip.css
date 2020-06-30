@@ -332,3 +332,6 @@ li.tutor-dashboard-menu-withdraw {
 .tutor-dashboard-header-info h4 {
     color: #fff;
 }
+.tutor-course.tutor-course-loop a {
+    color: #000!important;
+}
