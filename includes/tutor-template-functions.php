@@ -1014,13 +1014,13 @@ function tutor_single_course_add_to_cart($echo = true){
 	tutor_load_template( 'single.course.add-to-cart' );
 	$output .= apply_filters( 'tutor_course/single/add-to-cart', ob_get_clean() );
 
-	if ( ! $isLoggedIn){
-		ob_start();
-		tutor_load_template( 'single.course.login' );
-		$login_form = apply_filters( 'tutor_course/global/login', ob_get_clean() );
-
-		$output .= "<div class='tutor-cart-box-login-form' style='display: none;'><span class='login-overlay-close'></span><div class='tutor-cart-box-login-form-inner'><button class='tutor-popup-form-close tutor-icon-line-cross'></button>{$login_form}</div></div>";
-	}
+	// if ( ! $isLoggedIn){
+	// 	ob_start();
+	// 	tutor_load_template( 'single.course.login' );
+	// 	$login_form = apply_filters( 'tutor_course/global/login', ob_get_clean() );
+	//
+	// 	$output .= "<div class='tutor-cart-box-login-form' style='display: none;'><span class='login-overlay-close'></span><div class='tutor-cart-box-login-form-inner'><button class='tutor-popup-form-close tutor-icon-line-cross'></button>{$login_form}</div></div>";
+	// }
 
 	if ( $echo ) {
 		echo $output;
@@ -1088,6 +1088,34 @@ if ( ! function_exists('tutor_lesson_video')){
 	    return $output;
     }
 }
+
+/*
+*
+* Get tutor cart box login form
+*
+*/
+
+function tutor_single_course_add_to_cart_form($echo = true){
+	ob_start();
+
+	$isLoggedIn = is_user_logged_in();
+	$output = '';
+
+	if ( ! $isLoggedIn){
+		ob_start();
+		tutor_load_template( 'single.course.login' );
+		$login_form = apply_filters( 'tutor_course/global/login', ob_get_clean() );
+
+		$output .= "<div class='tutor-cart-box-login-form' style='display: none;'><span class='login-overlay-close'></span><div class='tutor-cart-box-login-form-inner'><button class='tutor-popup-form-close tutor-icon-line-cross'></button>{$login_form}</div></div>";
+	}
+
+	if ( $echo ) {
+		echo $output;
+	}
+
+	return $output;
+}
+
 
 /**
  *

@@ -335,3 +335,29 @@ li.tutor-dashboard-menu-withdraw {
 .tutor-course.tutor-course-loop a {
     color: #000!important;
 }
+img.attachment-post-thumbnail.size-post-thumbnail{
+  height: 100%;
+  width:100%;
+}
+/* North compatibility */
+.theme-north .tutor-wrap.tutor-full-width-course-top.tutor-course-top-info.tutor-page-wrap {
+    background: var(--tutor-primary-color);
+    padding-bottom: 20px;
+}
+
+.theme-north .tutor-col-8.tutor-col-md-100 {
+    z-index: 0;
+}
+.theme-north #page-content {
+  overflow: inherit;
+}
+
+.theme-north .bg-transparent-personalized h1, .theme-north .bg-transparent-personalized h2, .theme-north .bg-transparent-personalized h3, .theme-north .bg-transparent-personalized h4, .theme-north .bg-transparent-personalized h5, .theme-north .bg-transparent-personalized h6, .theme-north .tutor-dashboard-content-inner h3 {
+    color: #fff;
+}
+.theme-north .tutor-dashboard .tutor-container, .theme-north .tutor-container.bg-transparent-personalized{
+  background-color: var(--tutor-primary-color);
+}
+.theme-north .tutor-wrap, .tutor-single-lesson-wrap{
+  border-top: 1px solid transparent!important;
+}

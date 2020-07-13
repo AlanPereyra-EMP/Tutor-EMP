@@ -31,6 +31,7 @@ get_header();
                     <?php tutor_course_enroll_box(); ?>
                     <?php do_action('tutor_course/single/after/sidebar'); ?>
                 </div>
+                <?php tutor_single_course_add_to_cart_form(); ?>
             </div><!-- tutor-col-4  -->
             <div class="bg-transparent-personalized tutor-col-8 tutor-col-md-100">
               <?php
@@ -45,7 +46,7 @@ get_header();
             		<?php
             	}
             	?>
-	            
+
 
 
 	            <?php tutor_course_content(); ?>

@@ -17,20 +17,20 @@ if ( ! defined( 'ABSPATH' ) )
 
 <div class="border-30px tutor-price-preview-box">
     <div class="tutor-price-box-thumbnail">
-		<?php
-		if(tutor_utils()->has_video_in_single()){
-			tutor_course_video();
-		} else{
-			get_tutor_course_thumbnail();
-		}
-		?>
+			<?php
+			if(tutor_utils()->has_video_in_single()){
+				tutor_course_video();
+			} else{
+				get_tutor_course_thumbnail();
+			}
+			?>
     </div>
 
     <?php do_action('tutor_course/single/enroll_box/after_thumbnail'); ?>
 
-	<?php tutor_course_price(); ?>
-	<?php tutor_course_benefits_html(); ?>
-    <?php tutor_single_course_add_to_cart(); ?>
+		<?php tutor_course_price(); ?>
+		<?php tutor_course_benefits_html(); ?>
+		<?php tutor_single_course_add_to_cart(); ?>
 		<?php do_action('tutor_course/single/before/inner-wrap'); ?>
 
 </div> <!-- tutor-price-preview-box -->
