@@ -340,24 +340,24 @@ img.attachment-post-thumbnail.size-post-thumbnail{
   width:100%;
 }
 /* North compatibility */
-.theme-north .tutor-wrap.tutor-full-width-course-top.tutor-course-top-info.tutor-page-wrap {
+.customize-support .tutor-wrap.tutor-full-width-course-top.tutor-course-top-info.tutor-page-wrap {
     background: var(--tutor-primary-color);
     padding-bottom: 20px;
 }
 
-.theme-north .tutor-col-8.tutor-col-md-100 {
+.customize-support .tutor-col-8.tutor-col-md-100 {
     z-index: 0;
 }
-.theme-north #page-content {
+.customize-support #page-content {
   overflow: inherit;
 }
 
-.theme-north .bg-transparent-personalized h1, .theme-north .bg-transparent-personalized h2, .theme-north .bg-transparent-personalized h3, .theme-north .bg-transparent-personalized h4, .theme-north .bg-transparent-personalized h5, .theme-north .bg-transparent-personalized h6, .theme-north .tutor-dashboard-content-inner h3 {
+.customize-support .bg-transparent-personalized h1, .customize-support .bg-transparent-personalized h2, .customize-support .bg-transparent-personalized h3, .customize-support .bg-transparent-personalized h4, .customize-support .bg-transparent-personalized h5, .customize-support .bg-transparent-personalized h6, .customize-support .tutor-dashboard-content-inner h3, .customize-support .tutor-dashboard-info-table-wrap h3 {
     color: #fff;
 }
-.theme-north .tutor-dashboard .tutor-container, .theme-north .tutor-container.bg-transparent-personalized{
+.customize-support .tutor-dashboard .tutor-container, .customize-support .tutor-container.bg-transparent-personalized{
   background-color: var(--tutor-primary-color);
 }
-.theme-north .tutor-wrap, .tutor-single-lesson-wrap{
+.customize-support .tutor-wrap, .tutor-single-lesson-wrap{
   border-top: 1px solid transparent!important;
 }
