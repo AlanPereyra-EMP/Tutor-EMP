@@ -1,0 +1,30 @@
+.tutor-wrap.tutor-full-width-course-top.tutor-course-top-info.tutor-page-wrap {
+    background: var(--tutor-primary-color)!important;
+    padding-bottom: 20px;
+}
+
+.tutor-col-8.tutor-col-md-100 {
+    z-index: 0!important;
+}
+#page-content {
+  overflow: inherit;
+}
+
+.bg-transparent-personalized h1, .bg-transparent-personalized h2, .bg-transparent-personalized h3,
+.bg-transparent-personalized h4, .bg-transparent-personalized h5, .bg-transparent-personalized h6,
+.tutor-dashboard-content-inner h3, .tutor-dashboard-info-table-wrap h3, .tutor-container h1, .tutor-container h2,
+.tutor-container h3, .tutor-container h4.tutor-container h5, .tutor-container h6, .tutor-container a{
+    color: #fff;
+}
+.tutor-dashboard .tutor-container, .tutor-container.bg-transparent-personalized{
+  background-color: var(--tutor-primary-color)!important;
+}
+.tutor-wrap, .tutor-single-lesson-wrap{
+  border-top: 1px solid transparent!important;
+}
+.tutor-container a{
+  text-decoration: underline!important;
+}
+.tutor-container a:hover{
+  color: #ddd;
+}

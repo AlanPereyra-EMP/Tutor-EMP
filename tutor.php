@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: Tutor IP
-Plugin URI: https://informatica.pereyra.online
-Description: Tutor IP es un fork del plugin Tutor LMS hecho por Themeum y mejorado a una versión PRO por Informatica Pereyra,
-Author: Informatica Pereyra
+Plugin Name: Tutor EMP
+Plugin URI: https://empralidad.com.ar/tutor-emp
+Description: Tutor EMP es un fork del plugin Tutor LMS hecho por Themeum y mejorado a una versión por Empralidad,
+Author: Empralidad
 Version: 1.6.6
-Author URI: informatica.pereyra.online
-Requires at least: 4.5
-Tested up to: 5.3
+Author URI: https://empralidad.com.ar
+Requires at least: 5.2
+Tested up to: 5.4.2
 License: GPLv2 or later
 Text Domain: tutor
 */
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) )
 /**
  * Defined the tutor main file
  */
-define('TUTOR_VERSION', '1.6.1');
+define('TUTOR_VERSION', '1.6.6');
 define('TUTOR_FILE', __FILE__);
 define('TUTOR_PRO_VERSION', __FILE__);
 
