@@ -28,3 +28,6 @@
 .tutor-container a:hover{
   color: #ddd;
 }
+div#wpadminbar{
+  position: fixed;
+}
