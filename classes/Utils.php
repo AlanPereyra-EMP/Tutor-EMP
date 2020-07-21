@@ -2079,7 +2079,7 @@ class Utils {
 			'withdraw'          => array('title' => __('Retirar', 'tutor'), 'auth_cap' => tutor()->instructor_role),
 			// 'my-profile'        => __('Mi perfil', 'tutor'),
 			'create-course'     => array('title' => __('Crear curso', 'tutor'), 'show_ui' => false, 'auth_cap' => tutor()->instructor_role),
-			'enrolled-courses'  => __('Cursos comenzados', 'tutor'),
+			// 'enrolled-courses'  => __('Cursos comenzados', 'tutor'),
 			'wishlist'          => __('Lista de deseos', 'tutor'),
 			'my-quiz-attempts'  => __('Mis evaluaciones', 'tutor'),
 			'reviews'           => __('Reviews', 'tutor'),
