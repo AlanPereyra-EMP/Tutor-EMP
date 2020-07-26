@@ -113,15 +113,15 @@ do_action('tutor_dashboard/before/wrap'); ?>
 
                 <div class="tutor-col-9">
                     <div class="tutor-dashboard-content">
-						<?php
-						if ($dashboard_page_name){
-						    do_action('tutor_load_dashboard_template_before', $dashboard_page_name);
-							tutor_load_template("dashboard.".$dashboard_page_name);
-							do_action('tutor_load_dashboard_template_before', $dashboard_page_name);
-						}else{
-							tutor_load_template("dashboard.dashboard");
-						}
-						?>
+											<?php
+											if ($dashboard_page_name){
+											    do_action('tutor_load_dashboard_template_before', $dashboard_page_name);
+												tutor_load_template("dashboard.".$dashboard_page_name);
+												do_action('tutor_load_dashboard_template_before', $dashboard_page_name);
+											}else{
+												tutor_load_template("dashboard.dashboard");
+											}
+											?>
                     </div>
                 </div>
             </div>

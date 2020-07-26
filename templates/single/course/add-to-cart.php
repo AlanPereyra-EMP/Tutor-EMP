@@ -52,9 +52,9 @@ do_action('tutor_course/single/add-to-cart/before');
 				<button type="submit" class="tutor-btn-enroll tutor-btn tutor-course-purchase-btn">
 					<?php
 					if(!$isLoggedIn){
-						 _e('Ingresar/registrarse', 'tutor');
+						 _e('Acceder', 'tutor');
 					 } else {
-						 _e('Inscribirse ahora', 'tutor');
+						 _e('Adquirir el curso', 'tutor');
 					 }
 					?>
 				</button>
