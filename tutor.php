@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) )
 /**
  * Defined the tutor main file
  */
-define('TUTOR_VERSION', '1.7.1');
+define('TUTOR_VERSION', '1.7.6');
 define('TUTOR_FILE', __FILE__);
 define('TUTOR_PRO_VERSION', __FILE__);
 
