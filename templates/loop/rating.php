@@ -15,21 +15,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-
-
-
-<div class="tutor-loop-rating-wrap">
-	<?php
-	$course_rating = tutor_utils()->get_course_rating();
-	tutor_utils()->star_rating_generator($course_rating->rating_avg);
-	?>
-    <span class="tutor-rating-count">
-        <?php
-        if ($course_rating->rating_avg > 0) {
-	        echo apply_filters('tutor_course_rating_average', $course_rating->rating_avg);
-	        echo '<i>(' . apply_filters('tutor_course_rating_count', $course_rating->rating_count) . ')</i>';
-        }
-        ?>
-    </span>
-</div>
-

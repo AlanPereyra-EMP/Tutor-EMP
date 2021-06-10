@@ -49,7 +49,7 @@ class Admin{
 			$pro_text = ' '.__('Pro', 'tutor');
 		}
 
-		add_menu_page(__('Tutor IP', 'tutor').$pro_text, __('Tutor IP', 'tutor').$pro_text, 'manage_tutor_instructor', 'tutor', null,
+		add_menu_page(__('Tutor EMP', 'tutor').$pro_text, __('Tutor EMP', 'tutor').$pro_text, 'manage_tutor_instructor', 'tutor', null,
 			'dashicons-welcome-learn-more', 2);
 		add_submenu_page('tutor', __('Categorías', 'tutor'), __('Categorías', 'tutor'), 'manage_tutor', 'edit-tags.php?taxonomy=course-category&post_type='.$course_post_type, null );
 
@@ -64,14 +64,11 @@ class Admin{
 		add_submenu_page('tutor', __('Intentos de examen', 'tutor'), __('Intentos de examen', 'tutor'), 'manage_tutor_instructor', 'tutor_quiz_attempts',array($this, 'quiz_attempts') );
 		add_submenu_page('tutor', __('Retirar solicitudes', 'tutor'), __('Retirar solicitudes', 'tutor'), 'manage_tutor_instructor', 'tutor_withdraw_requests', array($this, 'withdraw_requests') );
 
-		//add_submenu_page('tutor', __('Add-ons', 'tutor'), __('Add-ons', 'tutor'), 'manage_tutor', 'tutor-addons', array(new Addons(),'addons_page') );
-		add_submenu_page( 'tutor', __( 'Add-ons', 'tutor' ), __( 'Add-ons', 'tutor' ), 'manage_tutor', 'tutor-addons', array( $this, 'enable_disable_addons' ) );
-
 		do_action('tutor_admin_register');
 
 		add_submenu_page('tutor', __('Configuraciones', 'tutor'), __('Configuraciones', 'tutor'), 'manage_tutor', 'tutor_settings', array($this, 'tutor_page') );
 
-		add_submenu_page('tutor', __('Herramientas', 'tutor'), __('Herramientas', 'tutor'), 'manage_tutor', 'tutor-tools', array($this, 'tutor_tools') );
+		// add_submenu_page('tutor', __('Herramientas', 'tutor'), __('Herramientas', 'tutor'), 'manage_tutor', 'tutor-tools', array($this, 'tutor_tools') );
 
 		if ( ! $hasPro){
 			add_submenu_page( 'tutor', __( 'Ser Pro', 'tutor' ), __( '<span class="dashicons dashicons-awards tutor-get-pro-text"></span> Ser Pro', 'tutor' ), 'manage_options', 'tutor-get-pro', array($this, 'tutor_get_pro') );
@@ -411,8 +408,8 @@ class Admin{
 		$hasPro = tutor()->has_pro;
 
 		if(!$hasPro){
-			$actions['tutor_pro_link'] = '<a href="https://informatica.pereyra.online" target="_blank"><span
- style="color: #ff7742; font-weight: bold;">' . __('Acrualizar a Pro', 'wp-megamenu') . '</span></a>';
+			$actions['tutor_pro_link'] = '<a href="https://empralidad.com.ar" target="_blank"><span
+ style="color: #ff7742; font-weight: bold;">' . __('Actualizar a Pro', 'wp-megamenu') . '</span></a>';
 		}
 
 		$is_erase_data = tutor_utils()->get_option('delete_on_uninstall');
@@ -434,11 +431,11 @@ class Admin{
 
 		if ($plugin_file === tutor()->basename) {
 			$plugin_meta[] = sprintf( '<a href="%s">%s</a>',
-				esc_url( 'https://informatica.pereyra.online' ),
+				esc_url( 'https://empralidad.com.ar/cursos' ),
 				__( '<strong style="color: #03bd24">Documentación</strong>', 'tutor' )
 			);
 			$plugin_meta[] = sprintf( '<a href="%s">%s</a>',
-				esc_url( 'https://informatica.pereyra.online' ),
+				esc_url( 'https://empralidad.com.ar' ),
 				__( '<strong style="color: #03bd24">Conseguir soporte</strong>', 'tutor' )
 			);
 		}
@@ -462,8 +459,8 @@ class Admin{
 		if ( apply_filters( 'tutor_display_admin_footer_text', (tutor_utils()->array_get('parent_base', $current_screen) === 'tutor' ) ) ) {
 			$footer_text = sprintf(
 				__( 'Si quieres %1$s por favor dejanos %2$s tu calificación. Un saludo!', 'tutor' ),
-				sprintf( '<strong>%s</strong>', esc_html__( 'Tutor IP', 'tutor' ) ),
-				'<a href="https://informatica.pereyra.online" target="_blank" class="tutor-rating-link">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
+				sprintf( '<strong>%s</strong>', esc_html__( 'Tutor EMP', 'tutor' ) ),
+				'<a href="https://empralidad.com.ar" target="_blank" class="tutor-rating-link">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
 			);
 		}
 

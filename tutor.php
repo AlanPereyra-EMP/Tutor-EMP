@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Tutor EMP
+Plugin Name: Tutor-EMP
 Plugin URI: https://empralidad.com.ar/tutor-emp
 Description: Tutor EMP es un fork del plugin Tutor LMS hecho por Themeum y mejorado a una versión por Empralidad,
 Author: Empralidad
-Version: 1.7.6
+Version: 1.7.7
 Author URI: https://empralidad.com.ar
 Tested up to: 5.7
 License: GPLv2 or later
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) )
 /**
  * Defined the tutor main file
  */
-define('TUTOR_VERSION', '1.7.6');
+define('TUTOR_VERSION', '1.7.7');
 define('TUTOR_FILE', __FILE__);
 define('TUTOR_PRO_VERSION', __FILE__);
 

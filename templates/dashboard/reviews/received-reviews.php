@@ -27,7 +27,7 @@ $reviews = tutor_utils()->get_reviews_by_instructor(get_current_user_id(), $offs
             <div class="tutor-dashboard-inline-links">
                 <ul>
                     <li> <a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews'); ?>"> <?php _e('Dada', 'tutor'); ?></a> </li>
-                    <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('Resibida', 'tutor'); ?></a> </li>
+                    <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('reviews/received-reviews'); ?>"> <?php _e('Recibida', 'tutor'); ?></a> </li>
                 </ul>
             </div>
 		<?php } ?>
