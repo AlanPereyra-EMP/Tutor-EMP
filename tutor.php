@@ -6,7 +6,7 @@ Description: Tutor EMP es un fork del plugin Tutor LMS hecho por Themeum y mejor
 Author: Empralidad
 Version: 1.7.7
 Author URI: https://empralidad.com.ar
-Tested up to: 5.7
+Tested up to: 5.7.2
 License: GPLv2 or later
 Text Domain: tutor
 */

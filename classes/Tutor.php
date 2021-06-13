@@ -52,6 +52,8 @@ final class Tutor{
 	private $form_handler;
 	private $email;
 
+	private $updates;
+
 	/**
 	 * @return null|Tutor
 	 *
@@ -136,6 +138,7 @@ final class Tutor{
 		$this->dashboard = new Dashboard();
 		$this->form_handler = new FormHandler();
 		$this->email = new Email();
+		$this->updates = new Updates();
 
 		/**
 		 * Run Method
