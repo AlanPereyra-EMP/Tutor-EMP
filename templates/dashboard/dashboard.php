@@ -49,14 +49,14 @@
 			<div class="tutor-dashboard-content-inner">
 
 
-			    <div class="tutor-dashboard-inline-links">
+			    <!-- <div class="tutor-dashboard-inline-links">
 			        <ul>
 			            <li class="active"><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses'); ?>"> <?php _e('Todos los cursos'); ?></a> </li>
 			            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses/active-courses'); ?>"> <?php _e('Cursos activos'); ?> </a> </li>
 			            <li><a href="<?php echo tutor_utils()->get_tutor_dashboard_page_permalink('enrolled-courses/completed-courses'); ?>">
 								<?php _e('Cursos completos'); ?> </a> </li>
 			        </ul>
-			    </div>
+			    </div> -->
 
 
 				<?php

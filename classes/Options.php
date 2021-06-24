@@ -170,7 +170,7 @@ class Options {
 							'enable_gutenberg_course_edit' => array(
 								'type'      => 'checkbox',
 								'label'     => __('Gutenberg', 'tutor'),
-								'label_title'   => __('Habiliar', 'tutor'),
+								'label_title'   => __('Habilitar', 'tutor'),
 								'desc' => __('Use Gutenberg editor on course description area.', 'tutor'),
 							),
 							'display_course_instructors' => array(

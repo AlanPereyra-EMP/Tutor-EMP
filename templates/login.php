@@ -32,7 +32,7 @@ get_header();
         </div>
     </div><!-- .wrap -->
 
-<?php do_action('tutor/template/login/after/wrap'); ?>
+<!-- <?php do_action('tutor/template/login/after/wrap'); ?> -->
 
 
 

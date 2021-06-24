@@ -52,6 +52,7 @@ final class Tutor{
 	private $form_handler;
 	private $email;
 
+	// private $wp_autoupdate;
 	private $updates;
 
 	/**
@@ -138,6 +139,7 @@ final class Tutor{
 		$this->dashboard = new Dashboard();
 		$this->form_handler = new FormHandler();
 		$this->email = new Email();
+		// $this->wp_autoupdate = new WP_AutoUpdate();
 		$this->updates = new Updates();
 
 		/**

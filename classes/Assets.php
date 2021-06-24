@@ -48,11 +48,12 @@ class Assets{
 	 */
 	public function frontend_scripts(){
 
+		// Dinamic stars
+		wp_enqueue_script( 'tutor_review_js', TUTOR_ABSPATH .'assets/js/reviews.js');
 
+		// Empralidad-Theme Compatibility
+		wp_enqueue_style( 'empralidad_css', TUTOR_ABSPATH .'includes/theme-compatibility/empralidad/empralidad.css');
 
-		// Theme Compatibility
-
-			
 
 
 		global $post, $wp_query;
