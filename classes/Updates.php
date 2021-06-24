@@ -9,7 +9,7 @@ class Updates
 {
   public function __construct() {
 		// add_filter('pre_set_site_transient_update_plugins', array($this, 'tutor_automatic_updates'));
-    add_filter('pre_set_site_transient_update_plugins', array($this, 'tutor_check_update'));
+    // add_filter('pre_set_site_transient_update_plugins', array($this, 'tutor_check_update'));
 		// add_action( 'init', 'tutor_automatic_updates' );
   }
 
@@ -43,8 +43,6 @@ class Updates
       $remote_version = $match[1];
     }
 
-		$asd = version_compare(TUTOR_VERSION, $remote_version);
-
     if (version_compare(TUTOR_VERSION, $remote_version)) {
       $transient->response[$plugin_uri_slug] = array(
 				'id'		      	=> $plugin_uri_slug,
@@ -57,23 +55,13 @@ class Updates
         'package'     	=> 'https://github.com/alanpereyra57/'.$plugin_slug.'/archive/master.zip'
       );
 
-			$asd = 'true';
-
 			$class = 'notice notice-success';
-			$message = __( $asd.' '.TUTOR_VERSION.' < '.$remote_version, 'tutor');
-			// $message = __( 'Tutor-EMP tiene una nueva actualización, por favor actualiza ahora!', 'tutor' );
+			$message = __( 'Tutor-EMP tiene una nueva actualización, por favor contacta al soporte para actualizar ahora!', 'tutor' );
 
 			printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 
-
 			return $transient;
     }
-
-		$class = 'notice notice-info';
-		$message = __( $asd.' '.TUTOR_VERSION.' >= '.$remote_version, 'tutor');
-		// $message = __( 'Tutor-EMP tiene una nueva actualización, por favor actualiza ahora!', 'tutor' );
-
-		printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 
 		return $transient;
   }
